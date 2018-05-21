@@ -16,5 +16,5 @@ Most common words present across all above lists are calculated and sorted by nu
 * All combined words from above 6 lists are stored in 'CombinedAllWords.txt'
 * Individual Word lists are stored in Wordlist Folder *
 
-Wordlist Courtesy: www. quizlet.com
+Wordlist Courtesy: www.quizlet.com
 
