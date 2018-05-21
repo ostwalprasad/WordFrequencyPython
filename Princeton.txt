@@ -106,7 +106,7 @@ avarice:(noun) greed, especially for wealth (adj. form: avaricious)
 axiom:(noun) A universally recognized principle
 burgeon:(verb) to grow rapidly or flourish
 bucolic:(adj.) rustic and pastoral; characteristic of rural areas and their inhabitants
-cacophony:(noun) 
+cacophony:(noun)
 Harsh, jarring, discordant, or meaningless mixture of sounds
 canon:(noun) an established set of principles or code of laws, often religious in nature
 castigation:(noun) sever criticism or punishment (verb form: castigate)
@@ -115,7 +115,6 @@ caustic:(adj.) burning or stinging; causing corrosion
 chary:(adj.) wary; cautious; sparing
 cautiously or suspiciously reluctant to do something
 
-EX: "most people are chary of allowing themselves to be photographed"
 cogent:(adj.) appealing forcibly to the mind or reason; convincing
 complaisance:(noun) the willingness to comply with the wishes of others
 contentious:(adj.) argumentative; quarrelsome; causing controversy or disagreement
@@ -209,7 +208,7 @@ insipid:(adj.) lacking in qualities that interest, stimulate, or challenge
 loquacious:(adj.) extremely talkative (noun form: loquacity);
 SIMILAR: garrulous, voluble
 luminous:(adj.) characterized by brightness and the emission of light
-malevolent:(adj.) having or showing often vicious ill will, spite, or hatred 
+malevolent:(adj.) having or showing often vicious ill will, spite, or hatred
 
 (noun form: malevolence)
 malleable:(adj.) capable of being shaped or formed: tractable; pilable
@@ -222,7 +221,7 @@ obsequious:(adj.) exhibiting a fawning attentiveness
 occlude:(verb) to obstruct or block
 opprobrium:(noun) disgrace; contempt; scorn
 pedagogy:(noun) the profession or principles of teaching, or instruction
-pedantic:(adj.) overly concerned with the trivial details of learning or education; 
+pedantic:(adj.) overly concerned with the trivial details of learning or education;
 
 show-offish about one's knowledge
 penury:(noun) poverty; destitution
@@ -288,7 +287,7 @@ impetuous:(adj.) impulsive; acting without thought; rash; hasty; reckless; heedl
 
 SIMILAR: insouciant
 indifferent:(adj.) having no interest or concern; showing no bias or prejudice
-inimical:(adj.) damaging; harmful; injurious 
+inimical:(adj.) damaging; harmful; injurious
 OR
 hostile
 intractable:(adj.) not easily managed or directed; stubborn; obstinate
@@ -341,7 +340,7 @@ vituperate:(verb) to use harsh condemnatory language; to abuse or censure severe
 volatile:(adj.) readily changing to a vapor; changeable; fickle; explosive (noun form: volatility)
 alloy:(v.) to commingle;
 
-to debase by mixing w/ something inferior; 
+to debase by mixing w/ something inferior;
 
 unalloyed means pure
 appropriate:(verb) to take for one's own use; to confiscate
@@ -461,7 +460,7 @@ plangent:(adj.) pounding, thundering, resounding
 prolix:(adj.) long winded, verbose; prolixity means verbosity
 propitiate:(verb) to appease; to conciliate; propitious means auspicious, favorable
 puerile:(adj.) childish, immature, jejune, nugatory
-puissance:(noun) power, strength; 
+puissance:(noun) power, strength;
 
 puissant means powerful, strong
 pusillanimous:(adj.) cowardly, craven

@@ -10,7 +10,6 @@ ABSTEMIOUS:moderate in appetite
 ABYSS:an extremely deep hole
 ACCRETION:a growth in size; an increase in amount
 
-ex: the ______________ of sediments in coastal mangroves
 ACIDULOUS:sour in taste or manner
 ACME:highest point; summit; the highest level or degree attainable
 ADULTERATE:to make impure
@@ -42,10 +41,8 @@ ARBITRATE:to judge a dispute b/w two opposing parties
 ARCHAIC:ancient; old-fashioned
 ARDOR:intense and passionate feeling
 
-ex: They felt the stirrings of revolutionary __________________.
 ARROGATE:to claim without justification; to claim for oneself without right
 
-ex: The board ________________ed to itself the task of determining what medical facilities will be provided
 ARTICULATE:able to speak clearly and expressively
 ASSAIL:to attack; assault
 ASSUAGE:to make something unpleasant less severe
@@ -173,7 +170,6 @@ EXONERATE:to clear of blame
 EXPLICIT:clearly stated or shown; forthright in expression
 EXPONENT:one who champions or advocates
 
-ex: An early _____________ of the teachings of Thomas Aquinas
 EXPURGATE:to censor
 FALLOW:dormant; unused
 FANATICAL:acting excessively enthusiastic; filled with extreme unquestioned devotion
@@ -273,7 +269,6 @@ LARGESS:generous giving (as of money) to others who may seem inferior
 LASSITUDE:a state of diminished energy
 LATENT:potential that is not readily apparent
 
-ex: Discovering her _________ talent for diplomacy
 LAUD:to give praise; to glorify
 LAVISH:extremely generous or extravagant; giving unsparingly
 LEERY:suspicious

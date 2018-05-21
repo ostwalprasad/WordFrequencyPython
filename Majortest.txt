@@ -231,7 +231,7 @@ Clairvoyant:psychic; mystic
 Clamor:shout; scream
 Clandestine:secret; covert; stealthy
 Clemency:mercy
-Cliché:overused expression; something unoriginal
+Clichï¿½:overused expression; something unoriginal
 Clientele:customers
 Cloistered:isolated
 Cloture:closure; terminating a debate by voting
@@ -329,7 +329,6 @@ Deliberate:to think over deeply; consider; ponder
 Delineation:explanation; definition; outlining
 Demagogue:mob leader (who appeals to base instincts) [demagogy/demagoguery (n)]
 Demur:hesitate; refuse
-Demur:object; hesitate to accept
 Denigrate:decry; criticize; belittle
 Denounce:condemn; speak out against
 Deplete:use up; lessen
@@ -380,7 +379,7 @@ discreet:prudent; diplomatic]
 Discriminate:to make a clear distinction; see the difference
 Discursive:digressing; rambling
 Disdain:contempt; strong dislike
-Disingenuous:naïve
+Disingenuous:naï¿½ve
 Disinter:dig up
 Disinterested:unbiased
 Disparage:criticize; belittle
@@ -706,7 +705,7 @@ Infallible:perfect; flawless; cannot make mistakes
 Infamous:famous for something bad
 Infer:deduce; conclude
 Ingrate:ungrateful person
-Ingénue:naïve, unsophisticated person
+Ingï¿½nue:naï¿½ve, unsophisticated person
 Inimical:hostile
 Iniquitous:evil; unjust [iniquity (n)]
 Innate:inherited; inborn
@@ -1123,7 +1122,7 @@ Prostration:stretch out full on ground; lying face down; 2. be overcome with ext
 Protagonist:main character in film, book, play etc.
 Protean:changeable
 Protocol:procedure; code of behavior
-Protégé:person under protection of, or guided by another
+Protï¿½gï¿½:person under protection of, or guided by another
 Provincial:pertaining to a province; limited in outlook; unsophisticated
 Proximate:immediate; nearest
 Prudence:caution; wisdom
