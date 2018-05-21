@@ -21,8 +21,8 @@ def wordListToFreqDict(wordlist):
     return dict(zip(wordlist,wordfreq))
 
 # Combine all wordslist text files into one and convert to lowercase.
-filenames = ['Kaplan.txt','Magoosh.txt','Manhattan.txt','Barrons.txt','Princeton.txt','Majortest.txt']
-with open('allwords.txt', 'w') as outfile:
+filenames = ['WordLists/Kaplan.txt','WordLists/Magoosh.txt','WordLists/Manhattan.txt','WordLists/Barrons.txt','WordLists/Princeton.txt','WordLists/Majortest.txt']
+with open('CombinedAllWords.txt', 'w') as outfile:
     for fname in filenames:
         with open(fname) as infile:
             for line in infile:
@@ -30,7 +30,7 @@ with open('allwords.txt', 'w') as outfile:
                 outfile.write(line)
 
 # Open combined wordlist, remove definations and format words
-with open("allwords.txt") as f:
+with open("CombinedAllWords.txt") as f:
     items = f.readlines()
     t = items
     t = map(lambda items: items.strip(), t)
@@ -38,10 +38,10 @@ with open("allwords.txt") as f:
         t[i]=w.split(":", 1)[0]
 
 #Clear contents of output text file.
-l = open("output.txt","w").close()
+l = open("Words_Output.txt","w").close()
 
 #Open file and write sorted dictionary values into text file one by one in decreasing order
-l = open("output.txt","a")
+l = open("Words_Output.txt","a")
 l.write("Most Frequent Words: \n")
 for key, value in sorted(wordListToFreqDict(t).iteritems(), key=lambda (k,v): (v,k),reverse =True):
     l.write(" \n%s: %s" % (key, value))
