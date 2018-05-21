@@ -9,7 +9,6 @@ abstain:to choose not to do something
 abstemious:moderate in appetite
 abyss:an extremely deep hole
 accretion:a growth in size; an increase in amount
-
 acidulous:sour in taste or manner
 acme:highest point; summit; the highest level or degree attainable
 adulterate:to make impure
@@ -40,9 +39,7 @@ arbitrary:determined by chance or impulse
 arbitrate:to judge a dispute b/w two opposing parties
 archaic:ancient; old-fashioned
 ardor:intense and passionate feeling
-
 arrogate:to claim without justification; to claim for oneself without right
-
 articulate:able to speak clearly and expressively
 assail:to attack; assault
 assuage:to make something unpleasant less severe
@@ -169,7 +166,6 @@ exigent:urgent; requiring immediate action
 exonerate:to clear of blame
 explicit:clearly stated or shown; forthright in expression
 exponent:one who champions or advocates
-
 expurgate:to censor
 fallow:dormant; unused
 fanatical:acting excessively enthusiastic; filled with extreme unquestioned devotion
@@ -268,7 +264,6 @@ larceny:theft of property
 largess:generous giving (as of money) to others who may seem inferior
 lassitude:a state of diminished energy
 latent:potential that is not readily apparent
-
 laud:to give praise; to glorify
 lavish:extremely generous or extravagant; giving unsparingly
 leery:suspicious
@@ -331,10 +326,7 @@ oblique:indirect or evasive; misleading or devious
 obsequious:overly submissive and eager to please
 obstinate:stubborn; unyielding
 obviate:to prevent; to make unnecessary
-
 occlude:to stop up; prevent the passage of
-
-
 officious:too helpful; meddlesome
 onerous:troublesome and oppressive; burdensome
 opaque:impossible to see through; preventing the passage of light
@@ -365,10 +357,8 @@ pejorative:having bad connotations; disparaging
 penury:an oppressive lack of resource (as money); severe poverty
 peregrinate:to wander from place to place; to travel, especially on foot
 perfidious:willing to betray one's trust
-
 perfunctory:done in a routine way; indifferent
 peripatetic:wandering from place to place, especially on foot
-
 permeate:to penetrate
 perspicacious:shrewd, astute, or keen-witted
 pervade:to be present throughout; to permeate
@@ -414,7 +404,6 @@ quotidian:occurring daily; commonplace
 raconteur:witty, skillful storyteller
 rarefy:to make thinner or sparser
 redress:relief from wrong or injury
-
 the setting right of what is wrong
 rejoinder:response, especially a sharp or witty one
 repast:meal or mealtime
@@ -473,12 +462,9 @@ tome:book, usually large and academic
 torpor:extreme mental and physical sluggishness
 transitory:temporary; lasting a brief time
 trenchant:acute, sharp, or incisive; forceful; effective
-
 turgid:swollen as from a fluid; bloated
-
 tyro:beginner; novice
 umbrage:offense; resentment
-
 unconscionable:unscrupulous; shockingly unfair or unjust
 unequivocal:absolute; certain
 upbraid:to scold sharply
@@ -3392,11 +3378,10 @@ cryptic:having a secret or hidden meaning
 incredulous:not disposed or willing to believe; unbelieving
 capitulate:surrender under agreed conditions
 repulse:force or drive back
-extinct:no longer existenceabscond:(verb) to steal off and hide
+extinct:no longer existence
+abscond:(verb) to steal off and hide
 aberrant:(adj.) deviating from the norm (noun form: aberration)
 alacrity:(noun) eager and enthusiastic willingness
-or
-speed, quickness, or celerity
 anomaly:(noun) deviation from the normal order, form, or rule; abnormality (adj. form: anomalous)
 approbation:(noun) an expression of approval or praise
 arduous:(adj.) strenuous, taxing; requiring significant effort; onerous; strenuous
@@ -3422,16 +3407,11 @@ erudite:(adj.) very learned, scholarly
 exculpate:(verb) exonerate, to clear of blame
 exigent:(adj) urgent, pressing; requiring immediate action or attention
 extemporaneous:(adj.) improvised; done without preparation
-not: contemporaneous
 filibuster:(noun) intentional obstruction, esp. using prolonged speechmaking to delay legislative action
 fulminate:(verb) to loudly attack or denounce
-
 similar: berate; castigate; reprimand; reprove; rebuke; chide; chastise; reproach; upbraid; censure;
-
 extreme criticism: excoriate; objurgate; vituperate; lambaste
 ingenuous:(adj.) artless; frank and candid; lacking in sophistication
-or
-innocent, unsuspecting, childlike
 inured:(adj.) accustomed to accepting something undesirable
 irascible:(adj.) easily angered; prone to temperamental outbursts
 laud:(verb) to praise highly (adj. form: laudatory)
@@ -3457,25 +3437,14 @@ precipitate (adj.):(adj.) acting with excessive haste or impulse; impetuous
 precipitate (verb):(verb) to cause to happen before anticipated or required
 predilection:(noun) a disposition in favor of something, preference
 prescience:(noun) foreknowledge of events; knowing of events prior to their occurring (adj. form: prescient)
-prevaricate:(verb) to speak or act evasively; sidestep; beat around the bush; hedge; equivocate; waffle
-
-to deliberately avoid the truth; to mislead or create a false impression
+prevaricate:(verb) to speak or act evasively; sidestep; beat around the bush; hedge; equivocate; waffle to deliberately avoid the truth; to mislead or create a false impression
 qualms:(noun) misgivings, reservations, causes for hesitancy
 recant:(verb) to retract, especially a previously held belief
 refute:(verb) to disprove; to successfully argue against
 relegate:(verb) to forcibly assign, especially to a lower place or position;
-
-downgrade; lower; put down
-
-"women are relegated to a secondary role"
 reticent:(adj.) quiet; reserved; reluctant to express thoughts and feelings
 solicitous:(adj.) concerned and attentive; eager
 sordid:(adj.) characterized by filth; squalid
-
-or
-
-arousing moral distaste and contempt
-(antonym: respectable)
 sporadic:(adj.) occurring only occasionally, or in scattered instances
 squander:(verb) to waste by spending or using irresponsibly
 static:(adj.) non moving, active, or in motion; at rest
@@ -3508,7 +3477,6 @@ catalyst:(noun) a substance that causes or hastens a chemical reaction; any agen
 caustic:(adj.) burning or stinging; causing corrosion
 chary:(adj.) wary; cautious; sparing
 cautiously or suspiciously reluctant to do something
-
 cogent:(adj.) appealing forcibly to the mind or reason; convincing
 complaisance:(noun) the willingness to comply with the wishes of others
 contentious:(adj.) argumentative; quarrelsome; causing controversy or disagreement
@@ -3603,8 +3571,6 @@ loquacious:(adj.) extremely talkative (noun form: loquacity);
 similar: garrulous, voluble
 luminous:(adj.) characterized by brightness and the emission of light
 malevolent:(adj.) having or showing often vicious ill will, spite, or hatred
-
-(noun form: malevolence)
 malleable:(adj.) capable of being shaped or formed: tractable; pilable
 mendacity:(noun) the condition of being untruthful; dishonest (adj. form: mendacious)
 meticulous:(adj.) characterized by extreme care and precision; attentive to detail
@@ -3616,8 +3582,6 @@ occlude:(verb) to obstruct or block
 opprobrium:(noun) disgrace; contempt; scorn
 pedagogy:(noun) the profession or principles of teaching, or instruction
 pedantic:(adj.) overly concerned with the trivial details of learning or education;
-
-show-offish about one's knowledge
 penury:(noun) poverty; destitution
 pervasive:(adj.) having the tendency to permeate or spread throughout
 pine:(verb) to yearn intensely; to languish; to lose vigor
@@ -3678,12 +3642,8 @@ hubris:(noun) overbearing presumption or pride; arrogance
 imminent:(adj.) about to happen; impending
 immutable:(adj.) not capable of change
 impetuous:(adj.) impulsive; acting without thought; rash; hasty; reckless; heedless
-
-similar: insouciant
 indifferent:(adj.) having no interest or concern; showing no bias or prejudice
 inimical:(adj.) damaging; harmful; injurious
-or
-hostile
 intractable:(adj.) not easily managed or directed; stubborn; obstinate
 intrepid:(adj.) steadfast and courageous
 laconic:(adj.) using few words; terse
@@ -3705,7 +3665,6 @@ proclivity:(noun) a natural predisposition or inclination
 profligate:(adj.) excessively wasteful; recklessly extravagant (noun form: profligacy)
 propensity:(noun) a natural inclination or tendency; penchant
 prosaic:(adj.) dull; ordinary; commonplace; unromantic; lacking in spirit or imagination
-
 similar: insipid -- lacking the qualities that interest, stimulate, or challenge (insipid also means lacking flavor)
 pungent:(adj.) characterized by a strong, sharp smell or taste
 quixotic:(adj.) foolishly impractical; marked by lofty romantic ideals
@@ -3733,10 +3692,6 @@ vigilant:(adj.) alertly watchful (noun form: vigilance)
 vituperate:(verb) to use harsh condemnatory language; to abuse or censure severely or abusively; to berate
 volatile:(adj.) readily changing to a vapor; changeable; fickle; explosive (noun form: volatility)
 alloy:(v.) to commingle;
-
-to debase by mixing w/ something inferior;
-
-unalloyed means pure
 appropriate:(verb) to take for one's own use; to confiscate
 arrest, arresting:(verb)/(adj.) to suspend; to engage; holding one's attention: as in arrested adolescence, an arresting portrait
 august:(adj.) majestic, venerable
@@ -3765,12 +3720,6 @@ lumber:(verb) to move heavily and clumsily
 meet:(adj.) fitting, proper
 milk:(verb) to exploit; to squeeze every last ounce of
 mince:to soften/moderate one's words, especially for the sake of decorum
-
-to chop or cut into small pieces;
-
-to subdivide minutely, as land or a topic of study;
-
-to walk with short, affectedly dainty steps
 nice:(adj.) exacting, fastidious, extremely precise
 occult:(adj.) hidden, concealed, beyond comprehension
 pedestrian:(adj.) commonplace, trite, unremarkable, quotidian, picayune
@@ -3855,7 +3804,6 @@ prolix:(adj.) long winded, verbose; prolixity means verbosity
 propitiate:(verb) to appease; to conciliate; propitious means auspicious, favorable
 puerile:(adj.) childish, immature, jejune, nugatory
 puissance:(noun) power, strength;
-
 puissant means powerful, strong
 pusillanimous:(adj.) cowardly, craven
 remonstrate:(verb) to protest, to object
@@ -3872,7 +3820,6 @@ tendentious:(adj.) biased; showing marked tendencies
 timorous:(adj.) timid, fearful, diffident
 tyro:(noun) novice, greenhorn, rank amateur
 vitiate:(v.) to spoil or impair the quality or efficiency of;
-
 to corrupt, to debase, to spoil, to make ineffective
 voluble:(adj.) fluent, verbal, having easy use of spoken language
 abasement:humiliation; degradation

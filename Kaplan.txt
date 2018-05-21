@@ -9,7 +9,6 @@ ABSTAIN:to choose not to do something
 ABSTEMIOUS:moderate in appetite
 ABYSS:an extremely deep hole
 ACCRETION:a growth in size; an increase in amount
-
 ACIDULOUS:sour in taste or manner
 ACME:highest point; summit; the highest level or degree attainable
 ADULTERATE:to make impure
@@ -40,9 +39,7 @@ ARBITRARY:determined by chance or impulse
 ARBITRATE:to judge a dispute b/w two opposing parties
 ARCHAIC:ancient; old-fashioned
 ARDOR:intense and passionate feeling
-
 ARROGATE:to claim without justification; to claim for oneself without right
-
 ARTICULATE:able to speak clearly and expressively
 ASSAIL:to attack; assault
 ASSUAGE:to make something unpleasant less severe
@@ -169,7 +166,6 @@ EXIGENT:urgent; requiring immediate action
 EXONERATE:to clear of blame
 EXPLICIT:clearly stated or shown; forthright in expression
 EXPONENT:one who champions or advocates
-
 EXPURGATE:to censor
 FALLOW:dormant; unused
 FANATICAL:acting excessively enthusiastic; filled with extreme unquestioned devotion
@@ -268,7 +264,6 @@ LARCENY:theft of property
 LARGESS:generous giving (as of money) to others who may seem inferior
 LASSITUDE:a state of diminished energy
 LATENT:potential that is not readily apparent
-
 LAUD:to give praise; to glorify
 LAVISH:extremely generous or extravagant; giving unsparingly
 LEERY:suspicious
@@ -331,10 +326,7 @@ OBLIQUE:indirect or evasive; misleading or devious
 OBSEQUIOUS:overly submissive and eager to please
 OBSTINATE:stubborn; unyielding
 OBVIATE:to prevent; to make unnecessary
-
 OCCLUDE:to stop up; prevent the passage of
-
-
 OFFICIOUS:too helpful; meddlesome
 ONEROUS:troublesome and oppressive; burdensome
 OPAQUE:impossible to see through; preventing the passage of light
@@ -365,10 +357,8 @@ PEJORATIVE:having bad connotations; disparaging
 PENURY:an oppressive lack of resource (as money); severe poverty
 PEREGRINATE:to wander from place to place; to travel, especially on foot
 PERFIDIOUS:willing to betray one's trust
-
 PERFUNCTORY:done in a routine way; indifferent
 PERIPATETIC:wandering from place to place, especially on foot
-
 PERMEATE:to penetrate
 PERSPICACIOUS:shrewd, astute, or keen-witted
 PERVADE:to be present throughout; to permeate
@@ -414,7 +404,6 @@ QUOTIDIAN:occurring daily; commonplace
 RACONTEUR:witty, skillful storyteller
 RAREFY:to make thinner or sparser
 REDRESS:relief from wrong or injury
-
 The setting right of what is wrong
 REJOINDER:response, especially a sharp or witty one
 REPAST:meal or mealtime
@@ -473,12 +462,9 @@ TOME:book, usually large and academic
 TORPOR:extreme mental and physical sluggishness
 TRANSITORY:temporary; lasting a brief time
 TRENCHANT:acute, sharp, or incisive; forceful; effective
-
 TURGID:swollen as from a fluid; bloated
-
 TYRO:beginner; novice
 UMBRAGE:offense; resentment
-
 UNCONSCIONABLE:unscrupulous; shockingly unfair or unjust
 UNEQUIVOCAL:absolute; certain
 UPBRAID:to scold sharply
