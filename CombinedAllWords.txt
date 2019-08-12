@@ -1333,7 +1333,7 @@ superfluous:serving no useful purpose; more than is needed, desired, or required
 conspicuous:without any attempt at concealment; completely obvious
 dictatorial:expecting unquestioning obedience; characteristic of an absolute ruler
 chortle:to chuckle, laugh merrily
-banal:lacking freshness and originality; clich�
+banal:lacking freshness and originality; cliché
 gall:bitterness of feeling; nerve; effrontery;
 cryptic:mysterious or vague, usually intentionally
 deferential:showing respect
@@ -2046,7 +2046,7 @@ august:venerable, majestic; inspiring admiration
 avarice:insatiable greed; a miserly desire to hoard wealth
 axiom:self-evident truth requiring no proof; universally or generally accepted principle
 balloon:swell or puff out; increase rapidly
-banal:lacking freshness and originality; clich�
+banal:lacking freshness and originality; cliché
 bane:something that ruins or spoils
 baying:howling in a deep way, like a dog or wolf
 beneficent:doing good
@@ -2375,7 +2375,7 @@ propitiate:attempt to reconcile with, satisfy, or reduce the animosity of (a per
 propitious:favorable, giving good signs for the future, likely to work out; kind or forgiving
 providential:lucky, fortunate, or relating to divine care (the idea that a deity has helped or cared for a person)
 proxy:agent, substitute, person authorized to act on behalf of another
-pr�cis:concise summary, abstract
+précis:concise summary, abstract
 puerile:juvenile, immature
 pugilism:boxing, fighting with the fists
 puissance:power, might
@@ -4055,7 +4055,7 @@ clairvoyant:psychic; mystic
 clamor:shout; scream
 clandestine:secret; covert; stealthy
 clemency:mercy
-clich�:overused expression; something unoriginal
+clichï¿½:overused expression; something unoriginal
 clientele:customers
 cloistered:isolated
 cloture:closure; terminating a debate by voting
@@ -4203,7 +4203,7 @@ discreet:prudent; diplomatic]
 discriminate:to make a clear distinction; see the difference
 discursive:digressing; rambling
 disdain:contempt; strong dislike
-disingenuous:na�ve
+disingenuous:naï¿½ve
 disinter:dig up
 disinterested:unbiased
 disparage:criticize; belittle
@@ -4529,7 +4529,7 @@ infallible:perfect; flawless; cannot make mistakes
 infamous:famous for something bad
 infer:deduce; conclude
 ingrate:ungrateful person
-ing�nue:na�ve, unsophisticated person
+ingï¿½nue:naï¿½ve, unsophisticated person
 inimical:hostile
 iniquitous:evil; unjust [iniquity (n)]
 innate:inherited; inborn
@@ -4946,7 +4946,7 @@ prostration:stretch out full on ground; lying face down; 2. be overcome with ext
 protagonist:main character in film, book, play etc.
 protean:changeable
 protocol:procedure; code of behavior
-prot�g�:person under protection of, or guided by another
+protï¿½gï¿½:person under protection of, or guided by another
 provincial:pertaining to a province; limited in outlook; unsophisticated
 proximate:immediate; nearest
 prudence:caution; wisdom
