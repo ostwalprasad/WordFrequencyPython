@@ -48,13 +48,25 @@ with open("CombinedAllWords.txt") as f:
 
 
 #Open file and write sorted dictionary values into text file one by one in decreasing order
-l = open("Words_Output.txt","w")
-
+with open("Words_Output.txt","w") as f:
 # for key, value in sorted(wordListToFreqDict(t).items(), key=lambda k,v: (v,k), reverse =True):
-for key, value in sorted(wordListToFreqDict(combined_vocab).items(), key=lambda x: (x[1], x[0]), reverse =True):
-    # l.write(" \n%s: %s" % (key, value))
-    word = key
-    freq = value
-    meaning = combined_map[word]
-    l.write("{}[{}]: {}\n".format(key, value, meaning))
-l.close()
+    for key, value in sorted(wordListToFreqDict(combined_vocab).items(), key=lambda x: (x[1], x[0]), reverse =True):
+        # l.write(" \n%s: %s" % (key, value))
+        word = key
+        freq = value
+        meaning = combined_map[word]
+        f.write("{}[{}]: {}\n".format(key, value, meaning))
+
+# dump as HTML with some shitty formatting
+with open("words.html","w") as f:
+# for key, value in sorted(wordListToFreqDict(t).items(), key=lambda k,v: (v,k), reverse =True):
+    for key, value in sorted(wordListToFreqDict(combined_vocab).items(), key=lambda x: (x[1], x[0]), reverse =True):
+        # l.write(" \n%s: %s" % (key, value))
+        word = key
+        freq = value
+        meaning = "<ul>"
+        for m in combined_map[word]:
+            meaning += "<li>{}</li>".format(m)
+        meaning += "</ul>"
+
+        f.write("<h2>{}</h2><em>frequecy :: {}</em><br/><p>{}</p><hr/>".format(key, value, meaning))
