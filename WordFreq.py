@@ -13,6 +13,7 @@ Above words are stored in different text files along with definations. These tex
 Word along with Frequenices is stored in output text file 'output.txt'
 """
 from collections import defaultdict, Counter
+import json
 
 # Function to calculate word Frequency and store it into Dictionary
 def wordListToFreqDict(wordlist):
@@ -48,7 +49,7 @@ with open("CombinedAllWords.txt") as f:
 
 
 #Open file and write sorted dictionary values into text file one by one in decreasing order
-with open("Words_Output.txt","w") as f:
+with open("output/words.txt","w") as f:
 # for key, value in sorted(wordListToFreqDict(t).items(), key=lambda k,v: (v,k), reverse =True):
     for key, value in sorted(wordListToFreqDict(combined_vocab).items(), key=lambda x: (x[1], x[0]), reverse =True):
         # l.write(" \n%s: %s" % (key, value))
@@ -59,8 +60,21 @@ with open("Words_Output.txt","w") as f:
 
 counter = Counter([v for k, v in wordListToFreqDict(combined_vocab).items()])
 
+# dump as json
+jsonmap = {}
+for word, frequency in sorted(wordListToFreqDict(combined_vocab).items(), key=lambda x: (x[1], x[0]), reverse =True):
+    if frequency not in jsonmap:
+        jsonmap[frequency] = defaultdict(dict)
+    jsonmap[frequency][word] = combined_map[word]
+
+for frequency in jsonmap:
+    wordmap = jsonmap[frequency]
+    with open("output/{}.json".format(frequency), 'w') as f:
+        json.dump(wordmap, f, indent=4)
+
+
 # dump as HTML with some shitty formatting
-with open("words.html","w") as f:
+with open("output/words.html","w") as f:
     html = "<!DOCTYPE html>\n<head>{}</head>\n<body>\n{}</body>\n</html>"
 
     # add a metadata about occurence of each type
