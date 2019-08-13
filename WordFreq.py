@@ -12,7 +12,7 @@ WordLists ( Courtesy: www.quizlet.com )
 Above words are stored in different text files along with definations. These text files are combined, parsed and word frequecy is calculated.
 Word along with Frequenices is stored in output text file 'output.txt'
 """
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 # Function to calculate word Frequency and store it into Dictionary
 def wordListToFreqDict(wordlist):
@@ -57,16 +57,32 @@ with open("Words_Output.txt","w") as f:
         meaning = combined_map[word]
         f.write("{}[{}]: {}\n".format(key, value, meaning))
 
+counter = Counter([v for k, v in wordListToFreqDict(combined_vocab).items()])
+
 # dump as HTML with some shitty formatting
 with open("words.html","w") as f:
-# for key, value in sorted(wordListToFreqDict(t).items(), key=lambda k,v: (v,k), reverse =True):
-    for key, value in sorted(wordListToFreqDict(combined_vocab).items(), key=lambda x: (x[1], x[0]), reverse =True):
+    # add a metadata about occurence of each type
+    metadata = "<h1>Metadata</h1><ul>"
+    for k in range(6, 0, -1):
+        metadata += "<li>{} : {}</li>".format(k, counter[k])
+    metadata += "</ul><hr/></hr/>"
+    f.write(metadata)
+
+    # real shit happens now
+    count, prev = 0, 6
+    for i, (key, value) in enumerate(sorted(wordListToFreqDict(combined_vocab).items(), key=lambda x: (x[1], x[0]), reverse =True)):
         # l.write(" \n%s: %s" % (key, value))
         word = key
-        freq = value
+        frequency = value
+        # reset counter
+        if frequency != prev:
+            count, prev = 0, frequency
         meaning = "<ul>"
         for m in combined_map[word]:
             meaning += "<li>{}</li>".format(m)
         meaning += "</ul>"
+        count += 1
 
-        f.write("<h2>{}</h2><em>frequecy :: {}</em><br/><p>{}</p><hr/>".format(key, value, meaning))
+        f.write("<h2>{} - {}</h2><h4>frequecy : {}</h4><h4>S.N.: {}/{}</h4><p>{}</p><hr/>".format(
+            i, key, frequency, count, counter[frequency], meaning
+        ))
