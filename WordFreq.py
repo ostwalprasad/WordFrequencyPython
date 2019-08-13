@@ -61,14 +61,17 @@ counter = Counter([v for k, v in wordListToFreqDict(combined_vocab).items()])
 
 # dump as HTML with some shitty formatting
 with open("words.html","w") as f:
+    html = "<!DOCTYPE html>\n<head>{}</head>\n<body>\n{}</body>\n</html>"
+
     # add a metadata about occurence of each type
     metadata = "<h1>Metadata</h1><ul>"
     for k in range(6, 0, -1):
         metadata += "<li>{} : {}</li>".format(k, counter[k])
-    metadata += "</ul><hr/></hr/>"
-    f.write(metadata)
+    metadata += "</ul>"
+    # f.write(metadata)
 
     # real shit happens now
+    content = ""
     count, prev = 0, 6
     for i, (key, value) in enumerate(sorted(wordListToFreqDict(combined_vocab).items(), key=lambda x: (x[1], x[0]), reverse =True)):
         # l.write(" \n%s: %s" % (key, value))
@@ -82,7 +85,10 @@ with open("words.html","w") as f:
             meaning += "<li>{}</li>".format(m)
         meaning += "</ul>"
         count += 1
+        content += "<h2>{} - {}</h2><h4>frequecy : {}</h4><h4>S.N.: {}/{}</h4>{}<hr/>\n".format(
+            i+1, key, frequency, count, counter[frequency], meaning)
 
-        f.write("<h2>{} - {}</h2><h4>frequecy : {}</h4><h4>S.N.: {}/{}</h4><p>{}</p><hr/>".format(
-            i+1, key, frequency, count, counter[frequency], meaning
-        ))
+        # f.write(content)
+    body = "{}\n<hr/><hr/>\n{}".format(metadata, content)
+    html = html.format('', body)
+    f.write(html)
