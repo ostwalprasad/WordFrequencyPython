@@ -84,5 +84,5 @@ with open("words.html","w") as f:
         count += 1
 
         f.write("<h2>{} - {}</h2><h4>frequecy : {}</h4><h4>S.N.: {}/{}</h4><p>{}</p><hr/>".format(
-            i, key, frequency, count, counter[frequency], meaning
+            i+1, key, frequency, count, counter[frequency], meaning
         ))
