@@ -49,19 +49,6 @@ function showWord() {
 }
 
 $(document).ready(function() {
-  // var l = localStorage.getItem("learning"),
-  //   r = localStorage.getItem("reviewing"),
-  //   m = localStorage.getItem("mastered"),
-  //   w = localStorage.getItem("words");
-  // if (l) learning = JSON.parse(l);
-  // if (r) reviewing = JSON.parse(r);
-  // if (m) mastered = JSON.parse(m);
-  // if (w) {
-  //   words = JSON.parse(w);
-  //   words_list = Object.keys(words);
-  // } else {
-  //   localStorage.setItem("words", JSON.stringify(words));
-  // }
   reflectInBars();
   showWord();
 });
