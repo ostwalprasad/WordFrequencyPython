@@ -30,13 +30,6 @@ function getWord() {
   };
 }
 
-function reset($elem) {
-  $elem.before($elem.clone(true));
-  var $newElem = $elem.prev();
-  $elem.remove();
-  return $newElem;
-}
-
 function showWord() {
   var w = getWord();
   var word = w.word,
