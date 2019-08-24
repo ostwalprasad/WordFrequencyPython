@@ -5,11 +5,10 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
     <title>
-      Common Words I - Magoosh GRE
+      Frequency 6 Words - MerGRE
     </title>
   </head>
   <body class="bg-secondary">
-    <span class="page-index" data-page="6" style="display: none"></span>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -17,25 +16,22 @@
             class="navbar-toggle collapsed"
             data-target="#app-navbar-collapse"
             data-toggle="collapse"
-            >
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <a
             alt="Magoosh Logo"
             class="navbar-brand"
             href="/flashcards/vocabulary"
-            >
-          Magoosh
+          >
+            Magoosh
           </a>
         </div>
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
           <ul class="nav navbar-nav" role="navigation"></ul>
-          <ul class="nav navbar-nav navbar-right" role="navigation">
-            <ul class="nav navbar-nav navbar-right" role="navigation"></ul>
-          </ul>
         </div>
       </div>
     </nav>
@@ -44,49 +40,84 @@
         <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
           <h3 class="clearfix mobile-header">
             <a href="../index.html">&larr; Frequency 3 Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
           </h3>
-          <div class="alert alert-success alert-message" style="display: none">
-            Congratulations. You have mastered all the cards in this deck.
-            <a href="../index.html">Go back</a>
-          </div>
           <div class="flashcard-container u-margin-V-m">
             <div class="flashcard">
               <div class="front card flashcard-card">
-                <a href="#"
-                  >
-                  <div class="card-block flashcard-content">
-                    <div class="label label-flashcard">
-                      new word
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
                     </div>
-                    <p class="word-counter" style="text-align: right;"></p>
-                    <h1 class="text-gray text-center flashcard-word"></h1>
-                  </div>
-                </a
-                  >
-                <a
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
                   class="card-footer text-center"
                   data-loading-text="Loading definition..."
-                  href="#"
+                  href="#back"
                   >Click to see meaning &rarr;
                 </a>
               </div>
               <div class="back card flashcard-card">
                 <div class="card-block flashcard-content">
-                  <div class="label label-flashcard">
-                    new word
-                  </div>
-                  <p class="word-counter" style="text-align: right;"></p>
+                  <div class="label label-flashcard label-danger">learning</div>
                   <h3 class="flashcard-word"></h3>
                   <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
                 </div>
                 <a
-                  class="card-footer card-footer-success text-center next-word"
+                  class="card-footer card-footer-success text-center know-word"
                   data-loading-text="Loading next word..."
-                  href="#back"
-                  ><i class="fa fa-check"></i> Next word
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
                 </a>
               </div>
             </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 287 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 287 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 287 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
           </div>
           <br />
         </div>
