@@ -1,11 +1,5 @@
 # WordFrequencyPython
 
-To run the flash card server:
-
-1. Navigate to the public directory.
-2. Run `python -m http.server`. We are running SimpleHTTPServer provided by python 3.
-3. Enjoy.
-
 Python Code to find out most frequent words from famous GRE lists below.
 
 WordLists
