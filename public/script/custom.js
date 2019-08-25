@@ -42,6 +42,8 @@ function showWord() {
   var word = w.word,
     word_type = w.word_type,
     label = w.label;
+
+  $(".flashcard").removeClass("flipped");
   $(".flashcard-word").text(word);
   $(".flashcard-status").text(word_type);
   $(".label-flashcard")
