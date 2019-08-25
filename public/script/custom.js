@@ -4,15 +4,15 @@ function getWord() {
   var rnd = Math.random();
   var word, word_type, label;
 
-  if (rnd < 0.4) {
+  if (rnd < 0.45) {
     word = words_list[Math.floor(Math.random() * words_list.length)];
     word_type = "new word";
     label = "";
-  } else if (rnd < 0.65) {
+  } else if (rnd < 0.7) {
     word = learning[Math.floor(Math.random() * learning.length)];
     word_type = "learning";
     label = "label-danger";
-  } else if (rnd < 0.9) {
+  } else if (rnd < 0.97) {
     word = reviewing[Math.floor(Math.random() * reviewing.length)];
     word_type = "reviewing";
     label = "label-warning";
@@ -22,7 +22,14 @@ function getWord() {
     label = "label-success";
   }
 
-  if (!word) return getWord();
+  if (
+    !word ||
+    $(".back .flashcard-word")
+      .text()
+      .trim() === word
+  )
+    return getWord();
+
   return {
     word: word,
     word_type: word_type,
@@ -87,6 +94,7 @@ $(document).on("click", ".know-word", function(e) {
   showWord();
   reflectInBars();
 });
+
 $(document).on("click", ".dont-know-word", function(e) {
   e.preventDefault();
   var status = $(".back .flashcard-status").text();
