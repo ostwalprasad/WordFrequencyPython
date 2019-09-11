@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 2-i Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 2-i Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 99 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 99 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 99 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        zealous: [
+          "marked by active interest and enthusiasm",
+          "(adj.) fervent; ardent; impassioned, devoted to a cause"
+        ],
+        zealot: ["someone passionately devoted to a cause", "fanatic"],
+        yoke: [
+          "to join together",
+          "a burden or something that oppresses; a frame for attaching animals (such as oxen) to each other and to a plow or other equipment to be pulled, or a bar across a person's shoulders to help carry buckets of water, etc. (noun); to unite together or to burden (verb)nepotism"
+        ],
+        xenophobia: [
+          "a fear or hatred of foreigners or strangers",
+          "fear or hatred of foreigners or that which is foreign"
+        ],
+        wizened: ["shriveled; withered; wrinkled", "withered, shriveled"],
+        wistful: [
+          "showing pensive sadness",
+          "melancholy; pensive; expressing a longing for"
+        ],
+        wax: [
+          "to gradually increase in size or intensity",
+          "to increase; to grow"
+        ],
+        wane: [
+          "a gradual decline (in size or strength or power or number)",
+          "grow less"
+        ],
+        waffle: [
+          "(verb) to equivocate; to change one's position;",
+          "talk nonsense"
+        ],
+        voluminous: ["large in capacity or bulk", "very large; spacious"],
+        vitriol: [
+          "cruel and bitter criticism",
+          "something highly caustic, such as criticism (literally, one of a number of chemicals including sulfuric acid)"
+        ],
+        viscous: [
+          "thick and adhesive, like a slow-flowing fluid",
+          "(adj.) thick; sticky (noun form"
+        ],
+        virtuosity: [
+          "technical skill or fluency or style exhibited by a virtuoso",
+          "skill, expertise [virtuoso (n); virtuosi (n.pl)]"
+        ],
+        vim: [
+          "vitality and energy",
+          "pep, enthusiasm, vitality, lively spirit"
+        ],
+        vilify: [
+          "spread negative information about",
+          "(verb) to defame; to characterize harshly"
+        ],
+        vigilant: [
+          "carefully observant or attentive",
+          "(adj.) alertly watchful (noun form"
+        ],
+        viable: [
+          "(adj) capable of living (or growing, developing, etc.); practical, workable",
+          "capable of life or normal growth and development"
+        ],
+        vex: [
+          "to annoy; irritate; puzzle; confuse",
+          "annoy or bother; puzzle or distress"
+        ],
+        vertigo: [
+          "a reeling sensation; a feeling that you are about to fall",
+          "dizziness; a feeling that you are about to fall"
+        ],
+        vernal: [
+          "related to spring; fresh",
+          "relating to the spring; fresh, youthful"
+        ],
+        veritable: [
+          "actual, true, real; ?????????",
+          "true; genuine [verity (n)]"
+        ],
+        verisimilar: [
+          "having the appearance of truth, probable",
+          "appearing to be true or real"
+        ],
+        verdant: [
+          "green with vegetation; inexperienced",
+          "green, such as with vegetation, plants, grass, etc.; young and inexperienced"
+        ],
+        veracious: ["truthful", "true [veracity (n)]"],
+        venerable: ["respected because of age", "profoundly honored"],
+        vehement: [
+          "marked by extreme intensity of emotions or convictions",
+          "forceful"
+        ],
+        vapid: [
+          "lacking significance or liveliness or spirit or zest",
+          "dull; uninspiring"
+        ],
+        vacuous: ["lacking ideas or intelligence", "empty; silly; meaningless"],
+        usurp: [
+          "seize and take control without authority",
+          "take someone's position (usually by force)"
+        ],
+        untoward: ["unfavorable; inconvenient", "unexpected"],
+        untenable: [
+          "not able to be defended, not able to live in",
+          "(adj.) indefensible; not viable; uninhabitable"
+        ],
+        unseemly: [
+          "not in keeping with accepted standards of what is right or proper in polite society",
+          "(adj) improper, inappropriate, against the rules of taste or politeness"
+        ],
+        unprepossessing: ["unattractive", "unattractive"],
+        underwrite: ["to support financially", "give guarantee; insure"],
+        unctuous: [
+          "unpleasanlty and and excessively flattering or ingratiating",
+          "oily; using excessive flattery"
+        ],
+        tumult: ["a state of chaos, noise and confusion", "uproar; noise"],
+        truncate: ["to shorten by cutting off", "cut short; curtail"],
+        trivial: ["small and of little importance", "unimportant"],
+        treacherous: [
+          "dangerous",
+          "betraying trust, not faithful or trustworthy; not dependable; dangerous or deceptive"
+        ],
+        tranquil: ["free from disturbance by heavy waves", "peaceful"],
+        tout: [
+          "advertize in strongly positive terms; show off",
+          "(verb) to publicly praise or promote"
+        ],
+        torrid: [
+          "(adj) very hot, parching, burning; passionate",
+          "hot and steamy"
+        ],
+        torpid: [
+          "(adj.) lethargic; sluggish; dormant (noun form",
+          "inactive; lazy; stagnant"
+        ],
+        terrestrial: [
+          "earthly; down-to-earth; commonplace",
+          "relating to the earth or to land; worldly"
+        ],
+        temperance: [
+          "restraint or moderation, especially in regards to alcohol or food",
+          "(n) moderation, self-control, esp. regarding alcohol or other desires or pleasures; total abstinence from alcohol"
+        ],
+        temerity: ["foolish boldness", "fearless daring"],
+        tantamount: [
+          "being essentially equal to something",
+          "being essentially equal to something"
+        ],
+        tangible: [
+          "perceptible by the senses especially the sense of touch",
+          "can be touched"
+        ],
+        tangential: [
+          "digressing; diverting",
+          "(adj) only slightly relevant, going off topic"
+        ],
+        talon: [
+          "claw of an animal, especially a bird of prey",
+          "long pointed nail or claw"
+        ],
+        syncopation: [
+          "temporary irregularity in musical rhythm",
+          "type of musical rhythm with missed beats"
+        ],
+        symbiosis: [
+          "cooperation; mutual helpfulness",
+          "mutually dependent relationship between two organisms, people, groups, etc."
+        ],
+        susceptible: ["yielding readily to or capable of", "vulnerable"],
+        surmise: [
+          "(v) guess, infer, think, or make an opinion with incomplete information",
+          "infer from incomplete evidence"
+        ],
+        supine: ["lying face upward", "lying face upward"],
+        superficial: [
+          "on the surface",
+          "of, affecting, or being on or near the surface"
+        ],
+        supercilious: [
+          "looking down on others; proud and scornful",
+          "proud and haughty"
+        ],
+        sully: ["to tarnish; taint", "make dirty, stain, tarnish, defile"],
+        sullen: [
+          "bad-tempered and sulky; gloomy",
+          "showing a brooding ill humor"
+        ],
+        subversive: [
+          "in opposition to a civil authority or government",
+          "rebellious; revolutionary"
+        ],
+        subtle: [
+          "(adj.) not obvious; elusive; difficult to discern",
+          "not obvious"
+        ],
+        sublime: [
+          "lofty or grand",
+          "lofty or elevated, inspiring reverence or awe; excellent, majestic; complete, utter"
+        ],
+        stygian: ["(adj.) gloomy, dark", "very dark; hellish"],
+        stringent: [
+          "demanding strict attention to rules and procedures",
+          "strict or severe"
+        ],
+        strident: ["unpleasantly loud and harsh", "loud and harsh"],
+        stoic: [
+          "(adj.) indifferent to or unaffected by pleasure or pain; steadfast (noun form",
+          "person who is indifferent to pleasure or pain"
+        ],
+        stereotype: [
+          "a conventional or formulaic conception or image",
+          "a conventional or formulaic conception or image; fixed image"
+        ],
+        static: [
+          "(adj) fixed, not moving or changing, lacking vitality",
+          "(adj.) non moving, active, or in motion; at rest"
+        ],
+        stasis: [
+          "a state of static balance or equilibrium; stagnation",
+          "equilibrium, a state of balance or inactivity, esp. caused by equal but opposing forces"
+        ],
+        staid: [
+          "characterized by dignity and propriety",
+          "dull; sober; serious"
+        ],
+        stagnant: [
+          "not growing or changing; without force or vitality",
+          "still; not moving"
+        ],
+        squelch: [
+          "to crush as if by trampling; squash",
+          "crush, squash; suppress or silence; walk through ooze or in wet shoes, making a smacking or sucking sound"
+        ],
+        squander: [
+          "spend thoughtlessly; waste time, money, or an opportunity",
+          "(verb) to waste by spending or using irresponsibly"
+        ],
+        sportive: [
+          "frolicsome; playful",
+          '(adj) playful, merry, joking around, done "in sport" (rather than intended seriously)'
+        ],
+        spendthrift: [
+          "one who spends money wastefully",
+          "(noun) one who spends money wastefully"
+        ],
+        spate: [
+          "(n) sudden outpouring or rush; flood",
+          "a sudden forceful flow"
+        ],
+        sparse: [
+          "(adj.) thin; not dense; arranged at widely spaced intervals",
+          "thinly diffused; not dense"
+        ],
+        somatic: ["of the body", "concerned with the body"],
+        solicit: ["request urgently or persistently", "to ask for; seek"],
+        solace: ["comfort in disappointment or misery", "comfort for grief"],
+        sobriquet: ["nickname", "a nickname"],
+        slight: [
+          "(adj, v, n) small, not very important, slender or delicate (adj); treat as though not very important; snub, ignore (verb); an act of treating in this way, a discourtesy (noun)",
+          "a deliberate discourteous act; disrespect"
+        ],
+        slew: ["(n) a large number or quantity", "glut; excess"],
+        slake: [
+          "to calm down or moderate; satisfy a desire or need",
+          "satisfy (esp. thirst), cool, or refresh; make less active"
+        ],
+        skirmish: [
+          "a minor short term fight",
+          "minor battle; a minor short-term fight"
+        ],
+        singular: [
+          "being a single and separate person or thing",
+          "(adj.) exceptional, unusual, odd"
+        ],
+        servile: [
+          "submissive or fawning in attitude or behavior",
+          "overly submissive; groveling; obsequious; sycophantic"
+        ],
+        serene: ["calm and peaceful", "calm; peaceful"],
+        serendipity: [
+          "the instance in which an accidental, fortunate discovery is made",
+          "fortunate coincidence; unsought discovery; gift for finding valuable or desirable things by accident; accidental good fortune or luck"
+        ],
+        seraphic: [
+          "angelic; sweet",
+          "like an angel; serene, spiritually carried off or transported"
+        ],
+        sentient: [
+          "aware; conscious; able to perceive",
+          "(adj) conscious; experiencing sensation or perceiving with the senses"
+        ],
+        sententious: [
+          "to be moralizing, usually in a pompous sense",
+          "(adj.) given to moralizing in a pompous, excessive, or affected manner; self-righteous; moralistic"
+        ],
+        sedition: [
+          "behavior that promotes rebellion or civil disorder against the state",
+          "inciting rebellion against a government, esp. speech or writing that does this"
+        ],
+        scrutinize: ["examine carefully for accuracy", "examine carefully"],
+        scrupulous: [
+          "characterized by extreme care and great effort",
+          "careful; diligent; painstaking"
+        ],
+        scintilla: ["trace amount", "a tiny bit or trace"],
+        savor: ["(v) appreciate fully, taste or smell with pleasure", "enjoy"],
+        savant: [
+          "learned person, scholar, someone admitted to membership in a scholarly field; a person with amazing mental abilities despite having a cognitive difference or disability",
+          "person with knowledge"
+        ],
+        saturnine: ["morose or gloomy", "(adj.) gloomy, dark, sullen, morose"]
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>

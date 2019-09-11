@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 2-vi Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 2-vi Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 99 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 99 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 99 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        conspicuous: [
+          "without any attempt at concealment; completely obvious",
+          "obvious to the eye or mind; easily seen; prominent"
+        ],
+        consecrate: [
+          "to make holy or set apart for a high purpose",
+          "dedicate; sanctify"
+        ],
+        conniving: [
+          "conspiring to do bad",
+          "collusive; cunning; scheming [connive (v)]"
+        ],
+        conducive: [
+          "making a situation or outcome more likely to happen",
+          "tending to bring about; being partly responsible for; presenting favourable circumstances"
+        ],
+        concur: ["(v) approve, agree", "be in accord; be in agreement"],
+        concomitant: [
+          "existing concurrently",
+          "following or accompanying as a consequence"
+        ],
+        conciliate: ["to make peace with", "to bring together; end a dispute"],
+        concede: [
+          "to admit as true; to yield, submit",
+          "(v) give in, admit, yield; acknowledge reluctantly; grant or give up (such as giving up land after losing a war)"
+        ],
+        compound: [
+          "make more intense, stronger, or more marked",
+          "make more intense, stronger or more marked"
+        ],
+        compliant: [
+          "(adj) obeying, submissive; following the requirements",
+          "easy to control; submissive"
+        ],
+        complementary: [
+          "adjective",
+          "(adj) completing; fitting together well; filling mutual needs"
+        ],
+        complaisant: [
+          "overly polite; willingness to comply with the wishes of others; ??????????",
+          "eager to please; cheerfully complying"
+        ],
+        complaisance: [
+          "(noun) the willingness to comply with the wishes of others",
+          "compliancy; flexibility; willingness to please [complaisant (a)]"
+        ],
+        coffer: [
+          "strongbox; large chest for money",
+          "chest for storing valuables; financial resources, a treasury"
+        ],
+        coerce: [
+          "to cause to do through pressure or necessity",
+          "force [coercion (n); coercing (a)]"
+        ],
+        coda: [
+          "final part of a musical composition; an ending, esp. one that sums up what has come before",
+          "piece of music at the end of a musical work; finale; final part of document"
+        ],
+        cloying: [
+          "sickly sweet; excessive",
+          "disgustingly or distastefully sweet"
+        ],
+        clemency: ["mercy, humaneness; mildness, moderateness", "mercy"],
+        clandestine: [
+          "conducted with or marked by hidden aims or methods",
+          "secret; covert; stealthy"
+        ],
+        clamor: [
+          "(v) noisy uproar or protest, as from a crowd; a loud, continuous noise",
+          "shout; scream"
+        ],
+        circumvent: ["to get around; to bypass", "avoid"],
+        choleric: ["easily angered", "irascible; easily angered"],
+        chimerical: [
+          "like a grotesque product of the imagination",
+          "changeable; unstable"
+        ],
+        chimera: [
+          "a fantasy; a horrible creature of the imagination",
+          "(noun) an illusion; originally, an imaginary fire-breathing she monster"
+        ],
+        chauvinism: [
+          "fanatical devotion",
+          "(n) fanatical patriotism or blind enthusiasm for military glory; undue or biased devotion to any group, cause, etc."
+        ],
+        chagrin: [
+          "embarrassment; a complete loss of courage; ?????????",
+          "strong feelings of embarrassment"
+        ],
+        cerebral: [
+          "involving intelligence rather than emotions or instinct",
+          "intellectual"
+        ],
+        cartography: ["science or art of making maps", "(n) mapmaking"],
+        carping: [
+          "to find fault; complain",
+          "constant criticism; fault-finding"
+        ],
+        cant: [
+          "hypocritical and sanctimonious talk, typically of moral, religious, or political nature",
+          "insincere talk"
+        ],
+        candor: [
+          "the quality of being honest and straightforward",
+          "frankness; openness"
+        ],
+        cajole: [
+          "influence or urge by gentle urging, caressing or flattering",
+          "coax"
+        ],
+        bureaucracy: [
+          "(n) government characterized by many bureaus and petty administrators or by excessive, seemingly meaningless requirements",
+          "officialdom"
+        ],
+        bulwark: [
+          "an embankment built around a space for defensive purposes",
+          "fortification; barricade; wall"
+        ],
+        broach: [
+          "(verb) to bring up; to announce; to begin to talk about",
+          "start to discuss; approach"
+        ],
+        boorish: [
+          "ill-mannered and coarse or contemptible in behavior or appearance",
+          "ill-mannered"
+        ],
+        bonhomie: [
+          "good-natured geniality; atmosphere of good cheer",
+          "friendliness, open and simple good heartedness"
+        ],
+        bogus: [
+          "(adj) fake, fraudulent",
+          "fraudulent; having a misleading appearance"
+        ],
+        blight: [
+          "to afflict; destroy",
+          "disease that kills plants rapidly, or any cause of decay or destruction (noun); ruin or cause to wither (verb)"
+        ],
+        bigot: [
+          "a prejudiced person who is intolerant of differing opinions",
+          "narrow-minded, prejudiced person"
+        ],
+        bifurcate: [
+          "to divide into two parts",
+          "to fork into two branches or divide into two halves"
+        ],
+        bevy: [
+          "group",
+          "group of birds or other animals that stay close together; any large group"
+        ],
+        besmirch: [
+          "damage the good name and reputation of someone",
+          "smear so as to make dirty or stained; attack the good name of"
+        ],
+        bereft: [
+          "deprived of; made unhappy through a loss; ????????",
+          "sorrowful through loss or deprivation"
+        ],
+        bent: [
+          "personal inclination or tendency",
+          "(noun) leaning, inclination, proclivity, tendency"
+        ],
+        benevolent: [
+          "showing or motivated by sympathy and understanding; to wish good for others",
+          "kindly"
+        ],
+        bemoan: ["complain about", "lament; regret strongly"],
+        base: [
+          "the lowest, class were without any moral principles",
+          "(adj) morally low, mean, dishonorable; of little or no value; crude and unrefined; counterfeit"
+        ],
+        banality: ["a trite or obvious remark", "ordinariness; dullness"],
+        baleful: ["destructive, deadly", "evil"],
+        badger: [
+          "to tease, annoy, harass persistently",
+          "to bother repeatedly, pester, harass"
+        ],
+        avid: [
+          "(adj) enthusiastic, dedicated, passionate; excessively desirous",
+          "marked by active interest and enthusiasm"
+        ],
+        aversion: ["a feeling of intense dislike", "firm dislike"],
+        avaricious: ["excessively greedy", "greedy for money"],
+        auspicious: [
+          "favorable, the opposite of sinister; ?????????????",
+          "favorable; promising to turn out well"
+        ],
+        audacity: [
+          "aggressive boldness in social situations",
+          "aggressive boldness or unmitigated effrontery"
+        ],
+        atrophy: [
+          "gradually decline in effectiveness",
+          "waste away from lack of use"
+        ],
+        atavism: [
+          "a reappearance of an earlier characteristic",
+          "a reappearance of an earlier characteristic"
+        ],
+        astute: [
+          "marked by hardheaded intelligence",
+          "perceptive; sharp-witted"
+        ],
+        ascribe: [
+          "refer to something, attribute",
+          "assign or credit to a certain cause or source"
+        ],
+        ascertain: [
+          "(v) find out with certainty",
+          "learn or discover with confidence"
+        ],
+        artifact: [
+          "(n) any object made by humans, especially those from an earlier time, such as those excavated by archaeologists",
+          "a man made object taken as a whole"
+        ],
+        ardent: [
+          "very passionate, devoted, or enthusiastic",
+          "characterized by intense emotion, passionate"
+        ],
+        arbiter: [
+          "judge, umpire, person empowered to decide matters at hand",
+          "someone chosen to judge and decide a disputed issue"
+        ],
+        apposite: [
+          "highly appropriate, suitable, or relevant",
+          "fitting; suitable"
+        ],
+        appease: [
+          "to calm, pacify, placate",
+          "pacify; soothe; calm down; make peace with"
+        ],
+        apotheosis: [
+          "the finest example",
+          "(noun) deification; glorification to godliness; an exalted example; model of excellence or perfection"
+        ],
+        apogee: [
+          "the highest point",
+          "(noun) farthest or highest point; culmination; zenith"
+        ],
+        aphoristic: [
+          "something that is a concise and instructive of a general truth or principle",
+          "expressed tersely [aphorism (n) = short statement; maxim]"
+        ],
+        antithetical: [
+          "sharply contrasted in character or purpose",
+          "directly opposed, opposite; involving antithesis (the rhetorical act of placing two phrases opposite one another for contrast, as in love me or hate me)"
+        ],
+        antedate: [
+          "precede in time",
+          "be older than, precede in time; assign to an earlier date"
+        ],
+        antagonize: [
+          "to annoy or provoke to anger",
+          "(v) make hostile or unfriendly"
+        ],
+        animosity: ["intense hostility", "hatred; antagonism"],
+        anarchy: [
+          "(n) absence of law or government; chaos, disorder",
+          "chaos; lack of government"
+        ],
+        analgesia: [
+          "a lessening or pain without loss of consciousness",
+          "pain relief; inability to feel pain"
+        ],
+        amorphous: ["shapeless", "lacking in shape"],
+        amiable: ["friendly", "friendly"],
+        amenable: [
+          "easily persuaded; ???????????",
+          "(adj.) agreeable; responsive to suggestion"
+        ],
+        ambivalent: [
+          "uncertain; unable to decide, or wanting to do two contradictory things at once;",
+          "(adj) uncertain; unable to decide, or wanting to do two contradictory things at once"
+        ],
+        altruism: [
+          "the quality of unselfish concern for the welfare of others",
+          "putting others first; being self-sacrificing"
+        ],
+        allay: ["lessen the intensity of or calm", "to lessen"],
+        alchemy: [
+          "(noun) a medieval science aimed at the transmutation of metals, esp. base metals into gold (an alchemist is one who practices alchemy)",
+          "medieval chemistry"
+        ],
+        affluent: [
+          "wealthy",
+          "having an abundant supply of money or possessions of value"
+        ],
+        aerie: [
+          "a nest built high in the air; an elevated, often secluded, dwelling",
+          "dwelling or fortress built on a high place; the nest of a bird of prey, such as an eagle or hawk, built on a mountain or cliff"
+        ],
+        adverse: ["(adj) opposing, harmful", "in an opposing direction"],
+        adulation: [
+          "(noun) excessive praise; intense adoration",
+          "strong admiration; worship"
+        ],
+        adroit: ["quick or skillful or adept in action or thought", "skilful"],
+        admonitory: [
+          "serving to warn; expressing reproof or reproach especially as a corrective",
+          "scolding [admonition (n)]"
+        ],
+        acumen: [
+          "keen, quick, accurate insight or judgment",
+          "(noun) keen, accurate judgment or insight"
+        ],
+        acquiesce: ["to agree or express agreement", "to agree to; give in to"],
+        acidulous: [
+          "sour in taste or manner",
+          "slightly acid or sour; sharp or caustic"
+        ],
+        abyss: [
+          "an extremely deep hole",
+          "a deep and vast space or cavity; anything profound or infinite"
+        ],
+        abysmal: ["extremely bad", "very deep; very bad"],
+        abstruse: [
+          "difficult to understand; incomprehensible",
+          "difficult to understand; obscure"
+        ],
+        abscission: [
+          "cutting off; sudden termination; the separation of leaves, petals, or other parts from a plant or animal",
+          "cutting; process causing leaves to fall off"
+        ],
+        abrasive: [
+          "(adj) rough, suitable for grinding or polishing (such as sandpaper); causing irritation or annoyance",
+          "rough; coarse; harsh"
+        ],
+        aberration: [
+          "a deviation from what is normal or expected",
+          "deviation from the normal"
+        ],
+        abdicate: [
+          "to give up a position, right, or power",
+          "(v) formally give up the throne (or some other power or responsibility)"
+        ],
+        abase: [
+          "to humble; disgrace",
+          "degrade or humble; to lower in rank, status, or esteem"
+        ]
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>
