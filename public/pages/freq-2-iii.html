@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 2-iii Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 2-iii Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        parley: [
+          "discussion, usually b/w enemies",
+          "discussion, negotiation, esp. between enemies (noun); to have such a discussion (verb)"
+        ],
+        pare: [
+          "to trim off excess; reduce",
+          "peel or cut off the outer layer (such as peeling fruit with a knife), reduce or trim as if cutting off the outer parts"
+        ],
+        paramount: [
+          "having superior power and influence",
+          "to supreme importance"
+        ],
+        paradigm: [
+          "(n) model or pattern; worldview, set of shared assumptions, values, etc.",
+          "1. example; 2. model; 3. way of looking at things"
+        ],
+        panoply: [
+          "impressive array",
+          "splendid, wide-ranging, impressive display or array"
+        ],
+        panacea: [
+          "hypothetical remedy for all ills or diseases",
+          "remedy for all ills"
+        ],
+        palatial: [
+          "relating to a palace; magnificent",
+          "suitable for or resembling a palace, magnificent"
+        ],
+        palatable: [
+          "pleasant or acceptable to the taste; ?????????",
+          "good to eat; agreeable"
+        ],
+        paean: [
+          "(noun) song or hymn of praise and thanksgiving",
+          "praise; tribute (esp. in song)"
+        ],
+        overt: [
+          "open and observable; not secret or hidden",
+          "obvious; not hidden"
+        ],
+        oust: ["remove from a position or office", "push out of a position"],
+        ostracize: [
+          "exclude from a community or group",
+          "expel from a community or group"
+        ],
+        ossified: [
+          "(adj.) tending to become more rigid, conventional, sterile, and reactionary with age; literally, turned into bone",
+          "turned to bone; become rigid [ossification (n)]"
+        ],
+        orthodox: [
+          "(adj) adhering to a traditional, established faith, or to anything customary or commonly accepted",
+          "conventional"
+        ],
+        orotund: [
+          "pompous",
+          "full, rich, and clear (of the voice or speaking); pompous, bombastic"
+        ],
+        ornate: ["elaborately decorated; showily splendid", "highly decorated"],
+        opulence: [
+          "extreme wealth; luxuriousness; abundance",
+          "wealth as evidenced by sumptuous living"
+        ],
+        opine: ["to express an opinion", "express an opinion"],
+        omnipotent: ["having unlimited power", "all-powerful"],
+        ominous: [
+          "threatening or foreshadowing evil or tragic developments",
+          "threatening"
+        ],
+        odious: ["(adj.) evoking intense aversion or dislike", "hateful"],
+        obsolete: ["(adj) out of date, no longer in use", "no longer valid"],
+        obliterate: [
+          "remove completely from recognition or memory",
+          "destroy; demolish; eradicate"
+        ],
+        objective: [
+          "(adj) factual, related to reality or physical objects; not influenced by emotions, unbiased",
+          "unbiased; not subjective"
+        ],
+        obfuscate: [
+          "(verb) to deliberately obscure; to make confusing",
+          "deliberately make something difficult to understand"
+        ],
+        nullify: [
+          "declare invalid; make ineffective by counterbalancing the effect of",
+          "to counter; make unimportant"
+        ],
+        noxious: ["(adj.) harmful, injurious", "harmful; poisonous; lethal"],
+        novel: ["(adj) new, fresh, original", "new; unusual"],
+        notoriety: [
+          "(n) ill fame; the state of being well-known for a disgraceful reason",
+          "infamy; known for wrong doing"
+        ],
+        nostalgia: ["longing for something past", "longing for the past"],
+        nonentity: [
+          "a person of no influence",
+          "a person of no importance; not famous"
+        ],
+        nomadic: ["migratory", "wandering from place to place"],
+        negate: [
+          "(v) deny or refute; make void or cause to be ineffective",
+          "cancel; deny"
+        ],
+        nefarious: ["extremely wicked", "wicked; immoral; disreputable"],
+        multifarious: ["diverse", "diverse, having a lot of variety"],
+        mores: [
+          "fixed customs or manners; moral attitudes",
+          "(n) customs, manners, or morals of a particular group"
+        ],
+        monotony: [
+          "no variation; tediously the same",
+          "(n) sameness or repetitiousness to the point of being boring; lack of variation, uniformity, esp. repetition in sound"
+        ],
+        monolithic: [
+          "imposing in size or bulk or solidity",
+          "united in purpose; forming a single unit"
+        ],
+        monastic: [
+          "extremely plain or secluded",
+          "relating to or resembling a monastery (where monks or nuns live), esp. by being quiet, secluded, contemplative, strict, and/or lacking luxuries"
+        ],
+        molt: [
+          "to shed hair, skin, or an outer layer periodically",
+          "shed or cast off, esp. to regularly shed skin, feathers, etc. (as a snake)"
+        ],
+        modest: [
+          '(adj) humble; simple rather than showy; decent (esp. "covering up" in terms of dress); small, limited',
+          "1. bashful; unpretentious; 2. not excessive"
+        ],
+        missive: ["a written note or letter", "letter, written message"],
+        misogynist: [
+          "a person who dislikes women in particular",
+          "hater of women"
+        ],
+        misconstrue: ["to interpret wrongly", "interpret in the wrong way"],
+        mirth: [
+          "frivolity; gaiety; laughter",
+          "jollity, merriment; amusement or laughter"
+        ],
+        mince: [
+          "to soften/moderate one's words, especially for the sake of decorum",
+          "1. chop into small pieces; 2. walk with tiny steps, 3. speak in an affected manner"
+        ],
+        minatory: [
+          "(adj.) menacing, threatening (reminds you of the minotaur, a threatening creature indeed)",
+          "threatening"
+        ],
+        milk: [
+          "(verb) to exploit; to squeeze every last ounce of",
+          "to squeeze; obtain by application of pressure"
+        ],
+        militate: [
+          "to operate against; work against",
+          "have a great effect, weigh heavily (often as militate against)"
+        ],
+        mettlesome: ["full of courage and fortitude", "spirited [mettle (n)]"],
+        metamorphosis: [
+          "(n) a complete change or transformer (in biology, a change such as a caterpillar becoming a pupa and then a butterfly)",
+          "striking change in appearance or character or circumstances"
+        ],
+        mercenary: [
+          "a person hired to fight for another country than their own",
+          "concerned only with money or gain"
+        ],
+        mendacity: [
+          "the condition of being untruthful; dishonesty",
+          "(noun) the condition of being untruthful; dishonest (adj. form"
+        ],
+        meander: [
+          "to wander about, wind about; a sharp turn or twist",
+          "wander from side to side; a bend or curve, as in a stream or river"
+        ],
+        maxim: [
+          "a short saying expressing a general truth",
+          "a general truth or fundamental principle, esp. expressed as a proverb or saying"
+        ],
+        martial: [
+          "suggesting war or military life",
+          "(adj.) associated with war and the armed forces"
+        ],
+        mar: ["to damage or deface; spoil", "damage, spoil, ruin"],
+        manifest: [
+          "obvious, apparent, perceptible to the eye (adj); to show, make clear, or prove (verb)",
+          "clearly revealed to the mind or the senses or judgment"
+        ],
+        malingerer: [
+          "one who feigns illness to escape duty; ????????",
+          "person who deliberately tries to avoid work"
+        ],
+        malapropism: [
+          "humorous misuse of a word",
+          "the unintentional misuse of a word by confusion with one that sounds similar"
+        ],
+        maladroit: ["clumsy; unskillful", "clumsy; unskillful"],
+        machination: ["plot or scheme", "crafty schemes or plots"],
+        lurid: [
+          "gruesome or excessively vivid; sensational, shocking, unrestrained",
+          "horrible in fierceness or savagery"
+        ],
+        longevity: ["the property of being long lived", "long life"],
+        loath: ["unwilling, reluctant; ????????", "strongly opposed"],
+        lithe: ["moving and bending with ease", "flexible; supple"],
+        listless: [
+          "lacking energy and enthusiasm",
+          "spiritless, lacking interest or energy"
+        ],
+        lissome: ["easily flexed; limber; agile", "flexible, supple, agile"],
+        licentious: [
+          "immoral; unrestrained by society",
+          "sexually unrestrained; immoral; ignoring the rules"
+        ],
+        liberal: [
+          "tolerant or broad-minded; generous or lavish",
+          "(adj, n) favorable to progress or reform; believing in maximum possible individual freedom; tolerant, open-minded; generous (adj); a person with such beliefs or practices (noun)"
+        ],
+        legion: ["a large military unit", "in large numbers"],
+        languish: [
+          "to become weak or feeble; to lose strength; ????????",
+          "decay; fade away; get weaker"
+        ],
+        landmark: [
+          "(n, adj) object (such as a building) that stands out and can be used to navigate by; very important place, event, etc.",
+          "the position of a prominent or well-known object"
+        ],
+        lament: [
+          "to express sorrow; to grieve",
+          "(v, n) mourn; express grief, sorrow, or regret (verb); an expression of grief, esp. as a song or poem (noun)"
+        ],
+        lackluster: [
+          "(adj) not shiny; dull, mediocre, lacking brilliance or vitality",
+          "dull; monotonous; bland"
+        ],
+        laceration: ["the act of tearing irregularly", "a cut, wound"],
+        labyrinth: [
+          "complex system of paths in which it is easy to get lost",
+          "a maze"
+        ],
+        kudos: ["fame, glory, or honor", "(n) praise, honor, congratulations"],
+        knell: [
+          "sound of a funeral bell; omen of death or failure",
+          "the sound made by a bell for a funeral, or any sad sound or signal of a failure, death, ending, etc. (noun); to make such a sound (verb)"
+        ],
+        kinetic: [
+          "relating to motion; characterized by movement",
+          "pertaining to motion"
+        ],
+        keen: [
+          "having a sharp edge; intellectually sharp; perceptive",
+          "(adj) sharp, piercing; very perceptive or mentally sharp; intense (of a feeling)"
+        ],
+        jeopardize: [
+          "pose a threat to; present a danger to",
+          "put at risk; endanger"
+        ],
+        jejune: [
+          "dull; lacking flavor",
+          "(adj.) vapid, uninteresting; childish, immature, peurile"
+        ],
+        irrevocable: [
+          "incapable of being retracted or revoked",
+          "cannot be cancelled; unchangeable"
+        ],
+        irresolute: [
+          "uncertain how to act or proceed",
+          "wavering, not sure how to proceed, not firm in one's decision-making"
+        ],
+        irrational: [
+          "not consistent with or using reason",
+          "unreasonable; absurd"
+        ],
+        investiture: [
+          "ceremony conferring authority",
+          "investing; formally giving someone a right or title"
+        ],
+        inured: [
+          "(adj.) accustomed to accepting something undesirable",
+          "hardened; habituated"
+        ],
+        intrinsic: [
+          "(adj) belonging to the essential nature of a thing",
+          "belonging to a thing by its very nature"
+        ],
+        intimate: [
+          "to suggest something subtly",
+          "(verb) to imply, suggest, or insinuate"
+        ],
+        internecine: [
+          "mutually destructive; ??????????????",
+          "(of conflict) within a group or organization; destructive to both sides in a conflict"
+        ],
+        interminable: [
+          "tiresomely long; seemingly without end",
+          "never-ending"
+        ],
+        inter: ["to bury", "bury (a dead body) or place in a tomb"],
+        intelligible: ["(adj) able to understood, clear", "can be understood"],
+        insurrection: [
+          "rebellion",
+          "rebellion or revolt against a government or similarly established authority"
+        ],
+        insidious: [
+          "intended to deceive or entrap; sly, treacherous",
+          "working or spreading in a hidden and usually injurious way"
+        ],
+        inscrutable: [
+          "not easily understood; unfathomable",
+          "mysterious; impenetrable"
+        ],
+        inquest: [
+          "an investigation; an inquiry",
+          "legal or judicial inquiry, especially before a jury and especially made by a coroner into the cause of someone's death; the results of such an inquiry"
+        ]
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 2-iv Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 2-iv Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        inordinate: [
+          "excessive, not within proper limits, unrestrained",
+          "beyond normal limits"
+        ],
+        innate: [
+          "present at birth but not necessarily hereditary",
+          "inherited; inborn"
+        ],
+        inimitable: [
+          "not capable of being copied or imitated",
+          "(adj.) one of a kind, peerless; unrivaled"
+        ],
+        inherent: [
+          "(adj) existing as a permanent, essential quality; intrinsic",
+          "existing as an essential constituent or characteristic"
+        ],
+        infelicitous: [
+          "unfortunate; inappropriate; ?????????",
+          "(adj.) unfortunate; inappropriate"
+        ],
+        infamous: [
+          "known widely and usually unfavorably",
+          "famous for something bad"
+        ],
+        inevitable: [
+          "incapable of being avoided or prevented",
+          "cannot be avoided"
+        ],
+        ineluctable: [
+          "not to be avoided or escaped; inevitable; ?????????????",
+          "(adj.) certain, inevitable"
+        ],
+        ineffable: ["inexpressible", "cannot be expressed in words"],
+        indigence: ["extreme poverty", "extreme poverty or destitution"],
+        indifference: [
+          "the trait of seeming not to care",
+          "the trait of remaining calm and seeming not to care"
+        ],
+        indict: [
+          "to formally charge or accuse of wrong-doing",
+          "accuse formally of a crime"
+        ],
+        indefatigable: [
+          "untiring, not able to become fatigued",
+          "(adj.) not easily exhaustible; tireless, dogged"
+        ],
+        indecorous: [
+          "lacking good taste; improper",
+          "unseemly; inappropriate (of behavior)"
+        ],
+        incumbent: [
+          "necessary (for someone) as a duty or responsibility",
+          "necessary as a duty or responsibility; morally binding"
+        ],
+        inculcate: [
+          "to teach; impress in the mind",
+          "teach persistently, implant (an idea) in a person"
+        ],
+        incontrovertible: [
+          "indisputable; not open to question",
+          "impossible to deny or disprove"
+        ],
+        inconsequential: [
+          "(adj) insignificant, unimportant; illogical",
+          "unimportant; insignificant; negligible"
+        ],
+        incoherent: [
+          "without logical or meaningful connection",
+          "not clear; unintelligible; muddled; illogical"
+        ],
+        inclement: [
+          "unpleasant, stormy (of weather); used of persons or behavior; showing no mercy",
+          "severe , of weather"
+        ],
+        incisive: [
+          "having or demonstrating ability to recognize or draw fine distinctions",
+          "demonstrating ability to recognize or draw fine distinctions"
+        ],
+        incessant: [
+          "uninterrupted in time and indefinitely long continuing",
+          "without stopping"
+        ],
+        incarnadine: ["blood-red in color", "blood red or flesh-colored"],
+        impute: [
+          "attribute (responsibility or fault) to something",
+          "credit, attribute; lay blame or responsibility for (sometimes falsely)"
+        ],
+        impunity: [
+          "exemption from punishment or loss",
+          "(noun) immunity from punishment, penalty or harm"
+        ],
+        imprudent: ["unwise, not careful", "not wise"],
+        impromptu: [
+          "with little or no preparation or forethought",
+          "unrehearsed; spontaneous"
+        ],
+        imprecation: ["a curse", "curse; prayer for harm to come to someone"],
+        importune: [
+          "beg persistently and urgently",
+          "beg; solicit [importunate (a)]"
+        ],
+        imperious: [
+          "domineering",
+          "commanding, domineering; acting like a high-ranking person; urgent"
+        ],
+        imperative: ["requiring attention or action", "must be obeyed"],
+        impeccable: ["without fault or error", "without fault or error"],
+        impassive: [
+          "not having or not showing physical feeling or emotion",
+          "(adj.) revealing no emotion"
+        ],
+        impasse: [
+          "blocked path; dilemma with no solution",
+          "position or road from which there is no escape; deadlock"
+        ],
+        imbue: [
+          "to infuse, dye, wet, or moisten",
+          "permeate or saturate, as dye in a fabric; influence throughout"
+        ],
+        imbroglio: [
+          "a confusing and potentially embarrassing situation",
+          "(noun) difficult or embarrassing situation"
+        ],
+        imbibe: ["to drink or absorb as if drinking", "absorb or assimilate"],
+        idyllic: [
+          "presenting a positive, peaceful view of rural life (as poetry or prose); pleasant in a natural, simple way",
+          "charmingly simple and serene"
+        ],
+        husband: [
+          "to manage economically; to use sparingly",
+          "manage prudently, sparingly, or economically; conserve"
+        ],
+        hubris: [
+          "excessive pride or self-confidence",
+          "(noun) overbearing presumption or pride; arrogance"
+        ],
+        hostile: ["unfriendly", "characterized by enmity or ill will"],
+        hoodwink: [
+          "to mislead by a trick, deceive; ??????? ? ???????????",
+          "trick, deceive"
+        ],
+        hodgepodge: [
+          "a confusing mixture or jumble",
+          "(n) mixture of different kinds of things, jumble"
+        ],
+        heterodox: ["(adj.) unorthodox, heretical, iconoclastic", "unorthodox"],
+        hermetic: [
+          "tightly sealed",
+          "airtight, sealed, isolated; reclusive; pertaining to alchemy, occult"
+        ],
+        heresy: [
+          "a belief that rejects the orthodox tenets of a religion",
+          "against orthodox opinion"
+        ],
+        hedonist: ["(n) person devoted to pleasure", "a pleasure seeker"],
+        hedonism: [
+          "(noun) devotion to pleasurable pursuits, especially to the pleasures of the senses (a hedonist is someone who pursues pleasure)",
+          "self indulgence; pleasure-seeking"
+        ],
+        hedge: [
+          "a fence formed by a row of closely planted shrubs or bushes",
+          "avoid commitment by leaving provisions for withdrawal or changing one's mind; protect a bet by also betting on the other side"
+        ],
+        haven: [
+          "(adj) harbor or port; refuge, safe place",
+          "a place of safety or refuge"
+        ],
+        guileless: [
+          "free of cunning or deceit; artless",
+          "frank; straightforward; honest"
+        ],
+        guffaw: [
+          "a burst of deep loud hearty laughter",
+          "sudden loud laughter"
+        ],
+        grouse: [
+          "complain or grumble (verb); a reason for complaint (noun)",
+          "(verb) to complain or grumble"
+        ],
+        grievous: [
+          "causing grief or sorrow; serious and distressing",
+          "causing grief or suffering; very serious, grave; flagrant, outrageous"
+        ],
+        grandiloquent: [
+          "pompous; bombastic",
+          "relating to lofty speech, esp. to the point of being pompous, overblown, bombastic"
+        ],
+        graft: [
+          "illegal use of political influence for personal gain;",
+          "insert part of a plant into another plant, where it continues to grow; join living tissue (such as skin) to part of the body where it will continue to live and grow; attach as if by grafting (verb); the part so grafted (as in a graft of skin); the act of acquiring money or other benefits through illegal means, esp. by abusing one's power (noun)"
+        ],
+        gradation: [
+          "process occurring by regular degrees or stages; variation in color",
+          "(n) a progression, a process taking place gradually, in stages; one of these stages"
+        ],
+        gouge: [
+          "scooping or digging tool, like a chisel, or a hole made with such a tool (noun); cut or scoop out; force out a person's eye with one's thumb; swindle, extort money from (verb)",
+          "cut or dig out"
+        ],
+        gossamer: [
+          "characterized by unusual lightness and delicacy",
+          "delicate; filmy; like gauze"
+        ],
+        glower: [
+          "to glare or stare angrily and intensely",
+          "stare in an angry, sullen way"
+        ],
+        glean: [
+          "collect information bit by bit",
+          "gather, as of natural products"
+        ],
+        glacial: [
+          "pertaining to glaciers; cold, icy, slow, unsympathetic",
+          "hostile; unfriendly; cold; icy"
+        ],
+        gist: ["(n) main idea, essence", "essence; main point"],
+        gestation: [
+          "growth process from conception to birth",
+          "pregnancy; the period from conception until birth of an animal or (metaphorically) of an idea or plan"
+        ],
+        genre: ["a kind of literary or artistic work", "a category; type"],
+        gaunt: [
+          "very thin especially from disease or hunger or cold",
+          "bony and angular; emaciated"
+        ],
+        gauche: [
+          "tactless, lacking social grace, awkward, crude",
+          "(adj) tactless, lacking social grace, awkward, crude"
+        ],
+        gambit: [
+          "to take a risk for some advantage",
+          "opening move; transaction"
+        ],
+        galvanize: [
+          "to excite or inspire (someone) to action; ????????!",
+          "to excite or inspire; stimulate by administering a shock"
+        ],
+        gall: [
+          "bitterness of feeling; nerve; effrontery;",
+          "1. bitterness (bad feeling); 2. confidence; 3. abnormal growth on a plant"
+        ],
+        gaffe: [
+          "a socially awkward or tactless act",
+          "social blunder; social mistake"
+        ],
+        futile: [
+          "(adj) producing no useful result, ineffective; trivial unimportant",
+          "useless; hopeless"
+        ],
+        frustrate: [
+          "hinder or prevent (the efforts, plans, or desires) of",
+          "hinder or prevent, as an effort, plan or desire"
+        ],
+        frivolous: [
+          "not serious in content or attitude or behavior",
+          "flippant"
+        ],
+        fringe: [
+          "(n, adj) on the margin, periphery (adj); the people in a group who hold the most extreme views (noun)",
+          "1. decorative border with tassels (n); 2. to form an edge (v)"
+        ],
+        forthright: [
+          "characterized by directness in manner or speech; without subtlety or evasion",
+          "directly and without evasion; not roundabout"
+        ],
+        forestall: [
+          "to prevent or delay; anticipate",
+          "delay, hinder, prevent by taking action beforehand"
+        ],
+        forage: [
+          "wander in search of; rummage, hunt, make a raid",
+          "search for food"
+        ],
+        foolhardy: [
+          "marked by defiant disregard for danger or consequences",
+          "reckless"
+        ],
+        foible: [
+          "a behavioral attribute that is distinctive and peculiar to an individual",
+          "idiosyncrasy; quirk; minor weakness"
+        ],
+        florid: [
+          "excessively decorated or embellished",
+          "reddish or rosy; flowery, showy, or excessively fancy"
+        ],
+        flippant: [
+          "lacking in seriousness; disrespectful, saucy",
+          "making jokes about serious matters; levity"
+        ],
+        flamboyant: [
+          "tending to attract attention because of their confidence, and stylishness",
+          "showy; ornate"
+        ],
+        flagrant: [
+          "conspicuously and outrageously bad or reprehensible",
+          "conspicuously wicked; clearly wrong"
+        ],
+        finesse: [
+          "(n, v) extreme delicacy, subtlety, or diplomacy in handling a sensitive situation or in a performance or skill (noun); use tact or diplomacy; employ a deceptive strategy (verb)",
+          "skill"
+        ],
+        filibuster: [
+          "(noun) intentional obstruction, esp. using prolonged speechmaking to delay legislative action",
+          "delaying tactics"
+        ],
+        fickle: [
+          "likely to change on a whim or without apparent reason",
+          "unpredictable; whimsical; easily swayed"
+        ],
+        fetid: ["foul-smelling; putrid", "stinking; having an offensive smell"],
+        fervent: [
+          "(adj.) greatly emotional or zealous (noun form",
+          "passionate"
+        ],
+        feint: [
+          "any distracting or deceptive maneuver",
+          "pretended attack; a move intended to deceive"
+        ],
+        feckless: [
+          "careless or irresponsible",
+          "feeble; helpless; lacking in initiative"
+        ],
+        falter: [
+          "move hesitatingly, as if about to give way",
+          "hesitate; waver"
+        ],
+        fallacy: [
+          "(noun) an invalid or incorrect notion; a mistaken belief",
+          "wrong idea [fallacious (a)]"
+        ],
+        factitious: [
+          "artificial; not natural",
+          "not produced by natural forces"
+        ],
+        facile: [
+          "easily done or attained; ???????????????",
+          "arrived at without due care or effort; lacking depth"
+        ],
+        facade: [
+          "the face or front of a building",
+          "1. front elevation of building, 2. false appearance or demeanor"
+        ],
+        extrinsic: [
+          "not forming an essential part of a thing",
+          "irrelevant; on the outside"
+        ],
+        extrapolate: [
+          "(v) conjecture about an unknown by projecting information about something known; predict by projecting past experience",
+          "extend; predict on the basis of known data"
+        ]
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>

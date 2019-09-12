@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 2-ii Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 2-ii Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        saturate: [
+          "(v) soak or imbue thoroughly; cause a substance to unite with the greatest possible amount of another substance",
+          "infuse or fill completely"
+        ],
+        satiate: [
+          "to satisfy fully or overindulge",
+          "satisfy; fill completely [satiable (a); satiation (n)]"
+        ],
+        sap: [
+          "(n, v) the inner fluid of a plant or any essential body fluid; energy, vitality; a person taken advantage of (noun); undermine, weaken, tire out (verb)",
+          "1. liquid inside plants (n); 2. to drain; to undermine (v); 3. a fool (n)"
+        ],
+        salutary: [
+          "(adj.) remedial, having a beneficial effect, producing improvement or health",
+          "tending to improve; beneficial"
+        ],
+        salacious: [
+          "(adj.) lustful, lascivious, bawdy",
+          "erotic; lascivious; lustful"
+        ],
+        sage: [
+          "a mentor in spiritual and philosophical topics",
+          "a wise person"
+        ],
+        roster: ["a list of names", "list of names"],
+        rococo: [
+          "very highly ornamented",
+          "very elaborate and ornate (in decorating or metaphorically, as in speech and writing); relating to a highly ornate style of art and architecture in 18th-century france"
+        ],
+        robust: [
+          "sturdy and strong in form, constitution, or construction",
+          "strong; healthy; tough"
+        ],
+        rift: [
+          "a gap or fissure (such as in rock), a break in friendly relations",
+          "a narrow fissure in rock"
+        ],
+        revere: ["regard with feelings of respect", "worship"],
+        resurgent: [
+          "rising after defeat",
+          "having a revival, renewing, rising or surging again"
+        ],
+        resolution: [
+          "(n) the quality of being firmly determined; resolving to do something; a formal judgment, esp. decided by a vote",
+          "determination"
+        ],
+        resignation: [
+          "the acceptance of something unpleasant that can't be avoided",
+          "acceptance of fate"
+        ],
+        requite: ["to return or repay", "(v) reciprocate, repay, or revenge"],
+        reprobate: [
+          "evil, unprincipled",
+          "disreputable, unprincipled, or damned person (noun); shameless, depraved (adj)"
+        ],
+        reprehensible: [
+          "bringing or deserving severe rebuke or censure",
+          "shameful, very bad"
+        ],
+        repast: ["meal or mealtime", "a meal (noun); to eat or feast (verb)"],
+        rent: [
+          "(verb) torn (past tense of rend); an opening or tear caused by such",
+          "torn (past participle of the verb to rend)"
+        ],
+        remuneration: [
+          "paying for goods or services or to recompense for losses",
+          "payment for work done"
+        ],
+        remonstrate: ["to object or protest", "(verb) to protest, to object"],
+        remiss: [
+          "to be negligent in one's duty",
+          "failing in what duty requires"
+        ],
+        rejoinder: [
+          "response, especially a sharp or witty one",
+          "response or reply, esp. a witty comeback"
+        ],
+        refractory: [
+          "stubbornly disobedient, hard to manage",
+          "stubbornly disobedient, hard to manage"
+        ],
+        redoubtable: [
+          "formidable, arousing fear",
+          "(adj.) awe-inspiring; worthy of honor"
+        ],
+        redolent: [
+          "having a strong pleasant odor",
+          "noticeably odorous; smelling of; giving off odors"
+        ],
+        recluse: [
+          "(n) person who lives in seclusion",
+          "hermit; someone who cuts himself off from life"
+        ],
+        recapitulate: ["summarize, repeat in a concise way", "summarize"],
+        recalcitrant: [
+          "not obedient, resisting authority, hard to manage",
+          "(adj.) obstinately defiant of authority; difficult to manage"
+        ],
+        rebuke: [
+          "to criticize sharply",
+          "an act or expression of criticism and censure"
+        ],
+        raze: [
+          "tear down so as to make flat with the ground",
+          "destroy; demolish; tear down"
+        ],
+        raucous: [
+          "unpleasantly loud and harsh",
+          "rough and unpleasant (of sounds)"
+        ],
+        rash: [
+          "marked by defiant disregard for danger or consequences; imprudently incurring risk.",
+          "imprudently incurring risk"
+        ],
+        rarefied: [
+          "??????????",
+          "lofty, very high up or elevated (in a metaphorical way); exclusive, select; thin, pure, or less dense (as air at the top of a mountain)"
+        ],
+        rail: [
+          "to complain about bitterly",
+          "(verb) to complain about bitterly"
+        ],
+        quisling: ["traitor", "traitor"],
+        quip: ["a witty saying or remark", "a witty saying"],
+        quiescent: ["motionless", "quiet, still"],
+        quibble: [
+          "(v) make trivial arguments or criticisms, find faults in a petty way, esp. to evade something more important",
+          "1. (v) to argue about minor matters; to play on words when finding fault; 2. (n) a minor verbal point in an argument"
+        ],
+        quell: ["suppress or crush completely", "suppress"],
+        quarry: [
+          "a person who is the aim of an attack",
+          "1. something that is hunted; 2. mine for stone"
+        ],
+        qualify: ["reach a necessary standard;", "(verb) to limit"],
+        quail: [
+          "draw back, as with fear or pain",
+          "(verb) to lose coverage; to turn frightened"
+        ],
+        quaff: ["(verb) to drink deeply", "drink down quickly"],
+        pundit: [
+          "someone who has been admitted to membership in a scholarly field",
+          "expert"
+        ],
+        punctilious: [
+          "careful in observing rules fo behavior",
+          "meticulous; paying attention to small details"
+        ],
+        pulchritude: ["beauty", "physical beauty"],
+        puissant: ["powerful", "powerful"],
+        pugilism: ["boxing", "boxing, fighting with the fists"],
+        prudence: ["wisdom, caution, restraint", "caution; wisdom"],
+        provincial: [
+          "characteristic of the a limited perspective",
+          "pertaining to a province; limited in outlook; unsophisticated"
+        ],
+        protean: ["readily changing form or character", "changeable"],
+        propagate: [
+          "reproduce, spread, increase",
+          "multiply sexually or asexually"
+        ],
+        promulgate: [
+          "to make known officially; ?????????????",
+          "state or announce"
+        ],
+        prohibitive: [
+          "(adj) tending to forbid something, or serving to prevent something",
+          "1. prohibiting; 2. exorbitantly expensive"
+        ],
+        procrastinate: [
+          "postpone doing what one should be doing",
+          "delay; put off"
+        ],
+        primacy: [
+          "being first in importance",
+          "the state of being first or most important"
+        ],
+        preternatural: ["supernatural, exceptional", "unnatural; abnormal"],
+        pretentious: [
+          "(adj) claiming or demanding a position of importance or dignity, esp. when unjustified; showing off creating deceptive, false show of worth",
+          "ostentatious; ambitious"
+        ],
+        presentiment: [
+          "a sense of something about to happen",
+          "a feeling that something might happen"
+        ],
+        prescience: [
+          "(noun) foreknowledge of events; knowing of events prior to their occurring (adj. form",
+          "foreknowledge"
+        ],
+        prerogative: [
+          "a right reserved exclusively by a person or group",
+          "right or privilege"
+        ],
+        preempt: [
+          "to supersede; appropiate for oneself",
+          "(v) prevent; take the place of, supplant; take before someone else can"
+        ],
+        precursor: [
+          "(n) something that comes before, esp. something that also announces or suggests something on its way",
+          "(noun) one that precedes and indicates or announces another"
+        ],
+        precipitous: ["extremely steep", "done in a hurry"],
+        preamble: [
+          "(n) introductory statement, preface",
+          "introductory material"
+        ],
+        potent: [
+          "having or wielding force or authority",
+          "powerful; compelling; strong"
+        ],
+        posthumous: [
+          "(adj) happening or continuing after death",
+          "after death"
+        ],
+        pontificate: [
+          "speak pompously or dogmatically",
+          "speak pompously or dogmatically"
+        ],
+        polyglot: [
+          "a speaker of many languages",
+          "speaking or composed of many languages (of a person, book, etc.); a person who knows several languages"
+        ],
+        politic: [
+          "shrewd and practical in managing or dealing with things; diplomatic",
+          "shrewd, pragmatic; tactful or diplomatic"
+        ],
+        polemical: [
+          "(adj.) argumentative; strongly critical and controversial",
+          "causing debate or argument"
+        ],
+        plodding: [
+          "walking slowly; working slowly at a boring task",
+          "walking slowly and heavily; uninspired"
+        ],
+        plaque: [
+          "a memorial made of brass",
+          "1. surface deposit on teeth or in artery etc.; 2. decorative plate or sign"
+        ],
+        plaintiff: [
+          "a person who brings an action in a court of law",
+          "petitioner (in court of law), complainant"
+        ],
+        pittance: [
+          "a small amount (of money)",
+          "an inadequate payment; a small amount of money"
+        ],
+        pique: [
+          "a sudden outburst of anger",
+          "1. annoyance (n); 2. to stimulate interest; to annoy (v)"
+        ],
+        pied: ["(adj.) multicolored, usually in blotches", "multicolored"],
+        picayune: [
+          "of little value or importance",
+          "insignificant; of little value; trivial"
+        ],
+        phenomenon: [
+          "any state or process known through the senses",
+          "an event or happening (plural"
+        ],
+        phalanx: [
+          "a compact or close-knit body of people, animals, or things",
+          "formation of soldiers carrying shields close together for defense; any very close group of people"
+        ],
+        petulant: ["easily irritated or annoyed", "irritable; touchy; peevish"],
+        pervade: [
+          "to be present throughout; to permeate",
+          "(verb) to permeate throughout (adj. form"
+        ],
+        perpetuate: ["cause to continue", "cause to continue or prevail"],
+        peripheral: [
+          "(adj) relating to or making up an outer boundary or region; not of primary importance",
+          "on the edge; not important"
+        ],
+        perfidy: [
+          "(noun) intentional breach of faith, treachery (adj. form",
+          "treachery"
+        ],
+        peremptory: ["bossy and domineering", "in a commanding manner"],
+        peregrinate: [
+          "to wander from place to place; to travel, especially on foot",
+          "travel from place to place, esp. on foot"
+        ],
+        percipient: [
+          "able to perceive or see things as they actually are.",
+          "perceptive; insightful"
+        ],
+        penurious: [
+          "lacking money; poor",
+          "(adj.) penny-pinching; excessively thrifty; ungenerous"
+        ],
+        pensive: ["deeply or seriously thoughtful", "pondering"],
+        penitent: [
+          "regretful, feeling remorse for one's sins or misdeeds (adj); a person who feels this way (noun)",
+          "feeling or expressing remorse for misdeeds"
+        ],
+        pecuniary: [
+          "relating to or involving money",
+          "relating to or involving money"
+        ],
+        pathogenic: ["causing disease", "capable of producing disease"],
+        patent: [
+          "obvious; evident",
+          "(adj, n) obvious, apparent, plain to see (adj); a letter from the government guaranteeing an inventor rights to his or her invention (noun)"
+        ],
+        partisan: [
+          "(adj, n) devoted to a particular group, cause, etc. (adj); fervent supporter of a group, party, idea, etc.; guerilla fighter (noun)",
+          "biased; one-sided; committed to one group"
+        ],
+        parody: [
+          "(noun) a humorous imitation intended for ridicule or comic effect, esp. in literature and art",
+          "a mockery; imitation for ridicule; spoof"
+        ],
+        parochial: [
+          "narrowly restricted in scope or outlook; ????????????",
+          "narrow-minded; concerned only with local matters"
+        ]
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>

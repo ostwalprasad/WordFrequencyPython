@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 5 Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 5 Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 110 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 110 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 110 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        zenith: [
+          "the point of culmination; peak",
+          "highest point",
+          "(n) high point, culmination",
+          "the time at which something is most powerful or successful",
+          "summit"
+        ],
+        whimsical: [
+          "lightly acting in a fanciful or capricious manner; unpredictable",
+          "determined by impulse or whim rather than by necessity or reason",
+          "(adj) marked or motivated by whims (odd, fanciful ideas); erratic, unpredictable",
+          "determined by chance or impulse rather than by necessity",
+          "capricious; changeable"
+        ],
+        voluble: [
+          "talkative; speaking easily; glib",
+          "easily fluent in regards to speech",
+          "easily fluent in regards to speech",
+          "(adj.) fluent, verbal, having easy use of spoken language",
+          "talkative; loquacious"
+        ],
+        vituperate: [
+          "to abuse verbally; berate",
+          "to abuse verbally; berate",
+          "(v) verbally abuse, rebuke or criticize harshly",
+          "(verb) to use harsh condemnatory language; to abuse or censure severely or abusively; to berate",
+          "spread negative information about"
+        ],
+        umbrage: [
+          "offense; resentment",
+          "a feeling of anger caused by being offended",
+          "offense or annoyance (usually as take umbrage, meaning become offended or annoyed)",
+          "a feeling of anger caused by being offended",
+          "1. shadow; 2. offence; sense of injury; a feeling of anger caused by being offended"
+        ],
+        tyro: [
+          "beginner; novice",
+          "beginner",
+          "beginner",
+          "(noun) novice, greenhorn, rank amateur",
+          "novice; beginner"
+        ],
+        trenchant: [
+          "acute, sharp, or incisive; forceful; effective",
+          "effective, articulate, clear-cut; ???????????",
+          "forceful or vigorous, effective, keen; caustic, sharp",
+          "having keenneess and forcefulness and penetration in thought",
+          "(adj.) shapely perceptive; keen; penetrating"
+        ],
+        tortuous: [
+          "having many twists and turns, highly complex",
+          "twisting, winding, complex; devious, not straightforward",
+          "not straightforward; marked by repeated bends and turns",
+          "(adj.) winding; twisting; extremely complicated",
+          "indirect; winding"
+        ],
+        tirade: [
+          "long, harsh speech or verbal attack",
+          "an angry speech",
+          "(n) bitter, abusive criticism or verbal attack",
+          "(adj.) a long and extremely critical speech; a harsh denunciation",
+          "stream of verbal abuse"
+        ],
+        timorous: [
+          "fearful",
+          "(adj) fearful, timid",
+          "showing or suffering from nervousness or a lack of confidence; fearful",
+          "(adj.) timid, fearful, diffident",
+          "cowardly; fearful"
+        ],
+        sycophant: [
+          "a self-serving flatterer; yes-man",
+          "a person who tries to please someone in order to gain a personal advantage",
+          "(n) servile flatterer, parasitic person, one who fawns in order to get ahead",
+          "(noun) toady, servile, self seeking flatterer; parasite",
+          "bootlicker; flatterer"
+        ],
+        surfeit: [
+          "excessive amount",
+          "excessive amount; ????????????",
+          "(n) excess, excessive amount, overindulgence",
+          "excessive amount of something; indulge (one's appetite) to satiety",
+          "(verb) an overabundant supply; excess; to feed or supply to excess (noun form"
+        ],
+        sporadic: [
+          "occasional, happening irregularly or in scattered locations",
+          "(adj) occasional, happening irregularly or in scattered locations",
+          "recurring in scattered or unpredictable instances",
+          "(adj.) occurring only occasionally, or in scattered instances",
+          "not continuous; intermittent"
+        ],
+        specious: [
+          "deceptively attractive; seemingly plausible but fallacious",
+          "seeming to be logical and sound, but not really so",
+          "(adj) seemingly true but actually false; deceptively attractive",
+          "(adj.) seeming true, but actually being fallacious; misleadingly attractive; plausible but false",
+          "false (note --- don't mix up with spacious)"
+        ],
+        soporific: [
+          "causing sleep or lethargy",
+          "causing sleep, sleepy, drowsy;",
+          "(adj, n) causing sleep; sleepy, drowsy (adj); something that causes sleep (noun)",
+          "(adj.) causing drowsiness; tending to induce sleep",
+          "inducing sleep"
+        ],
+        sinecure: [
+          "a well-paying job or office that requires little or no work",
+          "an office that involves minimal duties",
+          "a job or position that pays while requiring little or no work",
+          "an office that involves minimal duties",
+          "an office that involves minimal duties"
+        ],
+        salubrious: [
+          "healthful",
+          "(adj) healthful, promoting health",
+          "promoting health",
+          "(adj.) promoting health or well-being",
+          "healthful"
+        ],
+        sagacious: [
+          "shrewd; wise",
+          "acutely insightful and wise",
+          "(adj) wise; showing good judgment and foresight",
+          "(adj.) having sound judgement; perceptive, wise; like a sage",
+          "wise"
+        ],
+        replete: [
+          "abundantly supplied; complete",
+          "completely stocked or furnished with something",
+          "(adj) supplied in abundance, filled, gorged (used with with)",
+          "filled to satisfaction with food or drink",
+          "full"
+        ],
+        relegate: [
+          "assign to a lower position",
+          "(v) send or commit to an inferior place, rank, condition, etc.; exile, banish; assign (a task) to someone else",
+          "assign to a lower position",
+          "(verb) to forcibly assign, especially to a lower place or position;",
+          "dismiss to a lower position"
+        ],
+        refute: [
+          "prove to be false",
+          "(v) prove to be false",
+          "overthrow by argument, evidence or proof; prove to be false",
+          "(verb) to disprove; to successfully argue against",
+          "disprove"
+        ],
+        redress: [
+          "relief from wrong or injury",
+          "an act of making something right",
+          "setting something right after a misdeed, compensation or relief for injury or wrongdoing (noun); correct, set right, remedy (verb)",
+          "make reparations or amends for",
+          "compensate; put right something that was wrong"
+        ],
+        recondite: [
+          "not easily understood, hidden, dealing with an obscure topic",
+          "not easily understood, hidden, dealing with an obscure topic",
+          "difficult to penetrate; little known or complex",
+          "(adj.) hidden; concealed; difficult to understand; obscure",
+          "obscure"
+        ],
+        raconteur: [
+          "witty, skillful storyteller",
+          "a person skilled in telling anecdotes",
+          "witty storyteller",
+          "a person skilled in telling anecdotes",
+          "story-teller"
+        ],
+        quotidian: [
+          "occurring daily; commonplace",
+          "daily; everyday, ordinary",
+          "(adj) daily; everyday, ordinary",
+          "(adj.) occurring or recurring daily; commonplace",
+          "daily; routine"
+        ],
+        quixotic: [
+          "overly idealistic; impractical",
+          "overly idealistic; impractical",
+          "extremely impractical but very romantic, chivalrous, or idealistic; impulsive",
+          "(adj.) foolishly impractical; marked by lofty romantic ideals",
+          "impractically idealistic"
+        ],
+        querulous: [
+          "inclined to complain; irritable",
+          "given to complaining, grumbling",
+          "given to complaining, grumbling",
+          "(adj.) prone to complaining or grumbling; peevish",
+          "always complaining"
+        ],
+        puerile: [
+          "childish, immature, or silly",
+          "childish",
+          "juvenile, immature",
+          "(adj.) childish, immature, jejune, nugatory",
+          "childish"
+        ],
+        propitiate: [
+          "to conciliate; to appease",
+          "to win over, appease",
+          "attempt to reconcile with, satisfy, or reduce the animosity of (a person who is angry, offended, etc.)",
+          "(verb) to appease; to conciliate; propitious means auspicious, favorable",
+          "appease"
+        ],
+        profligate: [
+          "corrupt; degenerate",
+          "completely and shamelessly immoral, or extremely wasteful; ??????????????",
+          "(adj) completely and shamelessly immoral, or extremely wasteful",
+          "unrestrained by convention or morality; wastefully extravagant",
+          "(adj.) excessively wasteful; recklessly extravagant (noun form"
+        ],
+        prodigious: [
+          "extraordinarily large, impressive, etc.",
+          "(adj) extraordinarily large, impressive, etc.",
+          "so great in size or force or extent as to elicit awe",
+          "(adj.) abundant in size, force, or extent; extraordinary",
+          "very large"
+        ],
+        prodigal: [
+          "lavish; wasteful",
+          "wasteful, extravagant; giving abundantly, lavish; ??????????????",
+          "(adj) wasteful, extravagant; giving abundantly, lavish",
+          "(adj.) recklessly wasteful",
+          "wasteful; extravagant"
+        ],
+        probity: [
+          "complete honesty and integriity",
+          "honesty; high-mindness",
+          "(n) honesty, integrity",
+          "(noun) adherence to highest principles; complete and confirmed integrity; uprightness",
+          "uprightness; honesty"
+        ],
+        pristine: [
+          "fresh and clean; uncorrupted",
+          "unspoiled, untouched",
+          "(adj) in an original, pure state; uncorrupted",
+          "(adj.) pure; uncorrupted; clean",
+          "unspoiled"
+        ],
+        precipitate: [
+          "to throw violently or bring about abruptly; lacking deliberation",
+          "a solid that forms and settles out of a liquid mixture",
+          "cause to happen suddenly or prematurely; fling, plunge, or hurl down",
+          "bring about abruptly",
+          "1. hurried (a); 2. insoluble product of a reaction in chemistry (n), 3. to instigate or speed up an action (v)"
+        ],
+        plethora: [
+          "excess",
+          "excess; excessive amount",
+          "extreme excess",
+          "(noun) an overabundance; a surplus",
+          "an excess"
+        ],
+        placate: [
+          "to soothe or pacify",
+          "to soothe or pacify",
+          "(v) satisfy or calm down (angry or dissatisfied person), esp. by conciliatory gestures",
+          "(verb) to appease or to pacify by making concessions",
+          "pacify; soothe; calm"
+        ],
+        pernicious: [
+          "very harmful or destructive, deadly",
+          "very harmful or destructive, deadly",
+          "exceedingly harmful",
+          "(adj.) extremely harmful in a way that is not easily seen or noticed",
+          "destructive; harmful"
+        ],
+        penury: [
+          "an oppressive lack of resource (as money); severe poverty",
+          "extreme poverty or scarcity",
+          "a state of extreme poverty or destitution",
+          "(noun) poverty; destitution",
+          "poverty"
+        ],
+        pariah: [
+          "an outcast",
+          "a social outcast",
+          "(n) social outcast, untouchable",
+          "a person who is rejected from society or home; outcast",
+          "an outcast from society"
+        ],
+        paragon: [
+          "model of excellence or perfection",
+          "a model of excellence or perfection",
+          "model of excellence, perfect example",
+          "a perfect embodiment of a concept",
+          "a perfect example"
+        ],
+        panegyric: [
+          "elaborate praise; formal hymn of praise",
+          "an expression of praise; ?????????",
+          "formal or lofty expression of praise",
+          "(noun) formal praise, eulogy, encomium, panegyric means expressing elaborate praise",
+          "eulogy"
+        ],
+        ostentatious: [
+          "pretentious, boastful showiness",
+          "pretentious, boastful showiness",
+          "intended to attract notice and impress others",
+          "(adj.) characterized by pretentious display; showy",
+          "showy"
+        ],
+        opaque: [
+          "impossible to see through; preventing the passage of light",
+          "impossible to see through; preventing the passage of light",
+          "(adj) not translucent; not allowing light, hear, etc. to pass through; dark, dull, unclear or stupid",
+          "(adj.) impenetrable by light; not reflecting light",
+          "not clear"
+        ],
+        obviate: [
+          "to prevent; to make unnecessary",
+          "(v) prevent, eliminate, or make unnecessary",
+          "do away with",
+          "(verb) to anticipate and make unnecessary; to eliminate completely",
+          "avoid; make unnecessary"
+        ],
+        obdurate: [
+          "hardened in feeling; resistant to persuasion",
+          "stubbornly refusing to change one's opinion or course of action",
+          "stubborn, hardhearted, hardened in wrongdoing",
+          "(adj.) unyielding; hard hearted; intractable",
+          "stubborn"
+        ],
+        nuance: [
+          "a subtle expression of meaning or quality",
+          "something subtle; a fine shade of meaning",
+          "(n) a subtle difference in tone, meaning, and expression",
+          "a subtle difference in meaning or opinion or attitude",
+          "shade of difference in meaning or color, something subtle; a fine shade of meaning"
+        ],
+        noisome: [
+          "stinking; putrid",
+          "offensive, disgusting; harmful; ???????",
+          "offensive, disgusting; harmful",
+          "causing or able to cause nausea; having an extremely bad smell",
+          "disgusting"
+        ],
+        nascent: [
+          "starting to develop; coming into existence",
+          "(adj) coming into existence, still developing",
+          "being born or beginning",
+          "(adj.) coming into being; in early developmental stages",
+          "emerging; newly formed"
+        ],
+        mundane: [
+          "ordinary, common",
+          "(adj) common, ordinary, everyday",
+          "found in the ordinary course of events",
+          "(adj.) of the world; typical of or concerned with the ordinary",
+          "ordinary; worldly"
+        ],
+        mollify: [
+          "to calm or make less severe",
+          "calm or soothe (an angry person); lesson or soften",
+          "(v) calm or soothe (an angry person); lessen or soften",
+          "cause to be more favorably inclined; make someone angry less angry",
+          "(verb) to calm or soothe; to reduce in emotional intensity"
+        ],
+        mitigate: [
+          "to soften; to lessen",
+          "make less severe; lesson or moderate (damage, grief, pain, etc.)",
+          "(v) make less severe; lessen or moderate (damage, grief, pain, etc.)",
+          "(verb) to make or become less severe or intense; to moderate",
+          "lessen; make less severe"
+        ],
+        mercurial: [
+          "quick, shrewd, and unpredictable",
+          "quickly and unpredictably changing moods; fickle, flighty",
+          "(adj) quickly unpredictably changing moods; fickle, flighty",
+          "(adj.) characterized by rapid unpredictable change in mood",
+          "volatile; changeable"
+        ],
+        maudlin: [
+          "overly sentimental",
+          "excessively sentimental",
+          "excessively sentimental, showing sadness or some other emotion in a foolish or silly way",
+          "effusively or insincerely emotional",
+          "sad; sentimental; inclined to weep"
+        ],
+        martinet: [
+          "strict disciplinarian; one who rigidly follows rules",
+          "a strict disciplinarian; a stickler for the rules",
+          "person who adheres to rules extremely closely; strict disciplinarian",
+          "a strict disciplinarian; someone who demands exact conformity to rules and forms",
+          "person who believes in strict discipline"
+        ],
+        lugubrious: [
+          "sorrowful; mournful; dismal",
+          "excessively mournful",
+          "mournful, gloomy (sometimes in an exaggerated way)",
+          "excessively mournful",
+          "sad; gloomy"
+        ],
+        lucid: [
+          "clear and easily understood",
+          "transparently clear; easily understandable",
+          "(adj) clear, easy to understand; rational, sane",
+          "(adj.) clear; easily understood",
+          "clear"
+        ],
+        lethargic: [
+          "acting in an indifferent or slow, sluggish manner",
+          "lacking energy",
+          "lazy, drowsy, or sluggish",
+          "deficient in alertness or activity",
+          "tired; without energy"
+        ],
+        lampoon: [
+          "to ridicule with satire",
+          "a written satire used to ridicule or attack someone",
+          "(n, v) a harsh satire (noun); ridicule or satirize (verb)",
+          "ridicule with satire",
+          "ridicule; spoof"
+        ],
+        itinerant: [
+          "wandering from place to place; unsettled",
+          "traveling from place to place, esp. as part of a job",
+          "traveling from place to place, esp. as part of a job",
+          "travelling from place to place to work",
+          "nomadic; wandering from place to place"
+        ],
+        intransigent: [
+          "uncompromising; refusing to be reconciled",
+          "refusing to compromise, inflexible, having extreme attitudes",
+          "refusing to compromise, inflexible, having extreme attitudes",
+          "(adj.) refusing to compromise (noun form",
+          "stubborn; unyielding"
+        ],
+        insipid: [
+          "lacking interest or flavor",
+          "dull and uninteresting",
+          "dull, stale, lacking taste or interest",
+          "(adj.) lacking in qualities that interest, stimulate, or challenge",
+          "dull; bland; boring"
+        ],
+        inimical: [
+          "hostile; unfriendly",
+          "hostile, adverse, harmful",
+          "hostile, adverse, harmful",
+          "(adj.) damaging; harmful; injurious",
+          "hostile"
+        ],
+        inexorable: [
+          "inflexible; unyielding",
+          "relentless, unyielding; not moved by pleading",
+          "relentless, unyielding; not moved by pleading",
+          "impossible to stop or prevent; not to be appeased or moved by entreaty",
+          "relentless; implacable"
+        ],
+        impugn: [
+          "to call into question; to attack verbally",
+          "to attack as false or questionable; ???????????",
+          "attack the truth or integrity of",
+          "attack as false or wrong",
+          "challenge; question someone's honor etc."
+        ],
+        implacable: [
+          "unable to be calmed down or made peaceful",
+          "not able to be appeased, calmed, or satisfied",
+          "not able to be appeased, calmed, or satisfied",
+          "incapable of being mitigated",
+          "(adj.) not capable of being appeased or significantly changed"
+        ],
+        impetuous: [
+          "quick to act without thinking",
+          "rash, impulsive",
+          "passionately impulsive, marked by sudden, hasty emotion; forceful, violent",
+          "characterized by undue haste and lack of thought",
+          "(adj.) impulsive; acting without thought; rash; hasty; reckless; heedless"
+        ],
+        impecunious: [
+          "poor; having no money",
+          "lacking money; poor",
+          "poor, without money",
+          "(noun) lacking funds; without money",
+          "having no money"
+        ],
+        hegemony: [
+          "the domination of one state or group over its allies",
+          "domination, authority; influence by one country over others socially, culturally, economically, etc.",
+          "domination, authority; influence by one country over others socially, culturally, economically, etc.",
+          "(noun) the consistent dominance or influence of one group, state, or ideology over others",
+          "political domination; complete authority"
+        ],
+        halcyon: [
+          "calm and peaceful; ???????????",
+          "calm and peaceful, carefree; prosperous, successful, happy",
+          "period of time in the past that was idyllically happy and peaceful",
+          "(adj.) calm and peaceful",
+          "peaceful and happy; calm (esp. of summer weather)"
+        ],
+        germane: [
+          "relevant and appropriate, on-topic",
+          "(adj) relevant and appropriate, on topic",
+          "relevant and appropriate",
+          "(adj.) relevant to the subject at hand; appropriate in subject matter",
+          "relevant and appropriate"
+        ],
+        foment: [
+          "to arouse or incite",
+          "to arouse or incite",
+          "(v) incite, instigate, stir up, promote the growth of; apply medicated liquid to a body part",
+          "try to stir up",
+          "1. stir up; 2. bathe with hot liquids (medical)"
+        ],
+        fawn: [
+          "to grovel",
+          "try to gain favor by extreme flattery",
+          "show affection or try to please in the manner of a dog; try to win favor through flattery and submissive behavior",
+          "(verb) to flatter or praise excessively",
+          "behave in a sycophantic way; grovel [fawning (a)]"
+        ],
+        fatuous: [
+          "stupid; foolishly self-satisfied",
+          "foolish, silly, esp. in a smug or complacent manner",
+          "devoid of intelligence",
+          "(adj.) silly, inanely foolish",
+          "silly; foolish"
+        ],
+        facetious: [
+          "cleverly amusing in tone",
+          "(adj) joking, humorous, esp. inappropriately; not serious, concerned with frivolous things",
+          "cleverly amusing in tone",
+          "(adj.) playful; humorous",
+          "not intended to be taken seriously"
+        ],
+        exonerate: [
+          "to clear of blame",
+          "clear from blame or accusation; free from a responsibility",
+          "clear from blame or accusation; free from a responsibility",
+          "pronounce not guilty of criminal charges",
+          "(adj.) to remove blame"
+        ],
+        esoteric: [
+          "known or understood only by a few",
+          "intended for or understood by only a small group",
+          "(adj) understood by or intended for only a few; secret",
+          "(adj.) intended for or understood by a small, specific group",
+          "obscure and difficult to understand"
+        ],
+        erudite: [
+          "learned; scholarly; bookish",
+          "scholarly, learned, bookish, pedantic",
+          "(adj) scholarly, knowledgeable; possessing a deep, often systematic, knowledge",
+          "having or showing profound knowledge",
+          "(adj.) very learned, scholarly"
+        ],
+        equivocate: [
+          "to use expressions of double meaning in order to mislead",
+          "intentionally use vague language",
+          "use unclear language to deceive or avoid committing to a position",
+          "(verb) to use ambiguous language with a deceptive intent (adj. form",
+          "speak ambiguously; avoid telling the truth"
+        ],
+        ephemeral: [
+          "lasting a short time",
+          "lasting a short time",
+          "(adj) lasting only a short time, fleeting",
+          "(adj.) brief; fleeting",
+          "short-lived"
+        ],
+        enervate: [
+          "to reduce in strength",
+          "weaken, tire",
+          "(v) weaken, tire",
+          "(verb) to weaken; to reduce in vitality",
+          "weaken"
+        ],
+        encomium: [
+          "warm praise",
+          "warm, glowing praise, esp. a formal expression of praise",
+          "a formal expression of praise",
+          "(noun) glowing and enthusiastic praise; panegyric, tribute, eulogy",
+          "praise"
+        ],
+        emulate: [
+          "to copy; to try to equal or excel",
+          "strive to equal or match, especially by imitating; compete with successfully",
+          "(v) copy in an attempt to equal or be better than",
+          "strive to equal or match, especially by imitating",
+          "to imitate something admired"
+        ],
+        eclectic: [
+          "selecting from or made up from a variety of sources",
+          "selecting the best of everything or from many diverse sources",
+          "(adj) selecting the best of everything or from many diverse sources",
+          "(adj.) composed of elements drawn form various sources",
+          "taking things from different sources"
+        ],
+        dupe: [
+          "to deceive; a person who is easily deceived",
+          "to deceive; a person who is easily deceived",
+          "person who is easily fooled or used (noun); to fool or exploit (verb)",
+          "fool or hoax",
+          "to fool someone"
+        ],
+        dissemble: [
+          "to present a false appearance; to disguise one's real intentions or character",
+          "to present a false appearance; to disguise one's real intentions or character; ??????????",
+          "mislead, conceal the truth, put on a false appearance of",
+          "(verb) to disguise or conceal; to mislead",
+          "avoid the truth"
+        ],
+        disparate: [
+          "fundamentally different; entirely unalike",
+          "two things are fundamentally different",
+          "distinct, different",
+          "fundamentally different or distinct in quality or kind",
+          "(adj.)fundamentally distinct or dissimilar"
+        ],
+        disabuse: [
+          "to set right; free from error",
+          "to set right; to free from error",
+          "(v) to show or convince (someone) that a belief is incorrect",
+          "(verb) to undeceive; to set right; to persuade someone that their belief is mistaken",
+          "free somebody (from an erroneous belief)"
+        ],
+        dilettante: [
+          "someone with an amateurish or superficial interest in a topic",
+          "person who takes up an art or activity for amusement only or in a superficial way",
+          "an amateur engaging in an activity without serious intentions",
+          "(noun) one w/ an amateurish or superficial interest in the arts or a branch of knowledge",
+          "aimless follower of the arts; amateur; dabbler"
+        ],
+        diffident: [
+          "lacking self-confidence",
+          "lacking confidence, shy",
+          "lacking confidence, shy",
+          "(adj.) reserved, shy, unassuming; lacking in self-confidence",
+          "lacking confidence"
+        ],
+        desultory: [
+          "jumping from one thing to another; disconnected",
+          "lacking consistency or order, disconnected, sporadic; going off topic",
+          "marked by lack of definite plan or regularity or purpose",
+          "(adj.) random; aimless; marked by a lack of plan or purpose",
+          "aimless; inconsistent in effort"
+        ],
+        deride: [
+          "to speak of or treat with contempt; to mock",
+          "treat or speak of with contempt",
+          "(v) mock, scoff at, laugh at contemptuously",
+          "treat or speak of with contempt",
+          "ridicule; make fun of; mock"
+        ],
+        deleterious: [
+          "subtly or unexpectedly harmful",
+          "harmful, injurious",
+          "(adj) harmful, unhealthy",
+          "harmful to living things",
+          "harmful"
+        ],
+        decorum: [
+          "appropriateness of behavior or conduct; propriety",
+          "propriety in manners and conduct",
+          "propriety in manners and conduct",
+          "(noun) polite or appropriate conduct or behavior (adj. form",
+          "propriety; correct behavior"
+        ],
+        corroborate: [
+          "to support with evidence",
+          "to confirm or lend support to (usually an idea or claim)",
+          "(v) support, add evidence to",
+          "give evidence for; to lend support",
+          "give supporting evidence [corroboration (n)]"
+        ],
+        connoisseur: [
+          "a person with expert knowledge or discriminating tastes",
+          "(n) expert, especially in the fine arts; person of educated, refined tastes",
+          "an expert able to appreciate a field",
+          "(noun) an informed and astute judge in matters of taste; expert",
+          "person with refined taste and good judgment"
+        ],
+        chicanery: [
+          "deception by means of craft or guile",
+          "trickery, deception by knowingly false arguments",
+          "the use of tricks to deceive someone",
+          "(noun) trickery or subterfuge",
+          "trickery"
+        ],
+        caustic: [
+          "biting in wit",
+          "(adj) capable of corroding metal or burning the skin; very critical or sarcastic",
+          "harsh in tone",
+          "(adj.) burning or stinging; causing corrosion",
+          "burning"
+        ],
+        castigate: [
+          "to punish or criticize harshly",
+          "criticize severely; punish in order to correct; ????????",
+          "(v) criticize severely; punish in order to correct",
+          "inflict severe punishment on",
+          "scold strongly"
+        ],
+        capricious: [
+          "changing one's mind quickly and often",
+          "impulsive and unpredictable",
+          "(adj) acting on impulse, erratic",
+          "determined by chance or impulse rather than by necessity",
+          "(adj.) inclined to change one's mind compulsively; erratic, unpredictable"
+        ],
+        candid: [
+          "impartial and honest in speech",
+          "a straightforward and honest look at something",
+          "(adj) open, sincere, honest",
+          "openly straightforward and direct without secretiveness",
+          "frank; honest"
+        ],
+        cacophony: [
+          "harsh, jarring noise",
+          "(n) harsh, discordant, or meaningless mixture of sounds",
+          "loud confusing disagreeable sounds",
+          "(noun)",
+          "discordant loud noises"
+        ],
+        bolster: [
+          "to support; prop up",
+          "to support",
+          "(v) strengthen or support",
+          "(verb) to provide support or reinforcement",
+          "support; prop up; reinforce"
+        ],
+        banal: [
+          "predictable; cliched; boring",
+          "lacking freshness and originality; clich\u00e9",
+          "lacking freshness and originality; clich\u00e9",
+          "repeated too often; overfamiliar through overuse",
+          "common; dull"
+        ],
+        assuage: [
+          "to make something unpleasant less severe",
+          "to make something unpleasant less severe",
+          "(v) make milder, relieve; soothe, pacify, or calm",
+          "(verb) to ease or lessen; to appease or pacify",
+          "to calm"
+        ],
+        asperity: [
+          "roughness or harshness; severity",
+          "rigor, severity; harshness or sharpness of tone; roughness of surface",
+          "harshness of manner",
+          "(noun) severity, rigor; roughness, harshness; acrimony, irritability",
+          "using harsh or critical tone [aspertion]"
+        ],
+        ascetic: [
+          "one who practices self-denial",
+          "(adj, n) abstinent or austere in lifestyle (adj); a person who leads an austere and simple like without material pleasures, esp. someone who does this for religious reasons",
+          "someone who practices self denial as a spiritual discipline",
+          "(noun) one who practices rigid self-denial, especially as an act of religious devotion",
+          "without luxuries; severely simple"
+        ],
+        apostate: [
+          "one who renounces a religious faith",
+          "one who renounces a religious faith",
+          "person who deserts a party, cause, religion, etc.",
+          "not faithful to religion or party or cause",
+          "(noun) one who abandons long-held religious or political conviction"
+        ],
+        ambiguous: [
+          "doubtful or uncertain; can be interpreted several ways",
+          "not clear, hard to understand, open to having several meanings or interpretations",
+          "(adj) not clear, hard to understand, open to having several meanings or interpretations",
+          "having more than one possible meaning",
+          "unclear in meaning"
+        ],
+        aesthetic: [
+          "concerning the appreciation of beauty",
+          "pertaining to beauty",
+          "(adj, n) concerning the appreciation of beauty or good taste, pertaining to the science of what is beautiful (adj); a sense of beauty and taste of a particular time and place (noun)",
+          "(adj.) dealing with, appreciative of, or responsive to art or the beautiful",
+          "concerning art of beauty"
+        ]
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>

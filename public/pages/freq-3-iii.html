@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 3-iii Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 3-iii Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 95 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 95 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 95 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        ersatz: [
+          "fake",
+          "artificial, synthetic; being an inferior substitute",
+          "artificial, synthetic; being an inferior substitute"
+        ],
+        epicure: [
+          "person with refined taste in food and wine",
+          "person with cultivated, refined tastes, esp. in food and wine",
+          "someone who appreciates good food and drink"
+        ],
+        enumerate: [
+          "to count, list, or itemize",
+          "determine the number or amount of",
+          "(v) count or list; specify one-by-one"
+        ],
+        enhance: [
+          "(v) raise to a higher value, desirability, etc.",
+          "increase",
+          "improve; make better or clearer"
+        ],
+        empirical: [
+          "(adj) coming from, based on, or able to be verified by experience or experimentation; not purely based on theory",
+          "(adj.) based on observation or experiment",
+          "found by experiment or practice"
+        ],
+        eminent: [
+          "famous, outstanding, distinguished; projecting",
+          "(adj) prominent, distinguished, of high rank",
+          "standing above others in quality or position"
+        ],
+        elusive: [
+          "difficult to capture or difficult to remember",
+          "skillful at evading capture",
+          "evasive; baffling; hard to grasp"
+        ],
+        elucidate: [
+          "make clearer and easier to understand",
+          "make clear and comprehensible",
+          "make clear (lucid)"
+        ],
+        elicit: [
+          "to draw forth, bring out from some source",
+          "(v) call forth, bring out, evoke",
+          "call forth, as of emotion, feeling or response"
+        ],
+        dubious: [
+          "(adj) doubtful, questionable, suspect",
+          "fraught with uncertainty or doubt",
+          "doubtful"
+        ],
+        droll: [
+          "amusing in a wry, subtle way",
+          "funny in an odd way",
+          "dryly amusing"
+        ],
+        docile: [
+          "easily handled or managed; willing to be taught or led or supervised or directed",
+          "easily handled or managed",
+          "gentle and easily lead; obedient; easily managed"
+        ],
+        diurnal: [
+          "existing during the day",
+          "occurring every day; happening in the daytime (rather than at night)",
+          "active in daytime; daily"
+        ],
+        dissonance: [
+          "a harsh and disagreeable combination, especially of sounds",
+          "(n) harsh, inharmonious sound; cacophony; disagreement",
+          "discord; disagreement"
+        ],
+        disseminate: [
+          "to scatter or spread widely",
+          "(v) scatter, spread about, broadcast",
+          "cause to become widely known"
+        ],
+        dispatch: [
+          "dispose of rapidly and without delay and efficiently",
+          "(n, v) speed, promptness; send off or deal with in a speedy way",
+          "1. send (v); 2. speed; celerity (n)"
+        ],
+        dispassionate: [
+          "impartial; calm, free from emotion",
+          "(adj) unbiased, not having a selfish or personal motivation; calm, lacking emotion",
+          "neutral; objective"
+        ],
+        disingenuous: [
+          "insincere",
+          "(adj) insincere, not genuine",
+          "na\u00ef\u00bf\u00bdve"
+        ],
+        discrete: [
+          "separate, distinct, detached, existing as individual parts",
+          "separate, distinct, detached, existing as individual parts",
+          "separate; discontinuous (not to be confused with"
+        ],
+        discreet: [
+          "careful to protect one's speech or actions in order to avoid offense or gain an advantage",
+          "marked by prudence or modesty and wise self restraint;",
+          "prudent; diplomatic]"
+        ],
+        discern: [
+          "to perceive or recognize",
+          "detect with the senses",
+          "to distinguish one thing from another; detect with the senses"
+        ],
+        deter: [
+          "to discourage or prevent from taking action",
+          "turn away by persuasion",
+          "put off; prevent"
+        ],
+        denote: [
+          "to indicate",
+          "(v) be a name or symbol for",
+          "have as a meaning"
+        ],
+        denigrate: [
+          "belittle, attack the reputation of",
+          "(v) belittle, attack the reputation of",
+          "decry; criticize; belittle"
+        ],
+        demagogue: [
+          "a leader or rabble-rouser, usually appealing to emotion or prejudice",
+          "a leader who lies and gains power by arousing the passions and especially prejudices of the people",
+          "mob leader (who appeals to base instincts) [demagogy/demagoguery (n)]"
+        ],
+        deliberate: [
+          "think about carefully; weigh the pros and cons of an issue",
+          "1. slow (a); 2. to think over (v); 3. on purpose (a)",
+          "to think over deeply; consider; ponder"
+        ],
+        deference: [
+          "respect; courtesy",
+          "(n) respectful submission; yielding to the authority or opinion of another",
+          "respect"
+        ],
+        decorous: [
+          "proper; tasteful; socially correct",
+          "behaving with propriety and good taste; polite",
+          "(adj) behaving with propriety and good taste; polite"
+        ],
+        debacle: [
+          "a sudden and violent collapse",
+          "(noun) rout, fiasco, complete failure",
+          "disaster"
+        ],
+        cumbersome: [
+          "difficult to handle or use especially because of size or weight",
+          "difficult to handle or use because of size or weight",
+          "bulky; difficult to carry [encumber = to burden]"
+        ],
+        culminate: [
+          "reach the highest point or final stage",
+          "(v) reach the highest point or final stage",
+          "end, especially to reach a final or climatic stage"
+        ],
+        cryptic: [
+          "mysterious or vague, usually intentionally",
+          "having a secret or hidden meaning",
+          "puzzling; enigmatic"
+        ],
+        craven: [
+          "lacking courage",
+          "cowardly",
+          "(adj) very cowardly, lacking courage"
+        ],
+        covert: [
+          "(adj) secret, veiled, undercover",
+          "secret or hidden",
+          "hidden; undercover"
+        ],
+        copious: [
+          "numerous; large in quantity",
+          "(adj) plentiful, bountiful",
+          "large in number or quantity"
+        ],
+        conundrum: [
+          "a difficult problem",
+          "(n) riddle, the answer to which involves a play on words; any mystery",
+          "a puzzle"
+        ],
+        consummate: [
+          "having or revealing supreme mastery or skill",
+          "having or revealing supreme mastery or skill",
+          "complete; total; supremely good"
+        ],
+        construe: [
+          "interpret or translate",
+          "(v) interpret or translate",
+          "make sense of; assign a meaning to; interpret in a particular way"
+        ],
+        confound: [
+          "confuse, frustrate; mix up or make worse",
+          "confuse, frustrate; mix up or make worse",
+          "confuse"
+        ],
+        conflagration: [
+          "great fire;",
+          "a very intense and uncontrolled fire",
+          "big fire"
+        ],
+        commensurate: [
+          "the same in size, extent, etc. equivalent; proportional, ???????????",
+          "(adj) the same in size, extent, etc., equivalent; proportional",
+          "equal in significance"
+        ],
+        collusion: [
+          "collaboration; complicity; conspiracy",
+          "agreement on a secret plot",
+          "conspiring in a fraudulent scheme; plotting and planning"
+        ],
+        circumspect: [
+          "cautious; aware of potential consequences",
+          "cautious, prudent; careful to consider the circumstances and consequences",
+          "cautious; considering all sides"
+        ],
+        circumscribe: [
+          "strictly limit a role, range of activity, or area; in math, to be constructed around so as to touch as many points as possible",
+          "strictly limit a role, range of activity, or area; in math, to be constructed around so as to touch as many points as possible",
+          "limit"
+        ],
+        chary: [
+          "cautious",
+          "(adj.) wary; cautious; sparing",
+          "cautious; sparing or restrained about giving"
+        ],
+        charlatan: [
+          "one who claims to know something that he does not, a quack",
+          "a flamboyant deceiver",
+          "trickster who claims knowledge he doesn't have"
+        ],
+        catholic: [
+          "universal; broad and comprehensive",
+          "universal; wide-ranging",
+          "universal, broad-minded"
+        ],
+        catalyst: [
+          "something that brings about a change in something else",
+          "(n) causer of change",
+          "(noun) a substance that causes or hastens a chemical reaction; any agent that causes change"
+        ],
+        capitulate: [
+          "to surrender (usually under agreed conditions)",
+          "surrender under agreed conditions",
+          "surrender; give in to"
+        ],
+        canonical: [
+          "(adj) authorized, recognized; pertaining to the canon, or body of accepted rules, standards or artistic works",
+          "(adj.) following or in agreement with accepted traditional standards (noun form",
+          "orthodox [canon (n) = set of accepted works]"
+        ],
+        callow: ["immature;", "young and inexperienced", "immature"],
+        buttress: [
+          "make stronger or defensible",
+          "(v, n) support or encourage (verb); a support or prop, esp. projecting from and supporting the wall of a building (noun)",
+          "strengthen; support"
+        ],
+        burnish: ["to polish", "polish, make smooth and lustrous", "polish"],
+        bucolic: [
+          "rustic; pastoral",
+          "pertaining to shepherds; suggesting a peaceful and pleasant view of rural life",
+          "(adj.) rustic and pastoral; characteristic of rural areas and their inhabitants"
+        ],
+        bristle: [
+          "stiffen with fear or anger",
+          "rise up as in fear; react in an offended or angry manner",
+          "to show irritation; react in an offended or angry manner"
+        ],
+        boor: [
+          "crude person, one lacking manners or taste",
+          "(n) rude, ill-mannered, or insensitive person; a peasant or country bumpkin",
+          "ill-mannered person [boorish (a)]"
+        ],
+        bombastic: [
+          "pompous in speech and manner",
+          "(of speech or writing) far too showy or dramatic than is appropriate; pretentious",
+          "(adj.) pompous; grandiloquent (noun form"
+        ],
+        blithe: [
+          "joyful, cheerful, or without appropriate thought",
+          "joyous, merry; excessively carefree (so as to ignore more important concerns)",
+          "free-spirited; carefree"
+        ],
+        blatant: [
+          "without any attempt at concealment; completely obvious",
+          "without any attempt at concealment; completely obvious",
+          "obvious"
+        ],
+        bilk: ["to cheat; defraud", "cheat or defraud", "cheat; defraud"],
+        besiege: [
+          "harass, as with questions or requests; cause to feel distressed or worried",
+          "attack, overwhelm, crowd in on or surround",
+          "surround so as to force to give up"
+        ],
+        benign: [
+          "kind; not dangerous to health; not recurrent or progressive",
+          "(adj) harmless; favorable; kindly, gentle, or beneficial; not cancerous",
+          "kindly; harmless"
+        ],
+        belligerent: [
+          "characteristic of one eager to fight",
+          "characteristic of an enemy or one eager to fight",
+          "aggressive; ready to fight"
+        ],
+        bellicose: [
+          "warlike; inclined to quarrel",
+          "(adj.) belligerent, pugnacious, warlike",
+          "war-like; aggressive"
+        ],
+        belittle: [
+          "to make seem less important",
+          "cause to seem less important",
+          "to demean"
+        ],
+        belie: [
+          "contradict or misrepresent; ???????????;",
+          "(v) contradict or misrepresent",
+          "contradict; give a false impression"
+        ],
+        begrudge: [
+          "to envy someone for possessing or enjoying something; to give reluctantly",
+          "be envious of",
+          "resent"
+        ],
+        bane: [
+          "something that ruins or spoils",
+          "something causing misery or death",
+          "troublesome influence; curse"
+        ],
+        axiom: [
+          "premise; postulate; self-evident truth",
+          "self-evident truth requiring no proof; universally or generally accepted principle",
+          "(noun) a universally recognized principle"
+        ],
+        august: [
+          "dignified; grandiose",
+          "venerable, majestic; inspiring admiration",
+          "(adj.) majestic, venerable"
+        ],
+        assail: [
+          "to attack; assault",
+          "attack in speech or writing",
+          "attack violently, assault"
+        ],
+        artifice: [
+          "a clever trick",
+          "a deceptive maneuver, especially to avoid capture",
+          "deception; trickery"
+        ],
+        articulate: [
+          "able to speak clearly and expressively",
+          "(adj, verb) using language in a clear, fluent way (adj); speak distinctly or give clarity to an idea (verb)",
+          "clear; lucid; eloquent"
+        ],
+        arrogate: [
+          "to claim without justification; to claim for oneself without right",
+          "to claim without justification; to claim for oneself without right; ???????????",
+          "claim or take presumptuously or without the right to do so"
+        ],
+        arcane: [
+          "known or understood by only a few; obscure, secret",
+          "(adj) known or understood by only a few; obscure, secret",
+          "obscure; known only to a few people"
+        ],
+        appropriate: [
+          "to take possession of for one's own use; confiscate",
+          "set aside or authorize (such as money) for a particular purpose; take for one's own use",
+          "(verb) to take for one's own use; to confiscate"
+        ],
+        apprehension: [
+          "fearful expectation",
+          "slight fear; sense of something unfavorable",
+          "slight fear; sense of something unfavorable"
+        ],
+        antiquated: [
+          "old-fashioned; belonging to an earlier period in time",
+          "so extremely old as seeming to belong to an earlier period",
+          "outdated; old fashioned"
+        ],
+        anathema: [
+          "a detested person; the source of somebody's hate",
+          "source of somebody's hatred; something or someone that one dislikes",
+          "(noun) a solemn or ecclesiastical (religious) curse; accursed or thoroughly loathed person or thing"
+        ],
+        amortize: [
+          "to diminish by installment payments",
+          "gradually pay off a debt, or gradually write off an asset",
+          "pay off a debt in installments"
+        ],
+        aloof: [
+          "distant physically or emotionally; reserved; indifferent",
+          "cool and distant, remote in manner",
+          "distant; detached; cold"
+        ],
+        aggrandize: [
+          "to increase in power, influence, and reputation",
+          "(v) make greater; exaggerate",
+          "(verb) to increase in intensity, power, influence, or prestige"
+        ],
+        affable: [
+          "likeable; easy to talk to",
+          "(adj) warm and friendly, pleasant, approachable",
+          "friendly; social; easygoing"
+        ],
+        adumbrate: [
+          "give a rough outline of; foreshadow; reveal only partially; obscure",
+          "(verb) to foreshadow vaguely or intimidate; to suggest or outline sketchily; to obscure or overshadow",
+          "outline; indicate"
+        ],
+        adulterate: [
+          "to make impure",
+          "make impure by adding inappropriate or inferior ingredients",
+          "(verb) to reduce purity by combining with inferior ingredients"
+        ],
+        admonish: [
+          "warn strongly",
+          "(v) mildly scold; caution, advise, or remind to do something",
+          "warn strongly, put on guard"
+        ],
+        adamant: [
+          "refusing to change one's mind",
+          "refusing to be persuaded",
+          "hard; inflexible"
+        ],
+        acerbic: [
+          "sour; harsh or severe",
+          "sour; harsh or severe",
+          "(adj.) having a sour or bitter taste or character; sharp; biting"
+        ],
+        accretion: [
+          "a growth in size; an increase in amount",
+          "gradual increase; an added part or addition",
+          "accumulation of matter; growth produced by adding from the outside"
+        ],
+        accolade: [
+          "an award or praise granted as a special honor",
+          "(noun) an expression of praise",
+          "tribute; honor; praise"
+        ],
+        abstemious: [
+          "moderate in appetite",
+          "indulging only very moderately in something",
+          "self denying; refraining from indulging"
+        ],
+        abscond: [
+          "to leave secretly",
+          "depart suddenly and secretively",
+          "(verb) to steal off and hide"
+        ],
+        abrogate: [
+          "cancel; deny; repeal; ?????????",
+          "repeal or do away with, abolish; revoke formally",
+          "abolish"
+        ],
+        abhor: [
+          "(v) detest, regard with disgust",
+          "regard with disgust and hatred",
+          "hate"
+        ],
+        abeyance: [
+          "temporary suppression or suspension",
+          "temporary suspension, inactivity",
+          "temporary cessation or suspension"
+        ]
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>

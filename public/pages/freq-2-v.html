@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 2-v Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 2-v Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 98 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        extol: ["praise, glorify, or honor", "praise"],
+        extirpate: [
+          "(verb) to destroy, to exterminate, to cut out, to exscind",
+          "wipe out totally; exterminate; eradicate"
+        ],
+        extemporaneous: [
+          "done without preparation (esp. of a speech), or with some preparation but no notes; improvised, done on the spur of the moment",
+          "(adj.) improvised; done without preparation"
+        ],
+        expunge: [
+          "to eliminate completely",
+          "remove by erasing or crossing out or as if by drawing a line"
+        ],
+        exponent: [
+          "one who champions or advocates",
+          "(n) person who expounds or explains; champion, advocate, or representative"
+        ],
+        explicit: [
+          "clearly stated or shown; forthright in expression",
+          "(adj) direct, clear, fully revealed; clearly depicting sex or nudity"
+        ],
+        expiate: [
+          "(verb) to atone or make amends for",
+          "atone; make amends for"
+        ],
+        expedite: ["process fast and efficiently", "make faster"],
+        expatriate: [
+          "a person who is voluntarily absent from home or country",
+          "refugee; emigrant; someone living away from his own country"
+        ],
+        exhort: [
+          "to strongly urge on; encourage",
+          "urge on or encourage; spur on encourage especially by cheers and shouts"
+        ],
+        exhaustive: [
+          "(adj) comprehensive, thorough, exhausting a topic or subject, accounting for all possibilities; draining, tending to exhaust",
+          "complete and thorough"
+        ],
+        exemplify: [
+          "be characteristic of; clarify by giving an example of",
+          "to serve as a good example"
+        ],
+        exemplar: ["something to be imitated", "model type [exemplary (a)]"],
+        excruciating: ["extremely painful", "extremely painful"],
+        exacting: [
+          "very severe in making demands; requiring precise attention",
+          "(adj) very severe in making demands; requiring precise attention"
+        ],
+        ethos: [
+          "beliefs or character of a group",
+          "the character, personality, or moral values specific to a person, group, time period, etc."
+        ],
+        espouse: ["to adopt or support an idea or cause", "promote; support"],
+        errant: [
+          "to be wandering; not sticking to a circumscribed path",
+          "1. wandering; 2. wrong; 3. straying from accepted standards"
+        ],
+        err: ["to make an error", "make a mistake"],
+        eradicate: [
+          "to completely destroy",
+          "destroy completely, as if down to the roots"
+        ],
+        equivocal: [
+          "confusing or ambiguous; ?????????",
+          "ambiguous; open to interpretation [equivocate (v), equivocation (n)]"
+        ],
+        equitable: [
+          "fair, just, embodying principles of justice",
+          "(adj) fair, equal, just"
+        ],
+        equanimity: [
+          "composure, evenness of mind; mental or emotional stability, esp. under stress",
+          "steadiness of mind under stress"
+        ],
+        epithet: [
+          "descriptive word or phrase",
+          "phrase used as a label or to express the essential nature of"
+        ],
+        epigram: ["witty comment", "short, witty saying"],
+        ennui: [
+          "the feeling of being bored by something tedious",
+          "(noun) dissatisfaction and restlessness resulting from boredom"
+        ],
+        enigmatic: [
+          "(adj.) mysterious, obscure, difficult to understand",
+          "puzzling"
+        ],
+        emollient: [
+          "(noun) soothing, especially to the skin; making less harsh; mollifying",
+          "softening (a); something which softens (n)"
+        ],
+        emaciated: [
+          "very thin especially from disease or hunger or cold",
+          "very thin; withered"
+        ],
+        elaborate: [
+          "marked by complexity and richness of detail; explain in more detail",
+          "1. complex and detailed (a); 2. to expand on (v)"
+        ],
+        egress: ["an exit or the action of exiting", "exit"],
+        edify: [
+          "to instruct morally and spiritually",
+          "uplift, enlighten, instruct or improve in a spiritual or moral way"
+        ],
+        edifice: [
+          "a structure that has a roof and walls",
+          "building; structure; construction"
+        ],
+        dyspeptic: [
+          "suffering from indigestion; gloomy and irritable",
+          "grumpy, pessimistic, irritable; suffering from dyspepsia (indigestion)"
+        ],
+        duress: ["compulsion by threat or force", "compulsory force or threat"],
+        dovetail: ["to fit together exactly", "join or fit together"],
+        dormant: [
+          "(adj) asleep, inactive, on a break",
+          "inactive but capable of becoming active"
+        ],
+        doleful: [
+          "filled with or evoking sadness; ????????",
+          "filled with or evoking sadness"
+        ],
+        dogma: [
+          "a firmly held opinion, especially a religious belief",
+          "(n) a system of principles laid down by an authority; established belief"
+        ],
+        doff: [
+          "take off (such as clothes), put aside; remove one's hat as a gesture",
+          "take off (esp. of a hat)"
+        ],
+        doctrinaire: [
+          "rigidly devoted to theories without regard for practicality; dogmatic",
+          "person who applies doctrine in an impractical or rigid and close-minded way (noun); merely theoretical, impractical, or fanatical about other people accepting one's ideas (adj)"
+        ],
+        divulge: [
+          "make known to the public information previously kept secret",
+          "(verb) to disclose something secret"
+        ],
+        divine: [
+          "to foretell or know by inspiration",
+          "(v) discover through divination or supernatural means; perceive by insight"
+        ],
+        divest: [
+          "(v) deprive or strip of rank, title, etc., or of clothing or gear; to sell off holdings (opposite of invest)",
+          "remove; take off"
+        ],
+        dither: [
+          "to act confusedly or without clear purpose",
+          "act indecisively (verb); a state of fear or trembling excitement"
+        ],
+        distend: [
+          "to swell, inflate, or bloat",
+          "swell, expand, stretch, bloat"
+        ],
+        distaff: [
+          "the female branch of a family",
+          "female, esp. relating to the maternal side of the family; women or women's work; a staff that holds wool or flax for spinning"
+        ],
+        dissolution: [
+          "disintegration; looseness in morals; ??????????",
+          "dissolving, the state of having been dissolved; breaking bonds or breaking up of a group of people; death, disintegration; sinking into extreme hedonism, vice, and degradation"
+        ],
+        dissent: [
+          "(v, n) disagree or take an opposing view, esp. in relation to a formal body such as a government, political party, or church; such a view",
+          "a difference in opinion"
+        ],
+        disdain: [
+          "lack of respect accompanied by a feeling of intense dislike",
+          "contempt; strong dislike"
+        ],
+        discursive: ["rambling; ?????????????", "digressing; rambling"],
+        discrepancy: [
+          "(n) difference or inconsistency",
+          "something which does not match up; inconsistency"
+        ],
+        discordant: [
+          "harsh or inharmonious in sound; disagreeing, incongruous",
+          "conflicting; dissonant or harsh in sound"
+        ],
+        discord: ["lack of agreement or harmony", "disagreement"],
+        diminutive: ["very small; ????????", "extremely or unusually small"],
+        diligent: [
+          "characterized by care and perseverance in carrying out tasks",
+          "hard-working"
+        ],
+        dilate: [
+          "to make larger; expand",
+          "to become wider or make wider, cause to expand; to speak or write at length, elaborate upon"
+        ],
+        digress: [
+          "(v) go off-topic when speaking or writing",
+          "wander off the subject"
+        ],
+        dictum: [
+          "authoritative statement",
+          "formal or authoritative pronouncement; saying or proverb"
+        ],
+        dichotomy: [
+          "division into two parts or into two contradictory groups",
+          "a division into two parts"
+        ],
+        dexterity: [
+          "adroitness in using the hands",
+          "skill, esp. with hands [dexterous (a)]"
+        ],
+        detrimental: ["causing harm or injury", "harmful"],
+        desist: ["choose not to consume", "stop; discontinue; cease"],
+        desiccate: [
+          "to dry out thoroughly",
+          "(v) thoroughly dried up, dehydrated"
+        ],
+        desecrate: [
+          "to willfully violate or destroy a sacred place",
+          "to damage or pollute a holy place"
+        ],
+        descry: [
+          "(verb) to discriminate or discern; to catch sight of",
+          "to see (esp. at a distance); catch sight of"
+        ],
+        derogatory: ["expressive of low opinion", "uncomplimentary"],
+        derivative: [
+          "derived from something else; not original",
+          "(adj) derived from something else; not original"
+        ],
+        derision: [
+          "(noun) scorn, ridicule, contemptuous treatment (adj. form",
+          "ridicule"
+        ],
+        deprecate: [
+          "express strong disapproval of; deplore",
+          "criticize; denounce"
+        ],
+        denouement: [
+          "conclusion; resolution; the falling action of a story after its climax",
+          "(noun) an outcome or solution; the unraveling of a plot"
+        ],
+        delineation: [
+          "act of representing something or describing it",
+          "explanation; definition; outlining"
+        ],
+        delineate: [
+          "to represent or depict",
+          "(v) mark the outline of; sketch; describe in detail"
+        ],
+        deign: ["condescend", "condescend"],
+        degrade: [
+          "to lower in dignity or status; to corrupt; to deteriorate",
+          "reduce in worth or character, usually verbally"
+        ],
+        deferential: [
+          "showing respect",
+          "showing respect [deference (n); defer (v)]"
+        ],
+        deface: [
+          "to mar the appearance of; vandalize",
+          "(v) vandalize, mar the appearance of"
+        ],
+        deem: ["(v) judge; consider", "keep in mind or convey as a conviction"],
+        declivity: ["downward slope", "downward slope"],
+        declaim: [
+          "speak in an impassioned, pompous, or oratorical manner; give a formal speech",
+          "speak very passionately against something"
+        ],
+        debunk: [
+          "expose as false ideas and claims, especially while ridiculing",
+          "(v) expose, ridicule, or disprove false or exaggerated claims"
+        ],
+        debase: [
+          "reduce the quality or value of something",
+          "(v) degrade; lower in quality, value, rank, etc.; lower in moral quality"
+        ],
+        dearth: [
+          "lack or shortage of; an insufficient quantity or number",
+          "(noun) smallness of quantity or number; scarcity; a lack"
+        ],
+        damp: [
+          "(verb) to diminish the intensity or check the vibration of a sound",
+          "(used of vibration) reduce in extent"
+        ],
+        cynical: [
+          "(adj) thinking the worst of others' motivations; bitterly pessimistic",
+          "believing that people act only out of selfish motives"
+        ],
+        curtail: [
+          "terminate or abbreviate before its intended or proper end",
+          "cut short"
+        ],
+        culpable: [
+          "deserving blame or censure as being wrong or injurious",
+          "(adj.) deserving blame (noun form"
+        ],
+        culpability: ["a state of guilt", "guilt [culpable = blameworthy]"],
+        crescendo: [
+          "steadily increasing in volume or force",
+          "(n) steady increase in force, intensity, or the loudness of a musical passage; a climactic moment or peak"
+        ],
+        creditable: [
+          "deserving of praise but not that amazing",
+          "praiseworthy"
+        ],
+        cosset: ["to pamper; treat with great care", "treat as a pet, pamper"],
+        cosmopolitan: [
+          "comprising many cultures; global in reach and outlook",
+          "(adj) belonging to the entire world, at home globally; free from local or national prejudices or attachments"
+        ],
+        corpulent: ["excessively fat", "fat"],
+        cornucopia: [
+          "an abundant supply of something good",
+          "symbol (horn filled with fruit etc.) denoting natural abundance"
+        ],
+        contrition: ["repentance; remorse; penitence", "sorrow and repentance"],
+        contiguous: [
+          "(adj.) sharing a border; touching; adjacent",
+          "adjacent; touching; abutting [contiguity (n)]"
+        ],
+        contemptuous: ["lacking respect; scornful", "expressing extreme scorn"],
+        consternation: [
+          "fear resulting from the awareness of danger",
+          "worry and concern"
+        ]
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>

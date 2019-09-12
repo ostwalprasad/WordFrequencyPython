@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" media="screen" href="../index.css" debug="false" />
+    <title>
+      Frequency 1 Words - MerGRE
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            data-target="#app-navbar-collapse"
+            data-toggle="collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            alt="Magoosh Logo"
+            class="navbar-brand"
+            href="/flashcards/vocabulary"
+          >
+            Magoosh
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+          <ul class="nav navbar-nav" role="navigation"></ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container u-margin-T-xl">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3 class="clearfix mobile-header">
+            <a href="../index.html">&larr; Frequency 1 Words</a>
+            <small class="text-white pull-right">
+              <i class="fa fa-random"></i>
+              Words you don't know will reappear later
+            </small>
+          </h3>
+          <div class="flashcard-container u-margin-V-m">
+            <div class="flashcard">
+              <div class="front card flashcard-card">
+                <a href="#back"
+                  ><div class="card-block flashcard-content">
+                    <div class="label label-flashcard label-danger">
+                      learning
+                    </div>
+                    <h1 class="text-gray text-center flashcard-word">
+                      gregarious
+                    </h1>
+                  </div> </a
+                ><a
+                  class="card-footer text-center"
+                  data-loading-text="Loading definition..."
+                  href="#back"
+                  >Click to see meaning &rarr;
+                </a>
+              </div>
+              <div class="back card flashcard-card">
+                <div class="card-block flashcard-content">
+                  <div class="label label-flashcard label-danger">learning</div>
+                  <h3 class="flashcard-word"></h3>
+                  <div class="flashcard-text"></div>
+                  <span class="flashcard-status" style="display: none"></span>
+                </div>
+                <a
+                  class="card-footer card-footer-success text-center know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-check"></i> I knew this word </a
+                ><a
+                  class="card-footer card-footer-danger text-center dont-know-word"
+                  data-loading-text="Loading next word..."
+                  href="#"
+                  ><i class="fa fa-remove"></i>
+                  I didn't know this word
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text-white">
+            You have mastered <span id="mastered-flashcards-count">0</span> out
+            of 1743 words
+          </div>
+          <div class="progress">
+            <div
+              id="mastered-flashcards-progress"
+              class="progress-bar progress-bar-success"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are reviewing <span id="reviewing-flashcards-count">0</span> out
+            of 1743 words
+          </div>
+          <div class="progress">
+            <div
+              id="reviewing-flashcards-progress"
+              class="progress-bar progress-bar-warning"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <div class="text-white">
+            You are learning <span id="learning-flashcards-count">0</span> out
+            of 1743 words
+          </div>
+          <div class="progress">
+            <div
+              id="learning-flashcards-progress"
+              class="progress-bar progress-bar-danger"
+              style="width: 0.00%;"
+            ></div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <script>
+      var words = {
+        zephyr: ["a gentle breeze; something airy or insubstantial"],
+        zeitgeist: ["spirit of the times"],
+        zany: ["crazy; wacky"],
+        yen: ["a yearning for something or to do something"],
+        yearn: ["to have a strong and earnest desire"],
+        xenophobe: ["someone who fears or hates foreigners"],
+        wry: ["1. twisted or bent to one side; 2. dryly humorous"],
+        wrest: ["obtain by seizing forcibly or violently, also metaphorically"],
+        wraith: [
+          "a ghost or specter; a ghost of a living person seen just before his/her death"
+        ],
+        wispy: ["flimsy; frail; delicate"],
+        winnow: [
+          "sift, analyze critically, separate the useful part from the worthless part"
+        ],
+        wince: ["draw back, as with fear or pain"],
+        willful: ["stubborn"],
+        whittle: ["1. carve with knife; 2. reduce step by step"],
+        whitewash: [
+          "a substance used to whiten walls, wood, etc. (noun); deception, covering up of wrongs, errors, misdeeds, etc. (verb)"
+        ],
+        whereas: ["(conjunction) while on the contrary, considering that"],
+        whelp: ["young dog"],
+        wheddle: [
+          "influence or urge by gentle urging, caressing, or flattering"
+        ],
+        welter: [
+          "confused mass or pile, jumble; confusion or turmoil (noun); roll around, wallow, toss about, writhe (verb)"
+        ],
+        weighty: ["serious"],
+        waylay: ["ambush; lie in wait"],
+        warranted: [
+          "(adj) justified, authorized (warrant can mean to justify or a justification, but can also mean to vouch for or guarantee)"
+        ],
+        wanting: ["lacking"],
+        waive: ["surrender; give up"],
+        "wag (n)": ["a witty person"],
+        wag: ["(noun) wit, joker"],
+        waft: ["drift smoothly (v); whiff; smell (n)"],
+        vulpine: [
+          "like a fox [compare with bovine (cow-like); porcine (pig-like), etc.] ."
+        ],
+        vulnerable: ["capable of being wounded or hurt"],
+        volubility: ["excessive talkativeness [voluble (a)]"],
+        volition: ["the faculty or power of using one's will"],
+        vogue: ["a current state of general acceptance and use; fashion"],
+        vivify: ["enliven"],
+        vivacity: ["liveliness; animation"],
+        vivacious: ["vigorous and animated"],
+        vituperation: [
+          "abusive or venomous language to express blame or censure"
+        ],
+        vital: ["essential; alive; important"],
+        "viscid or viscous": [
+          "thick, adhesive, or covered in something sticky"
+        ],
+        virtuoso: ["an accomplished musician"],
+        virtual: [
+          "(adj) existing only in the mind or by means of a computer network; existing in results or in essence but not officially or in name"
+        ],
+        virile: ["characterized by energy or vigor"],
+        virago: ["an ill-tempered or violent woman"],
+        vintage: [
+          "(adj, n) related to items of high quality from a previous era, old-fashioned, antique (adj); the wine of a particular year (noun)"
+        ],
+        vindictive: ["to have a very strong desire for revenge"],
+        villify: ["spread negative information about"],
+        vilification: ["slanderous defamation; abuse"],
+        vignette: ["small sketch"],
+        vigil: ["a purposeful surveillance to guard or observe"],
+        vie: ["compete for something"],
+        vicarious: ["experiencing through another"],
+        via: [
+          "through, by means of, by way of (by a route that goes through or touches)"
+        ],
+        vexatious: ["causing irritation or annoyance"],
+        vexation: ["(noun) irritation; annoyance (verb form"],
+        vestigial: ["not developed"],
+        verisimilitude: ["the appearance of truth; ?????????????"],
+        verbosity: ["using too many words"],
+        verbiage: ["excessive or meaningless wordiness"],
+        venturing: [
+          "proceed somewhere despite the risk of possible dangers; risking"
+        ],
+        venom: ["toxin secreted by animals"],
+        veneration: ["worship; respect [venerable (a), venerate (v)]"],
+        venality: [
+          "the condition of being susceptible to bribes or corruption; ???????????"
+        ],
+        venal: ["corrupt; can be bribed"],
+        vehemently: ["in fierce manner"],
+        vehemence: ["violence; fervor; forcefulness"],
+        vaunted: ["much boasted about in a vain or swaggering way; ?????????"],
+        variance: ["difference, disagreement"],
+        vanquish: ["come out better in a competition, race, or conflict"],
+        vanguard: [
+          'leading units at the front of an army; leaders in a trend or movement, people on the "cutting edge"; the forefront of a trend or movement'
+        ],
+        valor: ["courage when facing danger"],
+        vain: [
+          "full of self-admiration; conceited; without result; unsuccessful; (vanity)"
+        ],
+        vagrant: ["person wandering without a home"],
+        vagary: ["something unaccountable; freak"],
+        utopian: ["a believer in an ideal world"],
+        utopia: ["ideally perfect state"],
+        utilitarian: ["useful"],
+        upshot: ["outcome"],
+        uproarious: ["hilarious; hysterical; very funny"],
+        unwitting: ["not deliberate; unconscious"],
+        unwieldy: ["difficult to use or handle because of size or weight"],
+        unviable: ["not able to work, survive, or succeed (inviable)"],
+        untrammeled: ["not confined or limited"],
+        untempered: [
+          "not toned down; not moderated, controlled, or counterbalanced"
+        ],
+        unstinting: ["very generous"],
+        unsparing: [
+          "generous, lavish (as in not sparing any help or gifts to others); unmerciful, harsh (as in not sparing any criticism)"
+        ],
+        unscrupulous: ["without scruples or principles"],
+        unscathed: ["unharmed; intact; without a scratch"],
+        unsavory: ["morally offensive"],
+        unruly: [
+          "noisy and lacking in restraint or discipline; unwilling to submit to authority"
+        ],
+        unpropitious: ["unlikely to be successful"],
+        unnerve: ["to make nervous or upset"],
+        unmitigated: ["not diminished or moderated in intensity or severity"],
+        unkempt: ["not properly maintained or cared for"],
+        universal: ["applicable to or common to all members of a group or set"],
+        unimpeachable: ["beyond doubt or reproach; ??????????"],
+        unfrock: ["to remove a priest from his position"],
+        unforthcoming: ["uncooperative, not willing to give up information"],
+        unflappable: [
+          "always knows what to do in any situation; cannot be made nervous or anxious"
+        ],
+        unfettered: ["set free; not bound by shackles and chains"],
+        unfeigned: ["(adj.) genuine; not false or hypocritical"],
+        unearth: ["(v) dig up, uncover, expose"],
+        undermined: ["damaged; attacked"],
+        undergird: ["support; strengthen"],
+        undercutting: ["offering a lower price; undermining"],
+        uncompromising: ["not making concessions"],
+        uncanny: ["strange, mysterious, weird, beyond explanation"],
+        unassailable: ["undeniable; ??????????????"],
+        unalloyed: ["undiluted; total"],
+        ultimate: ["furthest or highest in degree or order; utmost or extreme"],
+        tutelary: ["serving as a guardian [tutelage (n)]"],
+        turbulent: ["characterized by unrest or disorder or insubordination"],
+        tumultuous: [
+          "riotous, violently agitated, marked by disturbance or uproar; noisy, chaotic"
+        ],
+        truncated: ["cut short in duration"],
+        truculence: ["aggressiveness, ferocity"],
+        truant: ["absent without permission"],
+        trinket: ["something of little value; knick-knack"],
+        trilogy: [
+          "set of three (literary works etc.); tetralogy = set of four"
+        ],
+        trifling: [
+          "(adj) trivial, not very important; so small as to be unimportant; frivolous, shallow"
+        ],
+        tribulation: [
+          "something, especially an event, that causes difficulty and suffering"
+        ],
+        trepidation: ["fear"],
+        trend: ["a general tendency to change, as of opinion"],
+        tremulous: ["quivering as from weakness or fear"],
+        traverse: ["to move across"],
+        travail: [
+          "use of physical or mental energy; hard work; agony or anguish"
+        ],
+        transmute: ["to transform; ?????????????"],
+        transgression: ["violation of a law, moral rule, order, etc.; sin"],
+        transgress: ["go astray; disobey; commit a sin"],
+        transcribe: ["copy"],
+        transcendental: [
+          "supernatural; going beyond normal experience [transcendent (a)]"
+        ],
+        trait: [
+          "specific characteristic that varies from one individual to another"
+        ],
+        tradition: ["a specific practice of long standing"],
+        toy: ["to play with"],
+        touting: ["advertising; supporting [tout (v)]"],
+        totter: ["walk unsteadily"],
+        torque: ["(noun) a force that causes rotation"],
+        tolerate: ["put up with something or somebody unpleasant"],
+        token: [
+          "sign, symbol, mark, badge; souvenir, memento; coin-like disk used as currency for subways, arcade games, etc.; sample, or person, thing, idea taken to represent an entire group (noun); of very little or merely symbolic value (adj)"
+        ],
+        "to corrupt, to debase, to spoil, to make ineffective": [],
+        titter: ["giggle quietly"],
+        tinge: ["color lightly"],
+        timely: ["(adj) well-timed, happening at a suitable time"],
+        throwback: [
+          "exhibiting primitive, or ancestral, traits; a reappearance of an earlier characteristic"
+        ],
+        throng: ["a large gathering of people"],
+        thrifty: ["careful about money; economical"],
+        thoroughgoing: ["very thorough; complete."],
+        therapy: ["the act of caring for someone"],
+        therapeutic: ["medicinal; curative"],
+        "the setting right of what is wrong": [],
+        testiness: ["irritability; irascibility [testy (a)]"],
+        terminus: ["a place where something ends or is complete"],
+        terminate: ["bring to an end or halt"],
+        tentative: ["not certain"],
+        tenacity: [
+          "(noun) the quality of adherence or persistence to something valued; persistent determination (adj. form"
+        ],
+        tenable: ["based on sound reasoning or evidence"],
+        tempestuous: ["turbulent, stormy"],
+        tempers: ["moderates"],
+        tempered: ["moderated in effect"],
+        temperate: ["moderate"],
+        temper: ["to moderate; soften"],
+        telltale: ["revealing"],
+        telling: ["significant and revealing of another factor"],
+        teetotalism: ["total abstinence from alcoho"],
+        tedium: ["boredom"],
+        technology: [
+          "the practical application of science to commerce or industry"
+        ],
+        taxing: ["use to the limit; exhaust"],
+        taut: ["pulled or drawn tight"],
+        taunt: ["mock; tease"],
+        tarnished: ["made dull; spoil (reputation)"],
+        tarnish: [
+          "make dirty or spotty, as by exposure to air; also used metaphorically"
+        ],
+        tare: ["1. weed; 2. allowance made for container when weighing"],
+        tardy: ["slow, retard, late, overdue, delayed"],
+        tantalizing: [
+          "arousing desire or expectation for something unattainable"
+        ],
+        tangent: ["going off the main subject, touching"],
+        tamp: [
+          "to plug; press loose matter down tightly (e.g. pack explosives into a hole)"
+        ],
+        talisman: ["lucky charm"],
+        taint: ["place under suspicion or cast doubt upon"],
+        tactile: ["concerned with the sense of touch"],
+        tact: [
+          "consideration in dealing with others and avoiding giving offense"
+        ],
+        taboo: ["a ban resulting from social custom or emotional aversion"],
+        synthesis: [
+          "(noun) the combination of parts to make a whole (verb form"
+        ],
+        syntax: [
+          "the rules governing grammar and how words join to make sentences (or how words and symbols join in writing computer code), the study of these rules, or any system or orderly arrangement"
+        ],
+        synoptic: ["relating to a synopsis or summary; giving a general view"],
+        synchronous: [
+          "(adj) happening at the same time; occurring at the same rate and thus happening together repeatedly"
+        ],
+        synapse: ["junction between two nerve cells"],
+        symptomatic: ["relating to sensations experienced by a patient"],
+        symphony: ["type of musical composition"],
+        syllogism: [
+          "type of logical reasoning; deductive reasoning in which a conclusion is derived from two premises"
+        ],
+        suspect: ["doubtful"],
+        surrogate: [
+          "substitute, person who acts for another (noun); acting as a replacement (adj)"
+        ],
+        surreptitiously: ["secretly; furtively; stealthily"],
+        surge: ["rise and move, as in waves or billows"],
+        supposition: [
+          "assumption, hypothesis, something that has been supposed"
+        ],
+        supplication: [
+          "the action of asking or begging for something earnestly or humbly"
+        ],
+        supplicate: ["(v) pray humbly; ask, beg, or seek in a humble way"],
+        supplicant: [
+          "person who requests or begs for something [supplicate (v)]"
+        ],
+        supersede: [
+          "(v) replace, take the position of, cause to be disregarded as void or obsolete"
+        ],
+        superlative: ["extremely good; the best"],
+        sumptuous: ["rich and superior in quality"],
+        summit: ["the top point of a mountain or hill"],
+        sultry: ["sexually exciting or gratifying"],
+        sullied: ["made dirty or impure [opposite unsullied; sully (v)]"],
+        suffragist: ["someone who campaigns for voting rights"],
+        succumb: ["consent reluctantly"],
+        succulent: ["full of juice"],
+        succeeding: ["(adj) coming after or following"],
+        subterranean: ["being or operating under the surface of the earth"],
+        subsume: ["to include, incorporate"],
+        subside: [
+          "(v) sink, settle down, become less active; return to a normal level"
+        ],
+        subservient: ["compliant and obedient to authority"],
+        suborn: ["bribe"],
+        subliminal: ["below the threshold of consciousness"],
+        subjugate: ["make subservient; force to submit or subdue"],
+        subjective: [
+          "(adj) existing in the mind or relating to one's own thoughts, opinions, emotions, etc.; personal, individual, based on feelings"
+        ],
+        "stymie or stymy": [
+          "(v, n) block, hinder, or thwart (verb); an obstacle (noun)"
+        ],
+        stupor: ["marginal consciousness"],
+        stupefying: ["astonishing; shocking; stunning into silence"],
+        stupefy: ["(verb) to stun, baffle, or amaze"],
+        stunt: ["check the growth or development of"],
+        stultify: [
+          "to make ineffective or useless, cripple; to have a dulling effect on; ??????? ?? ???"
+        ],
+        strife: ["bitter conflict; heated often violent dissension"],
+        stratum: [
+          "one of many layers (such as in a rock formation or in the classes of a society)"
+        ],
+        stomach: ["to tolerate"],
+        stoke: ["add fuel to; strengthen"],
+        "stoic or stoical": [
+          "(adj, n) indifferent to pleasure or pain, enduring without complaint (adj); person indifferent to pleasure or pain (noun)"
+        ],
+        stipple: ["cover with dots of paint etc."],
+        stinting: [
+          "holding back; limiting the supply (of supplies/money etc.) [stint (v)]"
+        ],
+        stint: [
+          "period of time spent doing something, or a specific, limited amount of work (noun); to be frugal, to get by on little (verb)"
+        ],
+        stingy: ["(adj) not generous with money, reluctant to spend or give"],
+        stifle: ["suppress"],
+        stickler: ["one who is strict about rules or details"],
+        stevedore: ["dockworker"],
+        stem: ["to hold back or limit the flow or growth of something"],
+        steeped: ["immersed (in), saturated (with)"],
+        steadfast: ["marked by firm determination or resolution; not shakable"],
+        statute: ["law [statutory (a)]"],
+        "status quo": ["(n) existing state or condition"],
+        start: ["to suddenly move in a particular direction"],
+        stark: [
+          "(adj) complete, total, utter; harsh or grim; extremely simple, severe, blunt, or plain"
+        ],
+        stanza: ["section of a poem"],
+        standing: [
+          "(n, adj) status, rank, reputation (noun); existing indefinitely, not movable (adj)"
+        ],
+        stand: ["(noun) a group of trees"],
+        stanch: ["stop the flow of a liquid"],
+        stalwart: ["strong and sturdy"],
+        squeamish: ["excessively fastidious and easily disgusted"],
+        spurn: ["reject with contempt"],
+        spontaneous: ["said or done without having being planned in advance"],
+        splenetic: ["irritable; easily angered;"],
+        speculate: [
+          "(v) contemplate; make a guess or educated guess about; engage in a risky business transaction, gamble"
+        ],
+        spectrum: [
+          "(n) a broad range of nevertheless related qualities or ideas, esp. those that overlap to create a continuous series (as in a color spectrum, where each color blends into the next in a continuous way)"
+        ],
+        speckled: ["spotted; freckled; dotted"],
+        spearhead: ["(v) be the leader of"],
+        spear: ["a long pointed rod used as a tool or weapon"],
+        sound: [
+          "(v) measure the depth of (usually water) as with a sounding line; penetrate and discover the meaning of, understand (usually as sound the depths)"
+        ],
+        sophomoric: ["juvenile; immature"],
+        sophistry: ["a deliberately invalid argument in the hope of deceiving"],
+        soothsayer: ["fortuneteller"],
+        somnambulist: ["sleepwalker"],
+        somber: ["grave or even gloomy in character"],
+        solvent: [
+          "(adj.) able to meet financial obligations; able to dissolve another substance"
+        ],
+        soliloquy: ["solo speech"],
+        solidarity: [
+          "fellowship in interests, feelings, responsibilities, etc., such as among a group of people or among classes, nations, etc."
+        ],
+        solicitude: ["a feeling of excessive concern; ????????????"],
+        sojourn: ["a temporary stay"],
+        soak: ["absorbabate"],
+        snub: ["refuse to acknowledge; reject outright and bluntly"],
+        snide: [
+          "expressive of contempt; derogatory or mocking in an indirect way"
+        ],
+        smug: ["marked by excessive complacency or self-satisfaction"],
+        smorgasbord: ["a swedish buffet of cold dishes"],
+        smelt: ["refine an ore"],
+        smattering: [
+          "a slight or superficial understanding of a subject; a small amount of something"
+        ],
+        sluggard: ["slow-moving; lethargic person"],
+        slovenly: ["negligent of neatness especially in dress and person"],
+        slapdash: ["carelessly and hastily put together"],
+        slack: [
+          "(adj, v, n) loose, negligent, lazy, weak (adj); neglect to so one's duties; loosen up, relax (verb); period of little work (noun)"
+        ],
+        skittish: [
+          "shy, fickle, uncertain, or prone to act suddenly due to nervousness; lively in a restless or excessive way"
+        ],
+        skirt: ["(v) border, lie along the edge of , go around; evade"],
+        skiff: ["small boat"],
+        skeptical: ["doubting; not gullible"],
+        skeptic: [
+          "(adj) person inclined to doubting or questioning generally accepted beliefs"
+        ],
+        site: ["the piece of land on which something is located"],
+        sinistral: [
+          "left-handed (or counterclockwise) [dextral - right handed]"
+        ],
+        sinister: ["stemming from evil characteristics or forces"],
+        sinewy: ["brawny"],
+        simultaneous: ["(adj) at the same time"],
+        simulacrum: [
+          "a representation of a person (especially in the form of sculpture)"
+        ],
+        sidereal: ["relating to the stars"],
+        sibyl: ["prophetess; fortuneteller"],
+        shirk: ["avoid (esp. work)"],
+        shibboleth: ["a favorite saying of a sect or political group"],
+        shallow: ["not deep"],
+        serration: ["jagged edge"],
+        serrated: ["jagged; saw-like"],
+        serenity: ["the absence of mental stress or anxiety"],
+        sere: ["withered; old"],
+        sequester: ["isolate; retire from public life; segregate; seclude"],
+        sentinel: ["guard; sentry"],
+        sentimental: ["showing or causing a lot of emotion"],
+        sensuous: ["appealing to the senses"],
+        senile: ["mentally or physically infirm with age"],
+        seminary: ["an institution in which priests are trained"],
+        seminal: ["containing seeds of later development; formative"],
+        semblance: ["a likeness; an outward appearance; an apparition"],
+        semantic: [
+          "relating to the different meanings of words or other symbols"
+        ],
+        "self-effacing": [
+          "not drawing attention to oneself; modest; ??????????????"
+        ],
+        seine: ["type of fishing net"],
+        seemly: ["appropriate (of behavior); decorous"],
+        sedulity: ["thoroughness; perseverance [sedulous (a)]"],
+        sedentary: ["requiring sitting or little activity"],
+        sedate: ["characterized by dignity and propriety"],
+        secure: ["1. to fix firmly; 2. to obtain"],
+        secular: ["(adj) not religious or holy; pertaining to worldly things"],
+        secrete: [
+          "produce and release a substance from a cell or gland of the body for a functional purpose"
+        ],
+        searchingly: [
+          "in a searching or penetrating manner; while examining closely or probing for answers"
+        ],
+        scuttle: ["sink"],
+        scurry: ["to move about or proceed hurriedly"],
+        scurrilous: ["expressing offensive approach"],
+        screed: ["an abusive rant (often tedious)"],
+        "scotch (v)": ["to prevent; stop; disable"],
+        score: ["written form of music (n)"],
+        scoff: ["laugh at with contempt and derision"],
+        scion: ["a descendent or heir"],
+        scintillating: [
+          "sparkling, twinkling, exceptionally brilliant (applied to mental or personal qualities)"
+        ],
+        schism: ["division of a group into opposing factions"],
+        schadenfreude: ["joy from watching the suffering of others"],
+        scathing: [
+          "(adj) severe, injurious; bitterly harsh or critical (as a remark)"
+        ],
+        scapegoat: ["person on whom blame is placed for faults of others"],
+        scant: ["(adj) not enough or barely enough"],
+        scale: ["to climb up; ascend"],
+        scabbard: ["cover for a sword"],
+        saw: ["1. tool for cutting; 2. wise saying"],
+        savvy: ["a perceptive understanding; well-informed or perceptive"],
+        satire: [
+          "(noun) a literary work that criticizes human misconduct and ridicules vices, stupidities, and follies."
+        ],
+        satiety: ["being satisfactorily full and unable to take on more"],
+        "satiate or sate": [
+          "(v) to fully satisfy; to go beyond satisfying to the point of excess (possibly inducing disgust, tiredness, etc.)"
+        ],
+        sate: ["satisfy"],
+        sartorial: ["related to fashion or clothes"],
+        "sap (verb)": ["(verb) to enervate or weaken the vitality of"],
+        "sap (noun)": ["(noun) a fool or nitwit"],
+        sanguinary: ["bloodthirsty; bloody"],
+        sangfroid: ["cold-blooded composure"],
+        sanctuary: ["a consecrated place where sacred objects are kept"],
+        "sanction (2)": [
+          "(n, v) permission or approval, something that gives support or authority to something else (noun); to allow, confirm, ratify (verb); or a legal action against another country to get it to comply (noun); to place sanctions or penalties on (verb)"
+        ],
+        salvation: ["a means of preserving from harm or unpleasantness"],
+        sallow: ["yellowish"],
+        saccharin: ["falsely sweet"],
+        sabbatical: ["a leave usually taken every seventh year"],
+        ruse: ["trick; stratagem"],
+        runic: ["mysterious; magical"],
+        rotund: ["round"],
+        riveting: [
+          "fascinating [to rivet literally means to fix metal plates using metal pins]"
+        ],
+        rile: ["cause annoyance in; disturb, especially by minor irritations"],
+        rigor: ["thoroughness"],
+        riddled: ["damaged throughout by numerous perforations or holes"],
+        ridden: ["dominated or burdened by"],
+        revoked: ["repealed; canceled"],
+        revile: ["spread negative information about"],
+        revert: ["go back to a previous state"],
+        revamp: [
+          "renovate, redo, revise (verb); a restructuring, upgrade, etc. (noun)"
+        ],
+        retrospective: [
+          "(adj, n) looking to the past or backward; applying to the past, retroactive (adj); an art exhibit of an artist's work over a long period of time (n)"
+        ],
+        retrospect: ["contemplation of things past"],
+        retraction: ["withdrawal; cancellation of a statement"],
+        retracted: ["took back; withdrew"],
+        retract: [
+          "pull inward or towards a center; formally reject or disavow a formerly held belief, usually under pressure"
+        ],
+        retort: ["a quick reply to question or remark"],
+        retiring: ["to be shy, and to be inclined to retract from company"],
+        retention: ["preservation; withholding"],
+        resuscitation: ["revival from unconsciousness [resuscitate (v)]"],
+        restrictive: ["serving to limit"],
+        restorative: ["a tonic"],
+        resplendent: ["shining; glowing"],
+        respectively: ["(adv) in the order given"],
+        resourceful: ["adroit or imaginative"],
+        resonant: ["echoing"],
+        resilience: ["resistance; ability to spring back [resilience (a)]"],
+        reservation: [
+          "an unstated doubt that prevents you from accepting something wholeheartedly"
+        ],
+        requisite: ["necessary for relief or supply"],
+        repute: ["the state of being held in high esteem and honor"],
+        repulse: ["force or drive back"],
+        repugnant: ["offensive to the mind"],
+        reproof: ["scolding; criticism [reprove (v)]"],
+        reprisal: ["an injury done in return for injury; ????????"],
+        reprimand: ["an act or expression of criticism and censure"],
+        reprieve: [
+          "a respite; postponement of a sentence; relieve temporarily"
+        ],
+        repress: ["conceal or hide"],
+        replenish: ["fill with something that had previously been emptied"],
+        repine: ["express discontent"],
+        repertorial: [
+          "pertaining to a repertory or repertoire, a stock of available things or a number of theatrical performances presented regularly or in sequence"
+        ],
+        repertoire: ["the range of skills in a particular field or occupation"],
+        repent: ["feel sorry for; be contrite about"],
+        renown: ["fame"],
+        render: [
+          "(v) give, submit, surrender; translate; declare formally; cause to become"
+        ],
+        rend: [
+          "tear violently, esp. to tear one's clothing or hair out of grief; pull apart, split, or tear away"
+        ],
+        remote: ["located far away spatially"],
+        remorse: ["regret; sorrow; contrition"],
+        remedial: [
+          "(adj) providing a remedy, curative; correcting a deficient skill"
+        ],
+        rekindle: ["relight; revive"],
+        regale: ["entertain"],
+        referendum: ["public vote"],
+        redundant: ["unnecessary; superfluous"],
+        redound: [
+          "to have a good or bad effect, esp. as a result of a person's efforts or actions (usually used with to, on, or upon)"
+        ],
+        "red tape": ["formalities; paperwork; official procedure"],
+        recuperate: ["recover; get better after illness"],
+        recumbent: ["lying down; in a position of comfort or rest"],
+        recrudescent: ["revival, breaking out into renewed activity"],
+        recrudesce: ["to break out or happen again; ??????????"],
+        recrimination: ["mutual accusations"],
+        reconnaissance: [
+          "examination or survey conducted in advance [reconnoiter (v)]"
+        ],
+        reconcile: ["make (one thing) compatible with (another)"],
+        recoil: ["spring back; spring away from an impact"],
+        receptacle: ["container; vessel; holder"],
+        recapitulation: ["the restatement of a main idea"],
+        rebuttal: ["denial"],
+        rebus: ["puzzle in which pictures give clues"],
+        reap: [
+          "(v) harvest, such as by cutting; gather; get as a result of one's effort"
+        ],
+        realm: ["a domain in which something is dominant"],
+        ready: ["(used of wit) quick"],
+        reactant: [
+          "something that reacts; a substance that undergoes a change in a chemical reaction"
+        ],
+        ravenous: [
+          "extremely hungry; devouring or craving food in great quantities"
+        ],
+        rationalize: ["employ logic or reason"],
+        ratify: ["approve; consent"],
+        rapprochement: ["a reestablishing of cordial relations; ?????????"],
+        rant: ["use bombastic language"],
+        ranks: ["(n) personnel; a group of people considered all together"],
+        rankle: ["to cause anger, irritation, or bitterness"],
+        rancorous: [
+          "(adj.) characterized by bitter, long-lasting resentment (noun form"
+        ],
+        rancor: ["bitterness; hatred"],
+        rampant: ["unrestrained and violent"],
+        ramifications: ["branches; subdivisions of a complex system; outcomes"],
+        ramble: ["wander aimlessly"],
+        rakish: ["marked by a carefree unconventionality or disreputableness"],
+        raiment: ["especially fine or decorative clothing"],
+        raillery: ["good-humored ridicule or teasing; ????????????"],
+        raft: ["a large number of something"],
+        raffish: [
+          "cheaply vulgar in appearance or nature; tawdry; disreputable"
+        ],
+        rabid: ["marked by excessive enthusiasm for a cause or idea"],
+        quirk: ["oddity"],
+        quintessential: [
+          "most typical; the perfect example of [quintessence(n)]"
+        ],
+        quiescence: [
+          "(noun) stillness; motionlessness; quality of being at rest (adj. form"
+        ],
+        queries: [
+          "(noun) questions; inquiries; doubts in the mind; reservations"
+        ],
+        quarantine: ["isolation to prevent the spread of disease"],
+        qualms: ["(noun) misgivings, reservations, causes for hesitancy"],
+        qualified: ["(adj) modified, limited, conditional on something else"],
+        quaint: ["odd; old-fashioned; picturesque"],
+        quagmire: ["marsh; bog"],
+        quack: ["charlatan; fake"],
+        pyrrhic: ["ruinous; gained at too great a cost"],
+        pyromania: ["compulsion to start fires"],
+        pyre: ["ceremonial fire"],
+        putrefy: [
+          "(verb) to rot; to decay and give off a foul odor (adj. form"
+        ],
+        purloin: ["steal"],
+        purist: [
+          "conservative; one who insists on correct forms of language etc."
+        ],
+        purchase: ["1. grip; 2. buy"],
+        puny: ["of inferior size"],
+        "puissant means powerful, strong": [],
+        psychosis: ["severe mental disorder"],
+        précis: ["concise summary, abstract"],
+        prune: ["1. to trim; 2. a dried plum"],
+        prudish: ["exaggeratedly proper"],
+        proxy: [
+          "agent, substitute, person authorized to act on behalf of another"
+        ],
+        proximity: ["the property of being close together"],
+        proximate: ["immediate; nearest"],
+        provisional: ["conditional; temporary; tentative"],
+        providential: [
+          "lucky, fortunate, or relating to divine care (the idea that a deity has helped or cared for a person)"
+        ],
+        provident: [
+          "preparing for the future; providing for the future; frugal"
+        ],
+        "prot\u00ef\u00bf\u00bdg\u00ef\u00bf\u00bd": [
+          "person under protection of, or guided by another"
+        ],
+        protocol: ["procedure; code of behavior"],
+        protagonist: ["main character in film, book, play etc."],
+        prostration: [
+          "stretch out full on ground; lying face down; 2. be overcome with extreme weakness"
+        ],
+        prospective: ["(adj) potential, in the future"],
+        prosody: ["study of versification"],
+        proselytize: [
+          "convert to another religion, philosophy, or perspective; ???????? ? ???? ????"
+        ],
+        proponents: ["promoters; supporters"],
+        proponent: ["one who argues in favor of; supporter"],
+        propinquity: ["the property of being close together"],
+        prophetic: ["relating to prophesy, predicting, ominous"],
+        pronounced: ["(adj) distinct, strong, clearly indicated"],
+        prone: ["1. vulnerable to; 2. horizontal"],
+        prominent: ["1. eminent; 2. protruding; 3. obvious"],
+        prologue: ["(n) introductory part to a book, play, etc."],
+        prolixity: ["boring verbosity"],
+        proletarian: ["member of the working class"],
+        prohibition: ["the action of forbidding"],
+        prognostication: ["a statement made about the future"],
+        prognosticate: ["make a prediction about; tell in advance"],
+        progeny: ["the immediate descendants of a person"],
+        profusion: ["a plentiful supply; a great or generous amount"],
+        profundity: ["depth"],
+        proffer: ["present for acceptance or rejection"],
+        profanity: ["vulgar or irreverent speech or action"],
+        profane: ["unholy"],
+        prodigy: ["an unusually gifted or intelligent person"],
+        prize: [
+          "(verb) to pry; to press or force with a lever; something taken by force, spoils"
+        ],
+        privation: ["act of depriving someone of food or money or rights"],
+        principled: ["(adj) having high moral standards"],
+        primordial: ["present from the beginning of time"],
+        prevalent: ["most frequent or common"],
+        prevail: [
+          "be widespread in a particular area at a particular time; be current; prove superior"
+        ],
+        pretext: ["something serving to conceal plans"],
+        pretension: ["assumed attitude of superiority; arrogance"],
+        presumptive: [
+          "(adj) based on inference or assumption; providing reasonable grounds for belief"
+        ],
+        presumption: ["an assumption that is taken for granted"],
+        prestigious: ["having an illustrious reputation; respected"],
+        presient: ["having foreknowledge or foresight, seeing the future"],
+        presage: ["forewarn of; indicate; indicate by signs"],
+        premonition: ["an early warning about a future event"],
+        premise: ["a statement that is held to be true"],
+        prelude: ["something that introduces what follows"],
+        preen: [
+          "(verb) to dress up; to primp; to groom oneself with elaborate care"
+        ],
+        preemptive: ["done before someone else can do it"],
+        preeminent: ["outstanding; superior"],
+        predisposed: [
+          "(adj) having an inclination or tendency beforehand; susceptible"
+        ],
+        predicament: ["dilemma; difficult situation"],
+        predecessor: ["one who came before"],
+        precis: ["short summary of facts"],
+        "precipitate (verb)": [
+          "(verb) to cause to happen before anticipated or required"
+        ],
+        "precipitate (adj.)": [
+          "(adj.) acting with excessive haste or impulse; impetuous"
+        ],
+        precipice: ["steep slope"],
+        precinct: ["district of a city"],
+        precept: ["guiding principle; practical rule guiding conduct"],
+        pragmatist: ["practical person"],
+        powwow: ["an informal meeting or discussion"],
+        potpourri: ["a collection containing a variety of sorts of things"],
+        potential: ["existing as a possibility"],
+        potable: ["suitable for drinking"],
+        "posture (v)": [
+          "behave affectedly or unnaturally in order to impress others"
+        ],
+        postulate: ["hypothesize; propose"],
+        posterity: ["future generations"],
+        poseur: [
+          "person who pretends to be sophisticated, elegant, etc., to impress others"
+        ],
+        portentous: ["of momentous or ominous significance"],
+        portent: ["a warning sign; omen"],
+        portend: ["foretell"],
+        ponder: ["reflect deeply on a subject"],
+        pollyannaish: ["extremely optimistic"],
+        polarized: ["(adj) divided into sharply opposed groups"],
+        poised: ["calm; collected; self-possessed"],
+        podium: ["raised platform"],
+        plutocracy: ["rule by the wealthy"],
+        plumb: ["measure depth of (v); exact (a. slang)"],
+        plumage: ["feathers of a bird"],
+        "pluck (n)": ["courage"],
+        pluck: ["(noun) courage, spunk, fortitude"],
+        ploy: ["a clever plan to turn a situation to one's advantage"],
+        plight: ["a dangerous, difficult or otherwise unfortunate situation"],
+        pliable: ["flexible; not stubborn"],
+        plebian: ["of the common people"],
+        plebeian: ["crude or coarse; characteristic of commoners"],
+        plausibility: ["believability [plausible (a)]"],
+        plaudit: ["statement giving strong praise"],
+        plangent: ["(adj.) pounding, thundering, resounding"],
+        plaintive: ["sad; mournful"],
+        plagiarism: ["taking credit for someone else's writing or ideas"],
+        placebo: ["harmless medicine with no effect; dummy medicine"],
+        pivotal: ["of central importance"],
+        pirate: ["(verb) to illegally use or reproduce"],
+        piquant: ["a strong, stimulating taste"],
+        pillory: ["to punish, hold up to public scorn; ???????"],
+        pillage: ["plunder"],
+        phony: ["(adj) fake, counterfeit; insincere, not genuine"],
+        phobia: ["an anxiety disorder characterized by irrational fear"],
+        phenomenology: [
+          "branch of science concerned with things as they are perceived; not directly derived from theory"
+        ],
+        phantasmagorical: ["illusive; unreal"],
+        petrify: ["1. terrify; 2. turn to stone"],
+        pestilence: ["any epidemic disease with a high death rate"],
+        perverse: [
+          "deviating from what is considered moral or right or proper"
+        ],
+        perturb: ["disturb in mind or cause to be worried or alarmed"],
+        pertain: ["be relevant to [pertinent (a)]"],
+        perspicacity: ["insight; sound judgement"],
+        personification: [
+          "1. represent something as a person; 2. a concrete example of ."
+        ],
+        personable: ["attractive"],
+        persnickety: ["overly conceited or arrogant"],
+        persevere: ["be persistent, refuse to stop"],
+        perquisite: ['a privilege that goes along with a job; a "perk"'],
+        perpetuity: ["eternity"],
+        perpetuated: ["caused to continue"],
+        perpetrate: ["perform an act, usually with a negative connotation"],
+        peroration: ["(noun) the concluding part of a speech"],
+        perjury: ["telling lies under oath"],
+        perdition: ["damnation; complete ruin"],
+        perceptive: ["observant"],
+        perceive: ["to become aware of through the senses"],
+        "per se": ["intrinsically; by itself; in itself"],
+        penumbra: [
+          'outer part of a shadow from an eclipse; any surrounding region, fringe, periphery; any area where something "sort of" exists'
+        ],
+        penance: ["voluntary self-punishment in order to atone for something"],
+        peevish: ["easily irritated or annoyed"],
+        peerless: ["without equal"],
+        peer: ["1. an equal; 2. to stare at; 3. nobleman"],
+        peddle: [
+          "travel around while selling; sell illegally; give out or disseminate"
+        ],
+        pedagogue: ["someone who educates young people"],
+        peculiar: ["odd; strange"],
+        patronizing: [
+          "(adj) condescending, having a superior manner, treating as an inferior"
+        ],
+        patron: ["one who give support (usually financial)"],
+        pathos: ["evoking sadness or pity"],
+        pathological: [
+          "(adj) relating to or caused by disease; relating to compulsive bad behavior"
+        ],
+        pathetic: ["deserving or inciting pity"],
+        pastoral: ["relating to the countryside in a pleasant sense"],
+        passe: ["out of fashion"],
+        parvenu: ["upstart; newly rich person"],
+        partiality: ["bias"],
+        partial: [
+          "(adj) biased, prejudiced, favoring one over the others; having a special liking for something or someone (usually partial to)"
+        ],
+        parsimony: ["stinginess; frugality; cost-cutting"],
+        paroxysm: ["a sudden uncontrollable attack"],
+        parity: ["equality; close resemblance"],
+        parenthesis: [
+          "remarks deviating from the main point [parentheses are round brackets in punctuation]"
+        ],
+        parched: ["dried up"],
+        parasite: [
+          "1. scrounger; 2. animal which takes digested food from another"
+        ],
+        paranoia: ["mental state characterized by delusions or excessive fear"],
+        parable: ["a short moral story"],
+        papyrus: ["material used for writing on before paper was invented"],
+        pandemonium: ["a state of extreme confusion and disorder"],
+        paltry: ["contemptibly small amount"],
+        palpate: ["examine (a body part) by palpation; feel"],
+        palpable: ["easily felt; easily perceived"],
+        palliative: ["a remedy that improves but doesn't cure"],
+        pall: ["burial garment in which a corpse is wrapped"],
+        palisade: ["ence made of posts (aoe)"],
+        palimpsest: [
+          "an object or place having diverse layers or aspects beneath the surface"
+        ],
+        palaver: ["prolonged and idle discussion; ????????"],
+        overweening: ["arrogant; presumptuous"],
+        overshadow: [
+          "(v) cast a shadow over, darken; dominate, make to seem less important"
+        ],
+        outstrip: [
+          "(v) surpass, exceed; be larger or better than; leave behind"
+        ],
+        ostracism: ["shunning; social isolation [ostracize (v)]"],
+        ostentation: ["excessive showiness"],
+        oscillation: [
+          "(noun) the act or state of swinging back and forth with a steady, uninterrupted rhythm"
+        ],
+        oscillate: ["(v) swing back and forth; waver, change one's mind"],
+        originate: ["come into existence; take on form or shape"],
+        ordain: ["destine; confer holy order on a priest; command"],
+        orate: ["speak in a pompous manner"],
+        opulent: ["wealthy; rich; magnificent"],
+        "optimal/optimum": ["(adj) best, most desirable or favorable"],
+        opprobrious: ["expressing great scorn [opprobrium (n)]"],
+        onus: ["burden"],
+        omniscient: ["all-knowing"],
+        olfactory: ["concerned with the sense of smell"],
+        ogle: ["stare at; observe in an obvious manner"],
+        offset: [
+          "(v, n) counteract, compensate for (verb); a counterbalance (noun)"
+        ],
+        offhand: [
+          "(adj) casual, informal; done without preparation or forethought; rude in a short way, brusque"
+        ],
+        odometer: ["instrument to measure distance covered"],
+        octave: ["a musical interval of eight tones"],
+        occluded: ["obscured; blocked"],
+        obtain: ["to get"],
+        obsolescence: ["falling into disuse or becoming out of date"],
+        obsession: ["a dominating concern"],
+        obsess: ["be preoccupied with something"],
+        obscured: ["hidden; covered; buried"],
+        obloquy: ["a false accusation of an offense"],
+        oblivious: ["totally unaware"],
+        obliging: ["showing a cheerful willingness to do favors for others"],
+        obligate: ["compulsory"],
+        objurgate: ["criticize/criticism"],
+        obese: ["excessively fat"],
+        nuzzle: ["cuddle; snuggle"],
+        nutrition: ["the organic process of nourishing or being nourished"],
+        nurture: ["provide with nourishment"],
+        numismatics: ["coin collecting"],
+        nugatory: ["of minor significance; futile"],
+        novice: ["a beginner; tyro"],
+        nostrum: ["panacea"],
+        normative: [
+          "implying or attempting to establish a norm; expressing value judgments or telling people what to do (rather than merely describing that which is happening)"
+        ],
+        nontrivial: ["important or big enough to matter"],
+        nondescript: ["having no special features; dull and ordinary"],
+        nondescripit: ["lacking distinct or individual characteristics"],
+        nonchalant: ["cool and confident, unconcerned"],
+        nonchalance: ["an appearance of indifference; calm and composed"],
+        nirvana: ["the beatitude that transcends the cycle of reincarnation"],
+        niggardly: ["miserly; stingy"],
+        nice: ["(adj.) exacting, fastidious, extremely precise"],
+        nexus: ["connection"],
+        "nevertheless/nonetheless": ["(adv) however, even so, despite that"],
+        neutralize: ["make ineffective by counterbalancing the effect of"],
+        neurotic: ["affected by worry due to a mental disturbance"],
+        nettlesome: ["causing annoyance and difficulties; ????????????"],
+        "net (2)": [
+          "(adj, v) remaining after expenses or other factors have been deducted; ultimate (adj); to bring in as profit or to catch as in a net (verb)"
+        ],
+        negligible: ["not worth considering"],
+        negligence: ["carelessness"],
+        navigable: ["suitable for sailing"],
+        natty: ["neat; dapper; smart"],
+        mutinous: ["very rebellious"],
+        muted: ["silent; muffled; toned down"],
+        muse: [
+          "1. think; meditate (v); 2. a source of inspiration (n) [in mythology, a goddess who gives inspiration]"
+        ],
+        murky: ["clouded as with sediment, obscure or morally questionable"],
+        mulct: ["to defraud or deprive"],
+        motivate: ["give an incentive for action"],
+        mortality: ["the quality or state of being subject to death"],
+        moreover: ["(adv) besides; in addition to what was just stated"],
+        mordant: ["harshly ironic or sinister"],
+        moratorium: ["temporary prohibition or halt to activity"],
+        moralistic: ["concerned with morals [moralize (v)]"],
+        moot: [
+          "open to argument or debate; undecidable in a meaningless or irrelevant way"
+        ],
+        monotonous: ["dull; unvarying"],
+        momentous: ["very important"],
+        moment: ["significant and important value"],
+        modish: ["stylish, contemporary"],
+        modify: ["cause to change; make different"],
+        mitigation: ["making less severe [mitigate (v)]"],
+        misrepresentation: ["deliberately deceiving"],
+        misnomer: ["wrong name"],
+        miser: ["a person who doesn't like to spend money"],
+        miscreant: ["a person who breaks the law"],
+        misattribute: ["misidentify"],
+        "misanthrope or misanthropist": ["hater of humankind"],
+        mired: [
+          "stuck, entangled (in something, like a swamp or muddy area), soiled"
+        ],
+        mire: ["swamp; muddy ground"],
+        minutiae: ["small details"],
+        minion: ["underling; servant"],
+        millinery: ["shop selling women's hats"],
+        mien: ["dignified manner or conduct"],
+        mettle: ["courage; bravery; valor"],
+        meteoric: ["like a meteor in speed or brilliance or transience"],
+        metaphysical: [
+          "concerned with abstract thought, related to metaphysics (branch of philosophy concerned with explaining the nature of being and of the world); very subtle or abstruse"
+        ],
+        metaphorically: ["symbolically; figuratively"],
+        metaphor: ["figure of speech comparing two different things"],
+        mesmerize: ["to fascinate or hypnotize"],
+        merge: ["come together"],
+        mentor: ["a wise and trusted guide and advisor"],
+        menial: ["used of unskilled work, especially domestic work"],
+        menagerie: ["collection of animals"],
+        mellow: ["soft; melodious; ripe"],
+        mellifluous: ["smooth and sweet-sounding"],
+        melee: ["a wild, confusing fight or struggle"],
+        megalomania: [
+          "a psychological state characterized by delusions of grandeur"
+        ],
+        meet: ["(adj.) fitting, proper"],
+        meager: ["in short supply"],
+        mawkish: ["overly sentimental to the point that it is disgusting"],
+        maunder: ["to talk or move aimlessly, mutter"],
+        matriarchy: ["society governed by women"],
+        materialism: ["a desire for wealth and possessions"],
+        masticate: ["bite and grind with the teeth"],
+        masochist: ["person who intentionally inflicts pain on himself"],
+        marsupial: ["pouched mammal (like a kangaroo)"],
+        marshal: ["to gather together"],
+        marred: ["damaged; spoiled"],
+        manipulative: ["scheming"],
+        manipulatable: ["influencable; controllable"],
+        manifold: ["many and varied; having many features or forms"],
+        mandate: ["a document giving an official instruction or command"],
+        mammoth: ["huge"],
+        malodorous: ["having an unpleasant smell"],
+        malnutrition: ["a state of poor nourishment"],
+        mallet: ["1. wooden hammer; 2. stick used for polo"],
+        malignant: ["dangerous to health"],
+        malign: ["malevolent; slander"],
+        malfeasance: [
+          "misconduct or wrongdoing, especially by a public official"
+        ],
+        malefactor: ["a wrong-doer"],
+        makeshift: [
+          "(n, adj) a temporary, often improvised, substitute (noun); improvised for temporary use (adj)"
+        ],
+        "make someone less angry/hostile": [],
+        maintain: ["to assert; ????????????"],
+        maim: ["injure or wound seriously and leave permanent disfiguration"],
+        magnanimity: [
+          "(noun) the quality of being generously noble mind and heart, esp. in forgiving (adj. form"
+        ],
+        magisterial: ["authoritative"],
+        maculated: ["spotted"],
+        machismo: ["exaggerated masculinity"],
+        machinations: ["schemes; plots and plans"],
+        machinate: [
+          "engage in plotting or enter into a conspiracy, swear together"
+        ],
+        macerate: ["chop into tiny pieces"],
+        macabre: ["suggesting the horror of death and decay; gruesome"],
+        lynch: ["assassinate; kill; illegal hanging"],
+        lush: ["produced or growing in extreme abundance"],
+        luscious: ["juicy; moist; succulent"],
+        lummox: ["clumsy person"],
+        luminary: ["eminent person; notable"],
+        lull: [
+          "(n, v) soothe or cause to fall asleep (as in a lullaby); quiet down; make to feel secure, sometimes falsely (verb); a period of calm or quiet (noun)"
+        ],
+        lukewarm: ["1. unenthusiastic; 2. neither hot nor cold"],
+        ludicrous: ["ridiculous; silly"],
+        lucrative: ["producing a sizeable profit"],
+        lubricious: ["(adj.) lewd, wanton, greasy, slippery"],
+        lope: ["run with long strides"],
+        loll: ["laze around; hang out (when used of the tongue)"],
+        log: [
+          "(v, n) keep a record of, write down; travel for or at a certain distance or speed (verb); a written record (noun)"
+        ],
+        lofty: ["arrogant; haughty"],
+        lobbyist: [
+          "person who tries to persuade someone to support a particular cause"
+        ],
+        loathe: ["find repugnant"],
+        liturgy: ["form of worship"],
+        litany: ["any long and tedious account of something"],
+        "list (v)": ["1. to lean to one side; 2. to write in order"],
+        list: ["(verb) to tilt or lean to one side"],
+        lint: ["fluff; soft material used to cover wounds"],
+        liniment: ["soothing lotion"],
+        limerick: ["short amusing poem"],
+        likewise: ["(adv) also, in addition to; similarly, in the same way"],
+        lien: [
+          "right to sell property held as a security; legal hold on job etc."
+        ],
+        libertarian: ["someone who opposes tyranny"],
+        libel: ["a false and malicious publication"],
+        levy: [
+          "(v, n) collect tax from, wage war on, or enlist for military service (verb); act of collecting tax or amount owed, or the drafting of troops into military service (noun)"
+        ],
+        levee: [
+          "1. raised bank of a river; 2. morning reception held by a monarch"
+        ],
+        lethal: ["of an instrument of certain death"],
+        legend: ["key to map; myth or story"],
+        leaven: ["to make light; modify; cause bread to rise using yeast etc."],
+        layperson: [
+          "(n) a person who is not a member of the clergy or not a member of a particular profession (such as medicine, law, etc.)"
+        ],
+        lascivious: ["lecherous; sexually perverted"],
+        largesse: ["liberality in bestowing gifts"],
+        "largess or largesse": [
+          "generosity, the giving of money or gifts (esp. with the implication that the giver is a bit superior to the recipient)"
+        ],
+        lapidary: ["relating to precious stones or the art of cutting them"],
+        lance: ["spear; spike; javelin"],
+        lamentation: ["expression of regret or sorrow"],
+        lambaste: ["attack verbally; reprimand"],
+        lambast: ["criticize severely or angrily"],
+        lacuna: ["gap; missing part [plural = lacunae]"],
+        lacerate: ["to tear (flesh) jaggedly"],
+        labyrinthine: ["complicated; highly convoluted"],
+        labile: ["changing rapidly; unstable"],
+        kowtow: ["bend the knees and bow in a servile manner"],
+        knotty: ["complex; difficult to solve"],
+        jurisprudence: ["science or study of law"],
+        jurisdiction: ["the territory within which power can be exercised"],
+        junta: ["an aggressive takeover by a group (usually military)"],
+        "juncture (2)": [
+          "(n) critical point in time, such as a crisis or a time when a decision is necessary; a place where two things are joined together"
+        ],
+        juncture: ["point of time, especially where two things are joined"],
+        juggernaut: ["a force that cannot be stopped"],
+        jovial: ["cheerful and friendly"],
+        jostle: ["make one's way by pushing or shoving"],
+        jollity: ["gaiety; happiness"],
+        jockeying: [
+          "maneuvering; struggling to get ahead of others [jockey (v)]"
+        ],
+        jingoistic: ["extremely patriotic; nationalistic"],
+        jingoist: ["a person who thinks that their country should be at war"],
+        jibe: [
+          "agree with; complement; match up with (in british usage jibe means mock)"
+        ],
+        jaunty: ["having a cheerful, lively and self confident air"],
+        jaunt: ["short pleasure trip"],
+        jaundiced: ["cynical; pessimistic"],
+        jaundice: ["yellowing of the skin"],
+        jamb: ["door post"],
+        jaded: ["tired; bored; worn out"],
+        itinerary: ["travel schedule; detailed plan for a journey"],
+        irreproachable: ["cannot be criticized; perfect"],
+        irrelevant: [
+          "having no bearing on or connection with the subject at issue"
+        ],
+        irrefutable: ["impossible to deny or disprove"],
+        ironic: ["satiric; unexpected"],
+        ironclad: ["cannot be altered; firm"],
+        irksome: ["annoying; infuriating"],
+        irk: ["irritate or vex"],
+        ire: ["anger [irate (a) = very angry]"],
+        irate: ["feeling or showing extreme anger"],
+        involved: ["complicated, and difficult to comprehend"],
+        inviolate: ["free or safe from injury or violation"],
+        inveigh: ["complain bitterly"],
+        invalidate: ["make no longer acceptable for use"],
+        introspective: [
+          "given to examining own sensory and perceptual experiences"
+        ],
+        intransigence: ["stubbornness"],
+        intractability: ["stubbornness; resistance [intractable (a)]"],
+        intimidate: [
+          "frighten or overawe (someone), to make them do what one wants"
+        ],
+        intimation: ["an indirect suggestion"],
+        interrogate: ["pose a series of questions to"],
+        interplay: ["interaction, reciprocal relationship or influence"],
+        intermittent: ["sporadic; irregular"],
+        interloper: [
+          "someone who intrudes on the privacy or property of another"
+        ],
+        interject: ["to insert between other elements"],
+        intemperate: ["excessive; immoderate [intemperance (n)]"],
+        intangible: ["cannot be touched; abstract [intangibility (n)]"],
+        insurgent: ["a rebel"],
+        insular: [
+          "pertaining to an island; detached, standing alone; narrow-minded, provincial"
+        ],
+        insufferable: ["impossible to bear; intolerable"],
+        instigator: ["troublemaker; person who entices others to do something"],
+        instigate: ["to start; provoke"],
+        insouciant: ["(adj.) unconcerned, carefree, heedless"],
+        insouciance: ["lack of concern"],
+        insolvent: ["unable to pay one's bills; bankrupt"],
+        insolent: ["rude and arrogant"],
+        insinuate: [
+          "hint, suggest slyly; introduce (an idea) into someone's mind in a subtle, artful way"
+        ],
+        insentient: ["unfeeling; lacking the power of feeling"],
+        insensible: ["incapable of feeling; unconscious, unaware"],
+        inscrutability: ["the quality of being impossible to investigate"],
+        insatiable: ["impossible to satisfy"],
+        innovate: ["create; introduce something new"],
+        inkling: ["a slight suggestion or vague understanding"],
+        initiate: ["set in motion, start an event or prepare the way for"],
+        iniquitous: ["evil; unjust [iniquity (n)]"],
+        inhibition: ["the action of forbidding"],
+        "ing\u00ef\u00bf\u00bdnue": [
+          "na\u00ef\u00bf\u00bdve, unsophisticated person"
+        ],
+        ingrained: [
+          "(adj) deep-rooted, forming part of the very essence; worked into the fiber"
+        ],
+        ingenuity: ["the power of creative imagination"],
+        infraction: ["a crime less serious than felony"],
+        inform: [
+          "(v) inspire, animate; give substance, essence, or context to; be the characteristic quality of"
+        ],
+        inflammable: ["extremely controversial, incendiary"],
+        infer: ["deduce; conclude"],
+        inexpedient: ["not advisable"],
+        inertia: ["inactivity; lethargy"],
+        inerrancy: ["infallibility; inability to make mistakes [inerrant (a)]"],
+        inequity: ["unfairness"],
+        inept: ["incompetent; unskilled; useless"],
+        inefficacious: ["ineffective"],
+        ineffectual: ["not producing an intended consequence"],
+        inebriation: ["drunkenness; intoxication"],
+        inebriated: ["stupefied or excited by a chemical substance; drunk"],
+        industrious: ["characterized by hard work and perseverance"],
+        indulgent: ["pampering; satisfying desires; tolerant or lenient"],
+        inductee: ["novice; beginner"],
+        indolence: ["laziness"],
+        indoctrinate: ["teach uncritically"],
+        indiscriminate: ["failing to make or recognize distinctions"],
+        indignant: ["feeling anger over a perceived injustice"],
+        indicted: ["accused (of crime)"],
+        indeterminate: ["(adj) not fixed or determined, indefinite; vague"],
+        indelible: ["cannot be wiped out"],
+        indecisive: ["unable to make choices"],
+        incumbents: ["occupiers of a job or position"],
+        incubus: ["nightmarish thing"],
+        incredulous: ["not disposed or willing to believe; unbelieving"],
+        incorrigible: ["impervious to correction by punishment"],
+        incorporate: [
+          "(v) combine, unite; form a legal corporation; embody, give physical form to"
+        ],
+        inconstancy: [
+          "fickleness, unreliability; the state of changing without good reason"
+        ],
+        inconspicuous: ["not easily seen; subtle; not noticeable"],
+        incompatibility: [
+          "being unable to exist or work in congenial combination"
+        ],
+        inclination: ["tendency; a leaning toward"],
+        incite: ["to arouse to action"],
+        incise: ["cut into [incision (n); incisive (a)]"],
+        incentive: [
+          "(n) something that encourages greater action or effort, such as a reward"
+        ],
+        incense: ["make furious"],
+        incendiary: [
+          '(adj) setting on fire, pertaining to arson; arousing strife, rebellion, etc.; "inflaming" the senses'
+        ],
+        incarceration: ["putting in prison"],
+        incapacitated: ["lacking in or deprived of strength or power"],
+        incantation: ["chant; invocation; prayer"],
+        inasmuch: [
+          '(adv) in like manner, considering that (contradiction of "in as much," generally followed by "as")'
+        ],
+        inarticulate: ["without or deprived of the use of speech or words"],
+        inanity: ["foolishness; shallowness"],
+        inanimate: ["not endowed with life"],
+        inane: ["devoid of intelligence"],
+        impugned: ["challenged; called into question"],
+        impudent: ["improperly forward or bold"],
+        improvident: ["without foresight"],
+        impropriety: ["inappropriate behavior"],
+        improbity: ["lack of honesty or integrity"],
+        impressario: ["a sponsor who books and stages public entertainments"],
+        impregnable: ["immune to attack; incapable of being tampered with"],
+        impoverished: ["destitute; poor"],
+        importuned: ["insistently begged"],
+        imponderable: ["impossible to estimate or figure out"],
+        implore: ["beg someone earnestly or desperately to do something"],
+        implode: ["(v) burst inward"],
+        implicit: [
+          "(adj) implied, not stated directly; involved in the very essence of something, unquestionable"
+        ],
+        implication: [
+          "(n) act of implying or that which is implied; close connection, esp. in an incriminating way"
+        ],
+        implicate: ["convey a meaning; imply"],
+        implausible: ["describing a statement that is not believable"],
+        imperturbability: [
+          "quality of being calm and not easily disturbed [imperturbable (a)]"
+        ],
+        impertinent: [
+          "being disrespectful; improperly forward or bold; ?????????"
+        ],
+        impermeable: [
+          "impassable, not allowing passage through (such as by a liquid)"
+        ],
+        imperceptible: ["impossible or difficult to sense"],
+        impending: ["close in time; about to occur"],
+        impeding: ["hindering"],
+        impair: ["(v) make worse, weaken"],
+        immure: ["to imprison"],
+        immoderate: ["excessive; extreme"],
+        illustrious: ["very famous, distinguished"],
+        illusory: ["deceptive; false; misleading"],
+        illuminate: ["to light up or make clear"],
+        illicit: ["not permitted, unlawful, improper"],
+        illiberality: [
+          "(n) narrow-mindedness, bigotry; strictness or lack of generosity"
+        ],
+        ignominy: ["shame"],
+        idyll: ["story or incident in peaceful or ideal setting [idyllic (a)]"],
+        idolatry: [
+          "idol worship; excessive or unthinking devotion or adoration"
+        ],
+        idolatrous: [
+          "(adj.) given to intense or excessive devotion to something (noun form"
+        ],
+        iconoclastic: ["attacking cherished traditions"],
+        hypocritical: ["insincere"],
+        hypochondriac: [
+          "a person obsessed with health; having imaginary illness"
+        ],
+        humility: ["a disposition to be humble; a lack of false pride"],
+        humdrum: ["dull and lacking excitement"],
+        hound: ["to pursue relentlessly"],
+        hotly: ["in an intense, fiery, or heated way"],
+        hortatory: ["encouraging; exhorting"],
+        hone: ["sharpen; increase; whet"],
+        homogeneity: ["evenness; uniformity"],
+        homiletics: ["art of preaching and giving sermons"],
+        homage: ["honor or respect demonstrated publicly"],
+        hobble: [
+          "the uneven manner of walking that results from an injured leg"
+        ],
+        hoax: ["something intended to deceive"],
+        hoard: ["a secret store of valuables or money"],
+        hirsute: ["having or covered with hair"],
+        hinder: ["obstruct"],
+        hieroglyphics: [
+          "1. picture writing; 2. writing which is difficult to read or enigmatic"
+        ],
+        hierarchy: [
+          "(n) a ranked series; a classification of people according to rank, ability, etc.; a ruling body"
+        ],
+        hidebound: ["rigid in opinions"],
+        hiatus: ["interruption; pause"],
+        heyday: ["the pinnacle or top of a time period or career"],
+        hew: [
+          "strike, chop, or hack (as with an axe, sword. etc.); make or shape something (such as a statue) with a cutting tool"
+        ],
+        heretical: [
+          "(adj.) violating accepted dogma or convention, unorthodox"
+        ],
+        heretic: [
+          "a person who holds unorthodox opinions in any field (not merely religion)"
+        ],
+        heinous: ["extremely wicked, deeply criminal"],
+        heed: ["listen to"],
+        hector: ["bully; intimidate with threats; bluster"],
+        hearken: ["(v) listen, pay attention to"],
+        headstrong: ["stubborn; willful"],
+        hawser: ["thick rope or cable"],
+        havoc: ["violent and needless disturbance"],
+        hauteur: ["haughty manner or spirit; arrogance; ???????????"],
+        haughty: ["arrogant, excessively proud and vain"],
+        haughtiness: ["arrogance; pride"],
+        hasten: ["hurry; accelerate; rush"],
+        "harsh, jarring, discordant, or meaningless mixture of sounds": [],
+        harrow: [
+          "farming tool that breaks up soil (noun); painfully disturb or distress (verb)"
+        ],
+        harried: ["to be troubled or bothered"],
+        hardy: [
+          "(adj) strong and able to accept difficult or unpleasant conditions"
+        ],
+        harbingers: ["indicators; bringers of warnings"],
+        harbinger: [
+          "something indicating the approach of something or someone"
+        ],
+        harass: ["annoy continually or chronically"],
+        haphazard: [
+          "marked by great carelessness; dependent upon or characterized by chance"
+        ],
+        hangar: ["storage area (like garage) for a plane"],
+        "hand-wringing": [
+          "grasping, squeezing, etc. of the hands as an expression of nervousness, guilt, etc.; extend debate over what to do about an issue"
+        ],
+        hamstrung: ["made ineffective or powerless"],
+        hamper: ["hinder; obstruct"],
+        hallowed: ["worshipped; consecrated"],
+        hallow: ["respect; worship"],
+        hallmark: [
+          "a mark indicating quality, purity, genuineness, etc.; any distinguishing characteristic"
+        ],
+        hail: ["greet enthusiastically or joyfully"],
+        hagiographic: [
+          "a loving, idealistic telling about a person; describing someone in a saintly manner"
+        ],
+        hack: [
+          "1. chop roughly; 2. person who writes to earn money, 3. hired horse"
+        ],
+        habitat: [
+          "the type of environment in which an organism normally lives"
+        ],
+        guy: [
+          "(noun) a rope, cord, or cable attached to something as a brace or guide; to steady or reinforce using a guy"
+        ],
+        gusto: ["vigorous and enthusiastic enjoyment"],
+        gustatory: ["concerned with the sense of taste"],
+        gumption: ["courage and initiative; common sense;?????????????????"],
+        gullibility: ["being easily fooled"],
+        guise: ["an artful or simulated semblance"],
+        grotesque: ["distorted and unnatural in shape or size"],
+        gritty: ["coarse; granular"],
+        grimace: ["contort the face to indicate a certain mental state"],
+        gregariousness: ["sociability; liking for crowds [gregarious (a)]"],
+        gravity: ["seriousness"],
+        gratuity: ["a relatively small amount of money for services rendered"],
+        gratuitous: ["given freely; unwarranted; uncalled for"],
+        gratis: ["free of charge; without payment"],
+        grating: ["irritating; harsh or discordant (of a noise); scraping"],
+        grate: ["(v) 1. to annoy; aggravate; vex; 2. shred"],
+        grandstand: ["perform showily in an attempt to impress onlookers"],
+        grandiloquence: [
+          "(noun) a lofty, extravagantly colorful, pompous, or bombastic style, manner, or quality especially in language"
+        ],
+        goosebumps: [
+          "(n) the bumps created by hairs standing up on the skin in response to cold, fear, etc."
+        ],
+        glut: ["an excessive supply; supply with an excess of"],
+        gibbering: ["making meaningless noises"],
+        gesticulate: ["show,express or direct through movement"],
+        gerrymander: [
+          "to divide a district so as to give one side an advantage"
+        ],
+        gerontocracy: ["a political system governed by old men"],
+        germinal: ["just growing; not developed; immature"],
+        genteel: ["marked by refinement in taste and manners"],
+        genocide: ["systematic killing of a racial or cultural group"],
+        genial: ["agreeable, conducive to comfort"],
+        gawky: [
+          "(adj) physically awkward (esp. of a tall, skinny person, often used to describe teenagers)"
+        ],
+        gavel: ["judge's hammer"],
+        gaudy: ["tastelessly showy"],
+        gaucherie: ["awkwardness [gauche (a)]"],
+        garish: ["gaudy"],
+        garbled: ["lacking orderly continuity"],
+        garble: ["distort; confuse; muddle"],
+        gamut: ["a complete extent or range"],
+        galleon: ["ancient type of sailing ship"],
+        futility: [
+          "uselessness as a consequence of having no practical result"
+        ],
+        fusillade: ["long burst of gunfire"],
+        furrow: ["a long shallow trench in the ground; groove"],
+        fulsome: ["unpleasantly and excessively suave or ingratiating"],
+        frugality: ["tending to be thrifty or cheap"],
+        froward: ["stubborn; wayward; disobedient"],
+        frieze: ["decorative border"],
+        fret: ["be agitated or irritated"],
+        frenzy: ["state of violent mental agitation"],
+        fray: ["wear away by rubbing"],
+        fraught: ["filled with or attended with"],
+        fraudulent: ["fake; false"],
+        frail: ["physically weak"],
+        fortitude: ["bravery"],
+        fortify: ["(v) strengthen, invigorate, encourage"],
+        forthcoming: [
+          "available when required or as promised; at ease in talking to others"
+        ],
+        forlorn: ["sad and lonely; wretched; desolate"],
+        forfeit: [
+          "(v) surrender or lose as a result of an error, crime, or failure to fulfill an obligation"
+        ],
+        foreshadowed: ["indicated a future event [foreshadow (v)]"],
+        foreshadow: ["(v) indicate or suggest beforehand, presage"],
+        forensic: [
+          "used or applied in the investigation and establishment of facts or evidence in a court of law"
+        ],
+        forbearing: ["tolerant [forbear (v); forbearance (n)]"],
+        foppish: [
+          "behaving or dressing like a dandy; excessively concerned with fashion"
+        ],
+        foist: ["to force onto another"],
+        "fly-by-night": ["unreliable; disreputable"],
+        flux: ["flowing; a continuous moving"],
+        flustered: ["perturbed; rattled"],
+        flush: ["to be in abundance"],
+        flummox: ["to confuse or perplex"],
+        fluke: ["stroke of luck, something accidentally successful"],
+        fluctuate: ["move or sway in a rising and falling or wavelike pattern"],
+        flounder: ["behave awkwardly; have difficulties"],
+        flip: ["(adj.) sarcastic; impertinent; as in flippant"],
+        fleeting: ["(adj) passing quickly, transitory"],
+        fleece: ["to deceive"],
+        fledge: [
+          "grow feathers; decorate with feathers; feed, care for, and rear young birds for flight"
+        ],
+        flay: ["strip the skin off"],
+        flaunt: ["ostentate"],
+        flail: [
+          "1. tool used to thresh grain; 2. to thresh (separate grain from chaff); 3. to wave arms about wildly"
+        ],
+        flabbergasted: ["as if struck dumb with astonishment and surprise"],
+        fitful: ["not continuous; stopping and starting"],
+        firm: ["strong"],
+        firebrand: ["troublemaker"],
+        finagle: ["achieve something by means of trickery or devious methods"],
+        figurehead: ["symbol of power; nominal leader"],
+        figurative: [
+          "(adj) metaphorical, based on figures of speech; containing many figures of speech (as fancy-sounding writing); related to portraying human or animals figures"
+        ],
+        fidelity: [
+          "(n) faithful, loyalty; strict observance of duty; accuracy in reproducing a sound or image"
+        ],
+        fiat: ["a legally binding command or decision"],
+        fiasco: ["a sudden and violent collapse"],
+        fetter: ["a shackle for the ankles or feet"],
+        fete: ["to honor with a banquet or feast"],
+        fervor: ["passion; enthusiasm"],
+        ferrous: ["concerned with iron or its compounds"],
+        ferret: ["to search or drive out"],
+        ferment: ["incite or stir up (trouble or disorder)"],
+        felon: ["someone who has been legally convicted of a crime"],
+        "fell (verb)": ["(verb) to cause to fall by striking"],
+        "fell (adj.)": ["(adj.) inhumanely cruel"],
+        fell: ["terribly evil"],
+        fathom: [
+          "(v) measure the depth of (usually of water) as with a sounding line; penetrate and discover the meaning of, understand"
+        ],
+        fatal: ["bringing death"],
+        fanciful: [
+          "(adj) whimsical, capricious; imaginary; freely imaginative rather than based on reason or reality"
+        ],
+        fanaticism: ["passion; excessive devotion"],
+        falters: ["hesitates"],
+        fallible: ["capable of making mistakes [fallibility (n)]"],
+        faddish: ["intensely fashionable for a short time"],
+        factious: ["causing disagreement"],
+        faction: [
+          "group or clique within a larger organization; party strife and dissension"
+        ],
+        facilitate: ["(v) make easier, help the progress of"],
+        facet: ["a distinct feature or element in a problem"],
+        fabricated: [
+          "made up; false; manufactured [fabricate (v); fabrication(n)]"
+        ],
+        fabricate: ["put together out of artificial or natural components"],
+        exultation: ["the utterance of sounds expressing great joy"],
+        exult: ["feel extreme happiness or elation"],
+        "extreme criticism": [" excoriate; objurgate; vituperate; lambaste"],
+        extradite: ["deport from one country back to the home country"],
+        extortion: ["unjust exaction, as by the misuse of authority"],
+        extirpation: ["wiping out; complete destruction [extirpate (v)]"],
+        extinct: ["no longer existence"],
+        extenuating: ["making less guilty or more forgivable"],
+        extemporize: [
+          "speak without preparation or rehearsal [extemporaneous (a)]"
+        ],
+        expound: [
+          "add details or explanation; clarify the meaning; state in depth"
+        ],
+        expostulate: ["argue"],
+        exposition: ["clear explanation"],
+        exploit: ["use or manipulate to one's advantage"],
+        expatiate: ["elaborate"],
+        expansive: [
+          "outgoing and sociable; broad and extensive; able to increase in size"
+        ],
+        exorcism: ["getting free/rid of; eliminating (especially demons)"],
+        exorbitant: ["unreasonably high; excessive; ?????????"],
+        exonerates: ["acquits; absolves; removes blame"],
+        exiguity: ["meagerness; ????????????????"],
+        exigency: ["emergency"],
+        exemplary: ["setting a fine example; outstandingly good"],
+        execrate: ["curse; express abhorrence for; detest"],
+        execrable: ["very very bad"],
+        exceptionable: ["very bad (something which we should object to)"],
+        exasperated: ["frustrated; annoyed"],
+        exasperate: ["to irritate intensely"],
+        exalt: ["praise or glorify"],
+        "exact (v)": ["to demand; extort"],
+        exact: ["(verb) to demand; to call for; to require; to take"],
+        exacerbated: ["made worse [exacerbate (v); exacerbation (n)]"],
+        evince: ["give expression to"],
+        evenhanded: ["without partiality"],
+        evasive: ["intentionally vague or ambiguous"],
+        evaluate: ["estimate the nature, quality, ability or significance of"],
+        evacuate: ["vacate; abandon"],
+        euphoria: ["a feeling of great (usually exaggerated) elation"],
+        etymology: ["the study of word origins"],
+        ethics: ["motivation based on ideas of right and wrong"],
+        ethereal: [
+          "heavenly, unusually delicate, light, lacking material substance, intangible; ???????"
+        ],
+        essay: ["(verb) to try or attempt"],
+        esoterica: ["secrets known only to an initiated minority"],
+        eruption: ["the sudden occurrence of a violent discharge"],
+        erudition: ["learning; scholarly knowledge [erudite (a)]"],
+        erstwhile: ["former, previous (adj); in the past, formerly (adv)"],
+        erroneous: ["(adj) mistaken, in error; improper, morally incorrect"],
+        equivocation: ["speaking ambiguously [equivocate (v), equivocal (a)]"],
+        eponym: [
+          "a person for whom something, such as a city, building, or street, has been named"
+        ],
+        epitomized: ["typified; characterized; personified"],
+        epitome: ["a standard or typical example"],
+        epistolary: ["concerned with letters; through correspondence"],
+        epistle: ["a letter (form of communication)"],
+        epistemology: ["theory of knowledge; philosophy"],
+        epiphany: ["a moment of sudden revelation or insight"],
+        epaulet: ["shoulder decoration"],
+        envenom: ["to cause bitterness and bad feeling"],
+        enunciation: ["clear pronunciation; accent; articulation"],
+        enunciate: ["express or state clearly"],
+        entrenched: ["fixed firmly or securely"],
+        entreaty: ["earnest or urgent request"],
+        entourage: [
+          "the group following and attending to some important person"
+        ],
+        entitlement: [
+          "(n) having the right to certain privileges; believing, sometimes without cause, that one deserves or has a right to certain privileges"
+        ],
+        entice: ["to attract by offering reward or pleasure"],
+        enthrall: [
+          "to captivate, charm, hold spellbound; to enslave; to imprison"
+        ],
+        enshroud: ["cover"],
+        ensconce: ["establish firmly in a position, settle comfortably"],
+        enormity: ["great wickedness; an evil act"],
+        enmity: ["a state of deep-seated ill-will"],
+        enlist: ["1. sign up for the army; 2. obtain"],
+        enjoin: ["command; order; forbid"],
+        engrossed: ["giving or marked by complete attention"],
+        engendering: ["causing; bringing into being [engender (v)]"],
+        enfranchise: ["give voting rights"],
+        enduring: ["lasting"],
+        endurance: ["staying power; patience; stamina"],
+        endow: ["give gift; provide with money etc."],
+        endorse: ["give support or approval to"],
+        encumbrance: ["an onerous or difficult concern"],
+        encumber: ["to weigh down or burden"],
+        enamor: ["to inspire with love; to captivate; ???????????"],
+        empiricism: [
+          "the belief that accurate knowledge can be acquired through observation"
+        ],
+        empathetic: [
+          "showing understanding and ready comprehension of other peoples' states and emotions"
+        ],
+        emit: ["give off, send forth, or discharge"],
+        emissary: ["someone sent on a mission to represent another's interest"],
+        emerge: ["come out; appear"],
+        embryonic: ["in an early stage of development"],
+        embroiled: ["involved in argument or contention"],
+        embroil: ["involve in hostility or argument"],
+        emboss: ["decorate with a raised design"],
+        embezzle: ["steal"],
+        emancipate: ["set free"],
+        emaciate: ["make abnormally thin, cause to physically waste away"],
+        elude: ["escape, either physically or mentally"],
+        ellipsis: ["omission of essential words"],
+        elevate: [
+          "(v) raise, lift up; lift the spirits of; move up to a higher rank or status or raise up to a higher spiritual or intellectual plane"
+        ],
+        elegiac: ["expressing sorrow or lamentation; ???????????"],
+        elated: ["(adj) very happy, in high spirits"],
+        elapse: ["pass by"],
+        eke: ["manage to support oneself or make a living with difficulty."],
+        egotist: ["a conceited and self-centered person"],
+        egalitarianism: ["belief in equality"],
+        egalitarian: [
+          "(adj) related to the belief in the equality of all people, esp. in political, economic, or social spheres"
+        ],
+        effusive: ["gushing; demonstrative"],
+        efficacious: ["effective"],
+        effervescent: ["bubbly, lively"],
+        efface: ["wipe out; remove all trace of"],
+        edifying: ["instructing and improving spiritually or morally"],
+        eddy: ["circular current"],
+        economical: ["careful about spending money or using resources"],
+        eclipse: [
+          "(n, v) the obscuring of one thing by another, such as the sun by the moon or a person by a more famous or talented person (noun); to obscure, darken, make less important (verb)"
+        ],
+        echelon: ["a level, rank or grade; the people at that level"],
+        ebullience: [
+          "(noun) the quality of lively or enthusiastic expression of thoughts and feelings (adj. form"
+        ],
+        "e.g.": ["(abbre.) for example, such as"],
+        dynamic: ["lively; vibrant; energetic"],
+        dulcet: ["pleasing to the ear"],
+        drudgery: ["hard monotonous routine work"],
+        dross: ["something worthless; impurities left after refining"],
+        drone: [
+          "1. monotonous noise (n); 2. to speak with no emotion (v); 3.male bee"
+        ],
+        drivel: ["nonsense"],
+        dregs: ["the most worthless part or parts of something"],
+        drawl: ["speak slowly with words running together"],
+        drabness: ["dullness"],
+        doughty: ["brave; ?????????"],
+        dote: ["be excessively fond of"],
+        dotard: ["foolish old man; retard"],
+        dormancy: ["state of inactivity"],
+        don: ["put on (esp. of clothes)"],
+        domicile: ["housing that someone is living in"],
+        dolt: ["stupid person"],
+        dolorous: ["exhibiting sorrow or pain; ???????"],
+        dog: ["to pursue relentlessly; to hound"],
+        doddering: ["mentally or physically infirm with age"],
+        document: [
+          "(v) support with evidence, cite sources in a detailed way, create documentary evidence of"
+        ],
+        divert: ["1. entertain; 2. distract; 3. cause a detour"],
+        diversity: ["noticeable variety"],
+        diverge: [
+          "(v) differ, deviate; branch off or turn aside, as from a path"
+        ],
+        distraught: ["deeply agitated especially from emotion"],
+        distill: ["(v) purify; extract the essential elements of"],
+        dissipate: ["squander; waste foolishly; scatter; ?????????????"],
+        dissident: ["person who disagrees"],
+        disseminating: ["circulating; broadcasting; spreading (information)"],
+        disquieting: ["(adj) disturbing, causing anxiety"],
+        disposition: ["(n) a person's general or natural mood; tendency"],
+        dispersed: ["distributed or spread over a considerable extent"],
+        disperse: ["(v) scatter, spread widely, cause to vanish"],
+        dispensation: ["a special allowance; privilege"],
+        disparity: ["an inequality; difference"],
+        dismiss: [
+          "(v) allow to disperse or leave; fire from a job; put aside or reject, esp. after only a brief consideration"
+        ],
+        dismantle: ["take off or remove"],
+        disjointed: [
+          "(adj) disconnected, not coherent, jerky; having the joints separated"
+        ],
+        disinter: ["dig up"],
+        disheveled: ["in disarray; extremely disorderly"],
+        disgruntled: ["in a state of sulky dissatisfaction"],
+        disenfranchise: ["deprive of voting rights"],
+        discriminating: [
+          "(adj) judicious, discerning, having good judgment or insight"
+        ],
+        discriminate: ["to make a clear distinction; see the difference"],
+        discretion: [
+          "(noun) cautious reserve in speech; ability to make responsible decisions (adj. form"
+        ],
+        discredit: [
+          "(v) injure the reputation of, destroy credibility of or confidence in"
+        ],
+        discountenance: ["disallow"],
+        discordance: ["cacophony; harshness; jarring"],
+        discomfiting: ["disconcerting, confusing, frustrating"],
+        disciple: ["one who believes and helps spread the doctrine of another"],
+        discernment: ["judgment; perceptiveness"],
+        discerning: [
+          "(adj) having good judgment or insight; able to distinguish mentally"
+        ],
+        disarm: [
+          "1. take away weapons; 2. win over to one's side [disarming (a)]"
+        ],
+        disapprobation: ["disapproval"],
+        disaffected: ["having lost faith or loyalty; discontent"],
+        diorama: ["model of a scene; panorama"],
+        din: ["(n) loud, confused noise, esp. for a long period of time"],
+        dilletante: ["one who studies an art or science for mere amusement"],
+        dilettantism: [
+          "dabbling esp. in the arts [dilettante (n) = person who dabbles]"
+        ],
+        dilemma: ["puzzling situation"],
+        dilapidated: ["in terrible condition"],
+        dike: ["dam; embankment"],
+        diffuse: [
+          "spread widely, disseminate (verb); dispersed, widely spread out, or wordy and going off-topic (adj)"
+        ],
+        differentiate: ["be a distinctive feature, attribute, or trait"],
+        die: ["(noun) a tool used for shaping, as in a tool-and-die shop"],
+        dictatorial: [
+          "expecting unquestioning obedience; characteristic of an absolute ruler"
+        ],
+        diabolical: ["to be extremely wicked like the devil"],
+        dexterous: ["skilful with hands"],
+        devout: ["deeply religious"],
+        devoured: ["greedily eaten or consumed"],
+        devolve: [
+          'pass on or delegate to another; grow worse (usually "devolve into")'
+        ],
+        detriment: ["a damage or loss"],
+        deterrent: ["(n) something that restrains or discourages"],
+        deteriorate: ["worsen; decline"],
+        detached: [
+          "(adj) impartial, disinterested; unconcerned, distant, aloof"
+        ],
+        desuetude: ["(noun) disuse"],
+        destitution: ["hardship; poverty; misery"],
+        destitute: ["poor enough to need help from others"],
+        dessicate: ["(verb) to dry out or dehydrate to make dry or dull"],
+        despot: ["a dictator with absolute power"],
+        despondent: ["depressed; gloomy"],
+        desideratum: ["something needed and wanted; ????????"],
+        desiccated: ["dried up, dehydrated; ????????"],
+        desecration: ["spoiling something holy"],
+        derogative: ["expressed as worthless or in negative terms"],
+        derived: ["formed or developed from something else; not original"],
+        derive: ["to obtain from a specified source"],
+        derisive: ["abusing vocally; expressing contempt or ridicule"],
+        derelict: ["abandoned; negligent"],
+        depravity: ["moral corruption"],
+        deploy: ["place troops or weapons in battle formation"],
+        deplore: ["regret"],
+        deplorable: ["of very poor quality or condition"],
+        deplete: ["use up; lessen"],
+        depict: ["give a description of"],
+        denounce: ["condemn; speak out against"],
+        demure: ["to be modest and shy"],
+        demonstrative: ["expressing emotion freely"],
+        demeanor: ["the way a person behaves toward other people"],
+        demean: ["disgrace; humiliate; debase in dignity; behave"],
+        delve: ["turn up, loosen or remove earth"],
+        deluge: ["a heavy rain"],
+        delude: ["be dishonest with"],
+        delimit: ["fix, mark, or define the boundaries of"],
+        delegate: ["give an assignment to (a person)"],
+        degradation: ["poverty; debasement"],
+        defunct: ["no longer in existence; dead"],
+        defray: ["provide for the payment of; undertake the payment of; pay"],
+        defoliate: ["cause leaves to fall off"],
+        deflect: [
+          "(v) cause to curve; turn aside, esp. from a straight course; avoid"
+        ],
+        default: [
+          "(n, v) failure to act, neglect (noun); fail to fulfill an obligation, esp. a financial one (verb)"
+        ],
+        "defamatory (adj.)": ["slanderous, injurious to someone's reputation"],
+        decry: ["to criticize openly"],
+        decrepit: ["worn and broken down by hard use"],
+        decoy: ["lure; trap; trick"],
+        decimation: ["destroying or killing a large part of the population"],
+        decimate: ["kill or destroy a large part of (originally one tenth)"],
+        decathlon: ["an athletic competition with ten events"],
+        decapitate: ["cut the head off of"],
+        decadence: [
+          "the state of being degenerate in mental or moral qualities"
+        ],
+        decade: ["a period of 10 years"],
+        debutante: ["young woman making debut in high society"],
+        debunking: ["exposing false claims or myths; mythbusters"],
+        debris: ["the remains of something that has been destroyed"],
+        debonair: [
+          "carefree and self-confident in manner; elegant and gracious"
+        ],
+        debility: ["lack of ability; weakness; incapacity"],
+        debilitating: ["weakening [debilitate (v)]"],
+        debilitate: ["make weak"],
+        dawdler: ["laggard; slow person who falls behind others [dawdle (v)]"],
+        daunt: ["(v) discourage, dishearten, lessen the courage of"],
+        dally: ["waste time; flirt"],
+        daguerreotype: ["a photograph made by an early photographic process"],
+        cynicism: [
+          "(noun) an attitude or quality of belief that all people are motivated by selfishness"
+        ],
+        cynic: ["someone who is critical of the motives of others"],
+        cursory: ["hasty and without attention to detail; not thorough"],
+        cumulative: ["increasing by successive addition"],
+        crystallize: ["to take a definite form or shape"],
+        criterion: ["the ideal in terms of which something can be judged"],
+        cringe: ["recoil; flinch; shy away"],
+        crestfallen: ["discouraged, dejected, downcast"],
+        crepuscular: ["like twilight; dim, active at dawn and dusk"],
+        credulity: ["tendency to believe readily"],
+        credible: ["believable"],
+        credibility: ["(n) believability, trustworthiness"],
+        credence: ["belief in something"],
+        crave: ["have an appetite or great desire for"],
+        crafty: ["(adj) cunning, skillful in deception or underhanded schemes"],
+        cower: ["recoil in fear or servility; shrink away from"],
+        cow: ["terrorize; intimidate"],
+        covet: ["wish, long, or crave for"],
+        coup: ["a sudden and decisive change of government by force"],
+        counterproductive: [
+          "(adj) defeating the purpose; preventing the intended goal"
+        ],
+        counterpoint: [
+          "(n) contrasting item, opposite; a complement; the use of contrast or interplay in a work of art"
+        ],
+        countermand: ["cancel; revoke (an order); ??????????"],
+        counterintuitive: ["(adj) against what one would intuitively expect"],
+        counterfeit: ["fake; false"],
+        "countenance 2": ["(n, v) facial expression or face (noun);"],
+        countenance: ["the appearance conveyed by a person's face"],
+        coterminous: ["of equal extent or scope or duration; ?????????????"],
+        cosseted: ["overly pampered"],
+        corrugated: ["highly folded"],
+        corollary: [
+          "natural consequence (which naturally follows from something else)"
+        ],
+        cope: ["come to terms with"],
+        convoke: ["call together, as to a meeting"],
+        convivial: ["describing a lively atmosphere"],
+        conversely: ["(adv) in an opposite way; on the other hand"],
+        conversant: ["(adj) knowledgeable about or experienced with"],
+        converge: ["(v) move towards one another or towards a point; unite"],
+        conventional: ["usual; customary; common"],
+        convention: ["(noun) a generally agreed-upon practice or attitude"],
+        contusion: ["a bruise"],
+        controversial: ["marked by or capable of arousing disagreement"],
+        contrive: [
+          "to pull off a plan or scheme, usually through skill or trickery"
+        ],
+        contraries: ["things that are opposing; either of two opposite things"],
+        contingent: ["dependent; possible"],
+        contextualize: [
+          "(v) place in context, such as by giving the background or circumstances"
+        ],
+        contemporary: ["living or happening at the same time"],
+        constrict: ["(v) squeeze, compress; restrict the freedom of"],
+        constraint: ["something that limits or restricts"],
+        constituent: [
+          "a citizen who is represented in a government by officials for whom he or she votes; an abstract part of something"
+        ],
+        consolidate: ["(v) unite, combine, solidify, make coherent"],
+        console: [
+          "(v, n) lessen the suffering or grief of (verb); a control panel, or small table or cabinet (noun)"
+        ],
+        consequential: [
+          "(adj.) pompous, self-important (primary definitions are"
+        ],
+        consensus: ["general agreement"],
+        conscript: [
+          "1. person enlisted compulsorily into the armed forces; 2. (v) to enlist compulsorily"
+        ],
+        connubial: ["relating to the relationship between husband and wife"],
+        connote: [
+          "suggest or imply in addition to the precise, literal meaning"
+        ],
+        conjugal: ["relating to the relationship between a wife and husband"],
+        conjecture: [
+          "an opinion or conclusion formed on the basis of incomplete information"
+        ],
+        congruent: ["matching [congruency (n)]"],
+        congenital: ["present from birth"],
+        congenial: ["suitable to your needs"],
+        congeal: ["to solidify"],
+        confront: ["oppose, as in hostility or a competition"],
+        conflate: [
+          "to bring together; to merge into a composite whole; ??????????"
+        ],
+        confidant: ["someone to whom private matters are told"],
+        confer: ["(v) consult, compare views; bestow or give"],
+        condoning: ["overlooking; disregarding; ignoring"],
+        condolence: ["an expression of sympathy with another's grief"],
+        condescension: ["talking down to someone [condescending (a)]"],
+        condescend: ["talk down to"],
+        concoct: ["make something by mixing"],
+        concise: ["stated in few words"],
+        conciliatory: [
+          "(adj) reconciling, appeasing, attempting to make the peace"
+        ],
+        concatenation: ["linking into chains"],
+        concatenate: ["ling together"],
+        compulsion: ["irresistible impulse; force"],
+        compromised: [
+          "1. damaged or put in doubt (esp. of reputation); 2. reached an agreement by giving up part of a claim"
+        ],
+        comprehensive: ["including all or everything"],
+        component: ["one of the individual parts making up a composite entity"],
+        complicity: ["guilt as a confederate in a crime or offense"],
+        complicit: [
+          "involved with others in an illegal activity or wrongdoing; ?????????"
+        ],
+        compensate: ["make amends for"],
+        compendium: ["concise but complete summary; a list or collection"],
+        compatible: ["able to exist and perform in harmonious combination"],
+        compassion: [
+          "a deep awareness of and sympathy for another's suffering"
+        ],
+        commodious: ["large and roomy"],
+        commingle: ["mix"],
+        commendable: ["worthy of high praise"],
+        commandeer: ["to draft for military purposes; to take for public use"],
+        comely: ["according with custom or propriety"],
+        comeliness: ["beauty; prettiness [comely (a)]"],
+        colossal: ["so great in size or force or extent as to elicit awe"],
+        color: [
+          "(verb) to change as if by dyeing, i.e., to distort, gloss, or affect (usually the first)"
+        ],
+        collude: ["conspire; cooperate for illegal or fraudulent purposes"],
+        colloquial: ["local and informal (used of language)"],
+        collate: ["arrange in order"],
+        collage: ["picture made from fragments of other pictures"],
+        colander: ["utensil with perforated bottom used for straining"],
+        cohesive: ["well integrated, forming a united whole"],
+        cognizant: [
+          "having or showing knowledge or understanding or realization"
+        ],
+        cognitive: ["concerned with thinking or perceiving [cognition (n)]"],
+        cogitate: ["ponder"],
+        coercion: ["force"],
+        coddle: ["pamper; fuss over; indulge"],
+        coagulate: ["cause a liquid to become solid or semisolid"],
+        cloture: ["closure; terminating a debate by voting"],
+        cloistered: ["isolated"],
+        clique: ["an exclusive circle of people with a common purpose"],
+        clinch: [
+          "(v) make final or settle conclusively; to fasten or hold together"
+        ],
+        clientele: ["customers"],
+        "clich\u00ef\u00bf\u00bd": [
+          "overused expression; something unoriginal"
+        ],
+        cliche: ["a trite or obvious remark"],
+        clamber: ["climb awkwardly or with difficulty, scramble"],
+        clairvoyant: ["psychic; mystic"],
+        circumlocution: ["using too many words; long-windedness"],
+        circuitous: ["indirect"],
+        churlishness: ["rudeness; ill-mannered behavior"],
+        churlish: ["lacking manners or refinement"],
+        chronological: ["(adj) arranged in or relating to time order"],
+        chronicler: ["person who records historical information"],
+        chronic: [
+          "long lasting (often used for diseases in which case the opposite is acute)"
+        ],
+        chortle: ["to chuckle, laugh merrily"],
+        chorales: ["simple hymns"],
+        chivalrous: ["being attentive to women like an ideal knight"],
+        checkered: ["one that is marked by disreputable happenings"],
+        check: ["to limit (usually modifying the growth of something)"],
+        chastises: ["punishes; castigates"],
+        chastise: ["to reprimand harshly; ??????"],
+        charisma: [
+          "personal attractiveness that enables you to influence others"
+        ],
+        chaos: ["great disorder or confused situation"],
+        chantey: ["type of song sung by sailors"],
+        champion: ["to fight for a cause"],
+        cessation: ["a stopping"],
+        certitude: ["certainty"],
+        centurion: ["roman soldier (commander of a company of 100 soldiers)"],
+        centrifuge: [
+          "device to separate substances by spinning them at high speed"
+        ],
+        censorious: ["disapproving; critical"],
+        censor: ["to examine and remove objectionable material"],
+        cede: ["to give up"],
+        cavil: ["(verb) to find fault w/o good reason"],
+        cavalier: ["given to haughty disregard of others"],
+        cavalcade: ["procession of vehicles"],
+        "cautiously or suspiciously reluctant to do something": [],
+        caulk: ["treat with substance such as tar to make water-tight"],
+        caucus: ["type of private political meeting"],
+        catharsis: ["purging or cleansing of any passage of the body"],
+        catastrophic: [
+          "extremely harmful; bringing physical or financial ruin"
+        ],
+        cataclysmic: ["severely destructive"],
+        cataclysm: ["a violent change"],
+        castigation: ["(noun) sever criticism or punishment (verb form"],
+        cartographer: ["person who makes maps"],
+        carrion: ["dead flesh; carcasses"],
+        carnage: ["the savage and excessive killing of many people"],
+        caricature: ["ridicule (v); cartoon intended to ridicule (n)"],
+        caret: ["punctuation mark signifying omission"],
+        captious: [
+          "(adj.) disposed to point out trivial faults; calculated to confuse or entrap in argument"
+        ],
+        caprices: ["whimsies; fancies"],
+        capacious: ["spacious"],
+        capable: ["able to do something"],
+        cantankerous: ["bad-tempered; quarrelsome"],
+        canon: [
+          "(noun) an established set of principles or code of laws, often religious in nature"
+        ],
+        candidness: [
+          "the quality of being honest and straightforward in attitude and speech"
+        ],
+        calumniate: [
+          "(verb) to slander, to make a false accusation; calumny means slander, aspersion"
+        ],
+        calluous: [
+          "showing or having an insensitive and cruel disregard for others"
+        ],
+        calibrate: ["mark an accurate scale on a device"],
+        caldron: ["huge cooking pot"],
+        cadge: ["get by begging"],
+        cadaverous: ["pale, gaunt, resembling a corpse"],
+        cache: ["a hidden storage space"],
+        cabal: ["a secret group seeking to overturn something"],
+        byzantine: ["extremely complicated or devious"],
+        byline: ["the line that tells your who wrote an article"],
+        bygone: [
+          "(adj, n) past, former (adj); that which is in the past (usually plural noun)"
+        ],
+        burlesque: ["1. comic play; 2. lampoon"],
+        bumbling: [
+          "lacking physical movement skills, especially with the hands"
+        ],
+        buffer: [
+          "(n) something that shields, protects, absorbs shock, or cushions"
+        ],
+        buck: ["resist"],
+        brusquely: ["in a blunt, direct manner"],
+        brusque: ["blunt; abrupt"],
+        browbeat: ["bully; intimidate; ??????"],
+        bromide: ["platitude; chemical compound used to calm excitement"],
+        broadside: ["a strong verbal attack"],
+        bridle: ["headgear for a horse; ???????"],
+        brevity: ["being brief"],
+        brazen: ["unrestrained by convention or propriety"],
+        brawny: ["muscular"],
+        brawl: ["to quarrel noisily, angrily or disruptively"],
+        brash: ["offensively bold"],
+        brandish: ["shake, wave, or flourish, as a weapon"],
+        braggart: ["someone who boasts"],
+        boycott: ["refuse to have dealings with"],
+        bowdlerize: ["censor prudishly"],
+        bourgeois: ["middle class"],
+        boon: ["a desirable state; very close and convivial"],
+        "bona fide": ["not counterfeit or copied"],
+        bombast: ["arrogant, pompous language"],
+        blunt: ["straightforward; not sharp"],
+        blunderbuss: ["ancient weapon (type of gun); a clumsy person"],
+        blowhard: ["boastful person"],
+        bliss: ["a state of extreme happiness"],
+        blinkered: ["to have a limited outlook or understanding"],
+        blighted: ["damaged; destroyed; ruined"],
+        bleak: ["having a depressing or gloomy outlook"],
+        blasphemy: ["speech which offends religious sentiments"],
+        blase: ["nonchalantly unconcerned"],
+        blandishment: ["words used to coax or flatter [blandish (v)]"],
+        bizzare: ["conspicuously or grossly unconventional or unusual"],
+        billowing: ["swelling; fluttering; waving"],
+        bilious: ["bad tempered; cross"],
+        bias: ["a partiality preventing objective consideration of an issue"],
+        betray: ["to reveal or make known something, usually unintentionally"],
+        bestial: ["behaving like a beast; brutal"],
+        besotted: ["strongly infatuated, very drunk"],
+        beret: ["type of cap"],
+        berate: ["scold; criticize"],
+        bequeath: [
+          "leave something in one's will to be given after one's death"
+        ],
+        "bent (n)": ["inclination; aptitude"],
+        benignity: ["compassion; gentleness; fondness"],
+        benighted: ["ignorant; unenlightened"],
+        beneficent: ["doing good"],
+        belfry: ["bell tower; room in which a bell is hung"],
+        beleaguer: ["besiege; attack"],
+        belated: ["after the expected or usual time"],
+        belabor: [
+          "explain in unnecessary detail; to work at or to absurd length"
+        ],
+        behooves: ["to be one's duty or obligation"],
+        beguile: ["mislead; lure"],
+        beg: ["to make a very strong and urgent request"],
+        befuddle: ["confuse"],
+        bedlam: ["a state of extreme confusion and disorder"],
+        becoming: ["appropriate, and matches nicely"],
+        beatific: ["giving or showing bliss; blissful"],
+        baying: ["howling in a deep way, like a dog or wolf"],
+        bastion: ["fortress; stronghold"],
+        bastardization: ["an act that debases or corrupts;"],
+        barrage: [
+          "extended gunfire to cover an attack; dam across river; deluge of information etc."
+        ],
+        barometer: ["an instrument that measures atmospheric pressure"],
+        bard: ["poet"],
+        banish: ["to force to leave"],
+        balm: ["soothing ointment or anything soothing [balmy (a)]"],
+        balloon: ["swell or puff out; increase rapidly"],
+        axiomatic: [
+          "(adj.)taken as given, possessing self-evident truth (noun form"
+        ],
+        awesome: ["inspiring admiration or wonder"],
+        avert: ["turn away; ward off or prevent"],
+        autonomous: ["(adj) self-governing, independent"],
+        automaton: [
+          "a mechanism that can move independently of external control"
+        ],
+        autocratic: ["absolute in power or authority"],
+        atypical: ["not representative of a group, class, or type"],
+        attuned: ["in harmony; in sympathetic relationship"],
+        attest: ["provide evidence for"],
+        attenuated: ["reduced in strength"],
+        atonement: ["making amends for sin or crime [atone (v)]"],
+        atheist: ["person who does not believe in god"],
+        asylum: ["place of refuge or safety"],
+        astringent: [
+          "(adj.) having a tightening effect on living tissues; harsh; severe; something with a tightening effect on tissue"
+        ],
+        assiduously: ["with care and persistence; ??????!"],
+        asseverate: ["(verb) to aver, allege, or assert"],
+        asset: ["a useful or valuable quality"],
+        assay: ["1. try; 2. assess purity"],
+        aspire: ["have an ambitious plan or lofty goal"],
+        aspirant: ["an ambitious young person"],
+        aspersions: ["damaging remarks, defamation, slander"],
+        askance: ["with suspicion, distrust, or disapproval"],
+        asinine: ["devoid of intelligence"],
+        aseptic: ["free from germs"],
+        ascendancy: ["controlling influence; domination"],
+        ascend: ["travel up"],
+        artlessness: ["the quality of innocence"],
+        artisan: ["craftsman"],
+        artful: ["exhibiting artistic skill; clever in a cunning way; ??????"],
+        arson: ["deliberate, criminal starting of fires"],
+        arriviste: ["a person who has recently reached a position of power"],
+        arresting: ["attracting attention; striking"],
+        "arrest, arresting": [
+          "(verb)/(adj.) to suspend; to engage; holding one's attention"
+        ],
+        array: ["an impressive display"],
+        arrant: ["thoroughgoing, out-and-out; shameless, blatant"],
+        arouse: ["awaken, stir to action, excite"],
+        armada: ["fleet of ships"],
+        ardor: ["intense and passionate feeling"],
+        archives: [
+          "collections of old records; place of storage of old documents"
+        ],
+        archetype: ["prototype; primitive pattern; classic example of"],
+        arch: ["chief, first, rule"],
+        arboreal: ["living in trees; concerned with trees"],
+        arbitrator: [
+          "mediator; person appointed to judge a dispute [arbitrate (v)]"
+        ],
+        arbitrate: ["to judge a dispute b/w two opposing parties"],
+        "arbitrary (adj.)": [
+          "based entirely on one's discretion; capricious, unreasonable, or having no basis"
+        ],
+        arable: ["can be cultivated"],
+        appurtenant: ["supporting; ??????????"],
+        "approve or tolerate (verb)": [],
+        approbatory: ["expressing praise or approval"],
+        apprise: ["inform, give notice to"],
+        apprehensive: ["worried; fearful"],
+        "appreciable (adj.)": ["enough to be perceived, considerable"],
+        appreciable: ["large enough to be noticed"],
+        "appease (v.)": [
+          "pacify, satisfy, relieve; concede to be belligerent demands, sometimes at the expense of principles"
+        ],
+        appaled: ["struck with fear, dread or consternation"],
+        apothegm: ["a pithy saying"],
+        apostrophe: [
+          "1. punctuation mark; 2. appeal to someone not present (a figure of speech)"
+        ],
+        apostle: [
+          "pioneer of a reform movement (originally, an early follower of jesus)"
+        ],
+        aplomb: ["poise, assurance, great self-confidence; perpendicularity;"],
+        aphorism: ["a short instructive saying about a general truth"],
+        apex: ["the highest point"],
+        apellation: ["a name or title"],
+        apathetic: ["indifferent; uninterested; lethargic"],
+        antithesis: ["exact opposite"],
+        "antipathy (n.)": [
+          "deep dislike, aversion, or repugnance, somtimes without reason"
+        ],
+        antic: ["playful or silly act; prank; ???????"],
+        anthropologist: [
+          "a social scientist specializing in the study of humanity"
+        ],
+        anthropocentrism: ["putting man at the center of one's philosophy"],
+        anthology: ["a book which is a collection of poems or stories"],
+        antediluvian: ["outdated; prehistoric; very old-fashioned"],
+        antagonistic: ["opposed; hostile; aggressive"],
+        antagonism: ["hostility; strong opposition"],
+        anomalous: ["not normal"],
+        anoint: [
+          "(v) rub or sprinkle oil on; make sacred, such as by ceremony that includes applying oil to someone"
+        ],
+        anodized: ["electroplated; coated with thin layer of metal"],
+        annul: [
+          "make void or null, cancel, abolish (usually of laws or other established rules)"
+        ],
+        "annex (v)": ["take possession of; seize; capture"],
+        annex: ["a building which is an addition to an existing building"],
+        annals: ["historical records"],
+        anemic: ["lacking in color, spirit, or vitality"],
+        anecdote: ["a brief amusing story"],
+        analogue: [
+          "1. something similar; 2. output proportional to input (engineering)"
+        ],
+        analgesic: ["medicine to combat pain"],
+        anachronistic: ["occurring in the wrong time period [anachronism (n)]"],
+        amulet: ["ornament worn as a charm against evil spirits"],
+        amuck: ["in a frenzied or uncontrolled state"],
+        amorous: ["inclined toward or displaying love"],
+        amnesty: ["a warrant granting release from punishment for an offense"],
+        amity: ["friendship"],
+        amicable: ["characterized by friendship and good will"],
+        amelioration: ["improvement"],
+        ambulatory: ["able to walk around"],
+        ambivalence: [
+          "lack of clarity; wavering; the state of having contradictory or conflicting emotional attitudes"
+        ],
+        ambiguity: ["uncertainty; vagueness"],
+        ambidextrous: ["able to use both left and right hands equally well"],
+        amass: ["accumulate"],
+        amalgam: ["a mixture of multiple things"],
+        altruistic: ["showing unselfish concern for the welfare of others"],
+        allure: ["1. attraction (n); 2. to attract (v)"],
+        allude: ["suggest or call attention to indirectly, hint"],
+        alloy: ["(v.) to commingle;"],
+        alleviated: ["made less severe [alleviation (n); alleviate (v)]"],
+        alleged: ["doubtful or suspect"],
+        alienate: ["(v) cause to become unfriendly, hostile, or distant"],
+        alibi: ["an excuse that shows someone was not at a crime scene"],
+        albeit: ["although, even though"],
+        aisle: ["corridor; passageway (esp. between rows of seats)"],
+        agog: ["highly excited"],
+        aggregate: [
+          "(v, adj) gather together, amount to (verb); constituting a whole made up of constituent parts (adj)"
+        ],
+        afford: ["to be able to pay for;"],
+        afflict: ["cause physical pain or suffering in"],
+        affected: ["phony; artificial"],
+        affectation: [
+          "(n) fake behavior (such as in speech or dress) adopted to give a certain impression"
+        ],
+        aesthete: [
+          "one who professes great sensitivity to the beauty of art and nature"
+        ],
+        aegis: ["armor plate that protects the chest, shield"],
+        adversity: ["hardship"],
+        adversary: ["someone who offers oppostion"],
+        advent: ["arrival that has been awaited"],
+        adjudicate: ["to judge; ???????? ????????"],
+        adjective: [
+          " careful to protect one's speech or actions in order to avoid offense"
+        ],
+        adherent: [
+          "someone who supports a particular party, person, or set of ideas"
+        ],
+        adhere: ["(v) stick (to), such as with glue, or to a plan or belief"],
+        acute: [
+          "having or showing a perceptive understanding or insight; shrewd"
+        ],
+        acuity: ["sharpness (mental or visual)"],
+        activism: [
+          "(n) the practice of pursuing political or other goals through vigorous action, often including protests and demonstrations"
+        ],
+        acrophobia: ["fear of heights"],
+        acrimony: ["bitterness and ill will; ?????????????"],
+        acrimonious: ["marked by strong resentment or cynicism"],
+        acrid: ["sharp; pungent (used of smells and tastes)"],
+        acolyte: ["disciple; follower or attendant"],
+        acknowledge: [
+          "declare to be true or admit the existence or reality of"
+        ],
+        accost: ["speak to someone"],
+        accomplice: [
+          "a person who joins with another in carrying out some plan"
+        ],
+        "accompanying in a subordinate fashion; ?????????????": [],
+        accommodate: ["have room for; hold without crowding"],
+        access: ["the right to enter"],
+        accede: ['agree, give consent; assume power (usually as "accede to")'],
+        abut: ["adjoin; border"],
+        absurd: ["inconsistent with reason or logic or common sense"],
+        absolution: ["forgiveness; pardon; release"],
+        abridge: [
+          "(v) reduce or lessen; shorten by omitting parts throughout while retaining the main idea"
+        ],
+        abreast: [
+          'side-by-side. the more common "abreast of" means keeping up with, staying aware of, or remaining equal in progress with.'
+        ],
+        abrasion: [
+          "1. damage to skin caused by scraping; 2. process of scraping or rubbing [abrade (v)]"
+        ],
+        abraded: ["worn away; eroded [abrade (v); abrasion (n)]"],
+        aboveboard: ["open and honest"],
+        abound: ["exist in large quantities"],
+        abortive: ["failing to accomplish an intended result"],
+        abasement: ["humiliation; degradation"],
+        "a large destructive fire; ????????!": []
+      };
+    </script>
+    <script src="../script/index.js" debug="false"></script>
+    <script src="../script/custom.js" debug="false"></script>
+  </body>
+</html>
