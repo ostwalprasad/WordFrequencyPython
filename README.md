@@ -2,7 +2,7 @@
 
 Python Code to find out most frequent words from famous GRE lists below.
 
-WordLists
+### WordLists
 
 1. Barrons 1100 Words
 2. Magoosh 1000 Words
